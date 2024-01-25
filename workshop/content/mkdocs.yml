@@ -1,0 +1,53 @@
+site_name: Getting Started with MapServer
+site_description: "MapServer is an Open Source platform for publishing spatial data and interactive mapping applications to the web. This workshop will cover publishing geospatial data to the Web using MapServer in support of the suite of OGC API standards."
+site_author: The MapServer community
+copyright: "&copy; 2024 MapServer community"
+site_url: https://geographika.github.io/getting-started-with-mapserver
+repo_url: https://github.com/geographika/getting-started-with-mapserver
+nav:
+    - Home: index.md
+    - Introduction to MapServer: introduction.md
+    - Workshop environment setup: setup.md
+    - Standards: standards.md
+    - Publishing:
+        - publishing/index.md
+        - Exercise 1 - Your first dataset: publishing/first.md
+    - Conclusion: conclusion.md
+
+use_directory_urls: true
+
+theme:
+    name: material
+    palette:
+        # See https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#color-scheme
+        # Default is indigo (blue)
+        scheme: mapserver
+    features:
+        - navigation.indexes 
+    favicon: assets/favicon.ico
+    logo: assets/images/mapserver-logo.png
+
+plugins:
+    - search
+
+markdown_extensions:
+    - meta # option to add some meta tags on top, title, author, date, etc
+    - admonition # adds the note, question, tip boxes, eg: !!! tip "my tip"
+    - pymdownx.details # advanced collapsible panels
+    - pymdownx.superfences # advanced features; such as line number, flow chart, python shell
+    - pymdownx.tabbed:
+          alternate_style: true
+    - footnotes # notes bottom of page
+    - attr_list # used to size images
+    - md_in_html # used to size images
+
+extra_css:
+    # mapserver primary color with light and dark variations from material.io
+    # https://material.io/resources/color/#!/?view.left=0&view.right=1
+    - assets/stylesheets/mapserver.css
+    - assets/stylesheets/termynal.css
+    - assets/stylesheets/custom.css
+
+extra_javascript:
+    - assets/javascripts/termynal.js
+    - assets/javascripts/custom.js
