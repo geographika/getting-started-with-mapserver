@@ -1,2 +1,3 @@
 dist/
+# to allow this to be saved to the Docker image comment out the line below
 node_modules/
