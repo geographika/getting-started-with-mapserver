@@ -1,6 +1,7 @@
 import { resolve } from 'path'
 
 export default {
+    base: '', // otherwise assets are located at /assets
     server: {
         host: true,
         port: 5001,
