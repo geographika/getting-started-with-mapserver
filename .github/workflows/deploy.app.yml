@@ -6,10 +6,11 @@ on:
       - main
     paths:
       - 'workshop/exercises/app/**'
+      - '.github/workflows/deploy.app.yml'
 
 defaults:
   run:
-    working-directory: workshop/app
+    working-directory: workshop/exercises/app
 
 jobs:
   build:
