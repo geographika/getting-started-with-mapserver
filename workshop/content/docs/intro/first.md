@@ -4,7 +4,6 @@ title: Exercise 1 - Your first map
 
 # Exercise 1 - Your first map
 
-
 http://localhost:5000/?map=/etc/mapserver/example1-1.map&layer=states&mode=map
 http://localhost:5000/mapserver/?map=/etc/mapserver/example1-1.map&layer=states&mode=map
 
