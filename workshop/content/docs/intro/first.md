@@ -1,0 +1,47 @@
+---
+title: Exercise 1 - Your first map
+---
+
+# Exercise 1 - Your first map
+
+
+http://localhost:5000/?map=/etc/mapserver/example1-1.map&layer=states&mode=map
+http://localhost:5000/mapserver/?map=/etc/mapserver/example1-1.map&layer=states&mode=map
+
+
+ ## Verify the existing Docker Compose config
+
+Before making any changes, we will make sure that the initial Docker Compose
+setup provided to you is actually working. Two files are relevant:
+
+* `workshop/exercises/docker-compose.yml`
+
+To test:
+
+!!! question "Test the workshop configuration"
+
+    1. In a terminal shell navigate to the workshop folder and type:
+
+    <div class="termy">
+    ```bash
+    cd workshop/exercises
+    docker-compose up
+    ```
+    </div>
+    1. Open <http://localhost:5000> in your browser, you should see an error message!
+    1. Close by typing `CTRL-C`
+
+!!! note
+
+    You may also run the Docker container in the background (detached) as follows:
+
+    <div class="termy">
+    ```bash
+    docker-compose up -d
+    docker ls  # verify that the pygeoapi container is running
+    # visit http://localhost:5000 in your browser, verify some collections
+    docker logs --follow pygeoapi  # view logs
+    docker-compose stop
+    ```
+    </div>
+

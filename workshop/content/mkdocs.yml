@@ -9,9 +9,9 @@ nav:
     - Introduction to MapServer: introduction.md
     - Workshop environment setup: setup.md
     - Standards: standards.md
-    - Publishing:
-        - publishing/index.md
-        - Exercise 1 - Your first dataset: publishing/first.md
+    - Introduction:
+        - intro/index.md
+        - Exercise 1 - Your first dataset: intro/first.md
     - Conclusion: conclusion.md
 
 use_directory_urls: true
