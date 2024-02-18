@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'workshop/excercises/app/**'
+      - 'workshop/exercises/app/**'
 
 defaults:
   run:
