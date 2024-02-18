@@ -26,7 +26,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.PRIVATE_KEY }}
-          publish_dir: ./dist
+          publish_dir: dist
           publish_branch: gh-pages
           # deploy to https://geographika.github.io/getting-started-with-mapserver-demo/
           external_repository: geographika/getting-started-with-mapserver-demo
