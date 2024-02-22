@@ -5,7 +5,7 @@ import OSM from 'ol/source/OSM.js';
 import View from 'ol/View.js';
 import { Image as ImageLayer, Tile as TileLayer } from 'ol/layer.js';
 
-const baseUrl = import.meta.env.VITE_MAPSERVER_BASE_URL;
+const mapserverUrl = import.meta.env.VITE_MAPSERVER_BASE_URL;
 const mapfilesPath = import.meta.env.VITE_MAPFILES_PATH;
 
 const layers = [
@@ -15,7 +15,7 @@ const layers = [
     new ImageLayer({
         extent: [-13884991, 2870341, -7455066, 6338219],
         source: new ImageWMS({
-            url: baseUrl + mapfilesPath + 'first.map&',
+            url: mapserverUrl + mapfilesPath + 'first.map&',
             params: { 'LAYERS': 'states' },
             ratio: 1
         }),

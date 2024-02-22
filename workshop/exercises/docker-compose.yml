@@ -44,6 +44,9 @@ services:
     volumes:
       - ./data:/data
       - ./mapfiles:/etc/mapserver/
+    networks:
+      - mynetwork
+
 
   node:
    image: node:lts-slim
@@ -58,6 +61,9 @@ services:
    volumes:
      - ./app:/home/node/app
 
+   networks:
+     - mynetwork
+
    command: "npm start"
 
   # openlayers:
@@ -70,3 +76,6 @@ services:
 
   #  volumes:
   #    - ./html:/usr/local/apache2/htdocs
+
+networks:
+  mynetwork:

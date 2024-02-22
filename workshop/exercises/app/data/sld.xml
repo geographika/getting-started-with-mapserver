@@ -1,0 +1,49 @@
+<StyledLayerDescriptor version="1.1.0">
+  <NamedLayer>
+    <!-- The Name here must match the LAYER NAME in the Mapfile -->
+    <Name>countries</Name>
+    <UserStyle>
+      <FeatureTypeStyle>
+        <Rule>
+          <Name>Country Boundaries</Name>
+          <Filter>
+            <PropertyIsNotEqualTo>
+              <PropertyName>ADMIN</PropertyName>
+              <Literal>Estonia</Literal>
+            </PropertyIsNotEqualTo>
+          </Filter>
+          <LineSymbolizer>
+            <Stroke>
+              <SvgParameter name="stroke-width">2</SvgParameter>
+              <SvgParameter name="stroke">#638889</SvgParameter>
+            </Stroke>
+          </LineSymbolizer>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#9DBC98</CssParameter>
+              <CssParameter name="fill-opacity">0.5</CssParameter>
+            </Fill>
+          </PolygonSymbolizer>
+        </Rule>
+        <Rule>
+          <Name>Highlighted Country</Name>
+          <Filter>
+            <PropertyIsEqualTo>
+              <PropertyName>ADMIN</PropertyName>
+              <Literal>Estonia</Literal>
+            </PropertyIsEqualTo>
+          </Filter>
+          <PolygonSymbolizer>
+            <Fill>
+              <CssParameter name="fill">#FFEA20</CssParameter>
+            </Fill>
+            <Stroke>
+              <CssParameter name="stroke">#000000</CssParameter>
+              <CssParameter name="stroke-width">2</CssParameter>
+            </Stroke>
+          </PolygonSymbolizer>
+        </Rule>
+      </FeatureTypeStyle>
+    </UserStyle>
+  </NamedLayer>
+</StyledLayerDescriptor>
