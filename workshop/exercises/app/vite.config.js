@@ -1,4 +1,5 @@
 import { resolve } from 'path'
+import copy from 'rollup-plugin-copy'
 
 export default {
     base: '', // otherwise assets are located at /assets
@@ -16,7 +17,17 @@ export default {
             input: {
                 index: resolve(__dirname, 'index.html'),
                 first: resolve(__dirname, 'first.html'),
-            }
+                sld: resolve(__dirname, 'sld.html'),
+            },
+            plugins: [
+                copy({
+                    targets: [
+                        { src: 'data/*.*', dest: 'dist/data' }
+                    ],
+                    verbose: true,
+                    hook: 'writeBundle'
+                })
+            ]
         }
     }
 }
