@@ -1,0 +1,89 @@
+MAP
+    NAME "Points"
+    EXTENT 26.668678 58.339241 26.796582 58.40941
+    UNITS DD
+    SIZE 800 600
+    IMAGETYPE "PNG24"
+    PROJECTION
+        "init=epsg:4326"
+    END
+    FONTSET "data/fonts/fontset.txt"
+    WEB
+        METADATA
+            "ows_enable_request" "*" 
+            "ows_srs" "EPSG:4326 EPSG:3857" 
+        END
+    END
+    SYMBOL
+        NAME "circle"
+        TYPE ELLIPSE # Type of symbol
+        POINTS
+            1 1
+        END
+        FILLED TRUE
+    END
+    SYMBOL
+        NAME "city-hall"
+        TYPE SVG
+        IMAGE "data/icons/city-hall.svg"
+    END
+    SYMBOL
+        NAME "arrow"
+        TYPE TRUETYPE
+        FONT "MaterialIcons"
+        CHARACTER "&#58703;" #CHARACTER "e0c8"
+    END
+    SYMBOL
+        NAME "cinema"
+        TYPE TRUETYPE
+        FONT "MaterialIcons"
+        CHARACTER "&#57388;"
+    END
+    SYMBOL
+        NAME "local_library"
+        TYPE TRUETYPE
+        FONT "MaterialIcons"
+        CHARACTER "&#58699;"
+    END
+    SYMBOL
+        NAME "storefront"
+        TYPE TRUETYPE
+        FONT "MaterialIcons"
+        CHARACTER "&#59922;"
+    END
+    LAYER
+        NAME "pois"
+        STATUS OFF
+        TYPE POINT
+        CONNECTIONTYPE FLATGEOBUF
+        DATA "data/osm/pois.fgb"
+        CLASSITEM "fclass"
+        CLASS
+            NAME "cinema"
+            EXPRESSION "cinema"
+            STYLE
+                SYMBOL "cinema"
+                SIZE 16
+                COLOR 0 0 0
+            END
+        END
+        CLASS
+            NAME "library"
+            EXPRESSION "library"
+            STYLE
+                SYMBOL "local_library"
+                SIZE 16
+                COLOR 0 0 0
+            END
+        END
+        CLASS
+            NAME "shop"
+            EXPRESSION {computer_shop,shoe_shop,sports_shop}
+            STYLE
+                SYMBOL "storefront"
+                SIZE 16
+                COLOR 0 0 0
+            END
+        END
+    END
+END

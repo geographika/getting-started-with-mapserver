@@ -1,0 +1,46 @@
+MAP
+    NAME "Vector Tiles"
+    #EXTENT -20037508.34 -20048966.1 20037508.34 20048966.1
+    EXTENT -180 -90 180 90
+
+    SIZE 400 400 #
+    PROJECTION
+        "init=epsg:4326"
+        #"init=epsg:3857"
+    END
+    WEB
+        METADATA
+      #"tile_map_edge_buffer" "10"
+      #"tile_metatile_level" "0"
+        END
+    END
+    IMAGECOLOR "#ADD8E6"
+    LAYER
+        NAME "countries"
+        DEBUG 5
+        TYPE POLYGON
+        PROJECTION
+            "init=epsg:4326"
+        END
+        STATUS ON
+
+        TEMPLATE "ttt"
+        METADATA
+            "gml_include_items" "all"
+            "gml_types" "auto"
+        END
+
+        CONNECTIONTYPE OGR
+        CONNECTION "data/naturalearth"
+        DATA "ne_110m_admin_0_countries"
+        EXTENT -180.0 -90.0 180.0 90
+        PROCESSING "CLOSE_CONNECTION=DEFER"
+        CLASS
+            STYLE
+                COLOR 60 179 113
+                OUTLINECOLOR 255 255 255
+                OUTLINEWIDTH 0.1
+            END
+        END
+    END
+END
