@@ -30,8 +30,8 @@
 version: '3.3'
 services:
   mapserver:
-    image: camptocamp/mapserver:latest
-
+    # image: camptocamp/mapserver:latest
+    image: camptocamp/mapserver:8.0
     container_name: mapserver
 
     ports:
@@ -43,7 +43,8 @@ services:
 
     volumes:
       - ./data:/data
-      - ./mapfiles:/etc/mapserver/
+      - ./scripts:/scripts
+      - ./mapfiles:/etc/mapserver
     networks:
       - mynetwork
 
