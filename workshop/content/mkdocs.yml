@@ -12,6 +12,8 @@ nav:
     - Introduction:
         - intro/index.md
         - Exercise 1 - Your first dataset: intro/first.md
+    - Styling:
+        - Exercise 1 - SLD: styling/sld.md
     - Conclusion: conclusion.md
 
 use_directory_urls: true

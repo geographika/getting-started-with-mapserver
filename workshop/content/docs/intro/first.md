@@ -44,3 +44,10 @@ To test:
     ```
     </div>
 
+
+Interacting with MapServer on the command-line:
+
+```
+docker exec -it mapserver /bin/bash
+mapserv -v
+```
