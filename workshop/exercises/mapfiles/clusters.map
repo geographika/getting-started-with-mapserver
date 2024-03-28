@@ -29,7 +29,7 @@ SYMBOL
 END
 
   LAYER
-    NAME "cluster"
+    NAME "trees"
     STATUS OFF
     TYPE POINT
     # cluster does not seem to work with FLATGEOBUF
