@@ -1,5 +1,13 @@
 import { resolve } from 'path'
+import { readdirSync } from 'fs';
 import copy from 'rollup-plugin-copy'
+
+const inputFiles = readdirSync(__dirname)
+    .filter(filename => filename.endsWith('.html'))
+    .reduce((acc, filename) => {
+        acc[filename.replace('.html', '')] = resolve(__dirname, filename);
+        return acc;
+    }, {});
 
 export default {
     base: '', // otherwise assets are located at /assets
@@ -14,11 +22,7 @@ export default {
     build: {
         sourcemap: true,
         rollupOptions: {
-            input: {
-                index: resolve(__dirname, 'index.html'),
-                first: resolve(__dirname, 'first.html'),
-                sld: resolve(__dirname, 'sld.html'),
-            },
+            input: inputFiles,
             plugins: [
                 copy({
                     targets: [
