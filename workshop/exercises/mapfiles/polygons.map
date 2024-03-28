@@ -4,8 +4,6 @@ MAP
   UNITS DD
   SIZE 800 600
 
-  IMAGETYPE PNG24
-
   PROJECTION
     "init=epsg:4326"
   END
