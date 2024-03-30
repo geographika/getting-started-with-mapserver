@@ -1,4 +1,8 @@
 """
+
+docker exec -it mapserver /bin/bash
+dpkg -i /scripts/python3-mapscript_8.0.1-1~jammy2_amd64.deb
+
 python /scripts/introduction.py
 Segmentation fault if versions don't match
 """

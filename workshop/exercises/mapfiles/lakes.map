@@ -26,6 +26,8 @@ MAP
 
     PROCESSING "NATIVE_FILTER=LAKE_NAME!=''"
 
+    # PROCESSING "NATIVE_FILTER=FID IN (127, 1112)"
+
     CLASS
       NAME 'Lakes & Rivers'
 
@@ -43,11 +45,13 @@ MAP
     CONNECTION "/vsicurl/https://github.com/MapServer/MapServer-demo/raw/main/data/lakespy2.shp"
 
     GEOMTRANSFORM (centerline([shape]))
-    # GEOMTRANSFORM (centerline(densify([shape], 0.1)))
+    # adding a value of 0.1 causes the request to take over 5 minutes
+    # GEOMTRANSFORM (centerline(densify([shape], 0.5)))
+    # GEOMTRANSFORM (centerline(densify([shape], 5)))
 
-    # LABELITEM "LAKE_NAME"
+    # PROCESSING "NATIVE_FILTER=FID NOT IN (127, 1112)"
+
     CLASS
-    # TEXT initcap("[LAKE_NAME]")
     LABEL
       COLOR 255 255 255
       TEXT (initcap("[LAKE_NAME]"))
