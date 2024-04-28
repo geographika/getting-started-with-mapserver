@@ -3,7 +3,8 @@
 ## Docker compose environment
 
 ### Start
-To start Docker Compose, from `workshop/exercises`, run the following command:
+First ensure the Docker service is running, then to start Docker Compose, 
+navigate to the `workshop/exercises` folder and run the following command:
 
 ```bash
 docker compose up -d
@@ -16,4 +17,11 @@ To stop, use the command:
 
 ```bash
 docker compose down
+```
+
+To connect to the containers to use bash commands you can use the following commands:
+
+```bash
+docker exec -it mapserver bash
+docker exec -it node bash
 ```
