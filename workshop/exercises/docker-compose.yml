@@ -66,6 +66,9 @@ services:
      - mynetwork
 
    command: "npm start"
+   # stdin_open: true
+   # cd /home/node/app
+   # npm install
 
   # openlayers:
   #  image: httpd:alpine3.19
