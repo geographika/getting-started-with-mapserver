@@ -1,0 +1,93 @@
+MAP
+    NAME "Railways"
+    EXTENT 26.668678 58.339241 26.796582 58.40941
+    UNITS DD
+    SIZE 800 600
+    PROJECTION
+        "init=epsg:4326"
+    END
+    SYMBOL
+        NAME "line"
+        TYPE ELLIPSE
+        FILLED TRUE
+        POINTS
+            1 1
+        END
+    END
+    SYMBOL
+        NAME "track"
+        TYPE ELLIPSE
+        FILLED TRUE
+        POINTS
+            1 1
+        END
+    END
+    SYMBOL
+        NAME "tie"
+        TYPE ELLIPSE
+        POINTS
+            -5 5
+        END
+    END
+    SYMBOL
+        NAME "vertline"
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 0
+            0 10
+            1 10
+            1 0
+            0 0
+        END
+    END
+    WEB
+        METADATA
+            "ows_enable_request" "*" 
+            "ows_srs" "EPSG:4326 EPSG:3857" 
+        END
+    END
+    LAYER
+        NAME "railways"
+        STATUS OFF
+        TYPE LINE
+        CONNECTIONTYPE FLATGEOBUF
+        DATA "data/osm/railways.fgb"
+        CLASS
+            EXPRESSION ( "[name]" != "" )
+            STYLE
+                COLOR 102 102 102
+                WIDTH 4.0
+            END
+            # STYLE
+            STYLE
+                COLOR 255 255 255
+                WIDTH 2.0
+                LINECAP BUTT
+                PATTERN
+                    8 12
+                END
+            END
+            LABEL
+                TEXT "[name]"
+                COLOR 102 102 102
+                SIZE 12
+                ANGLE FOLLOW
+                OFFSET 5 -99
+            END
+        END
+        # STYLE
+        # CLASS
+        CLASS
+            STYLE
+                COLOR 102 102 102
+                WIDTH 0.8
+            END
+            STYLE
+                COLOR 102 102 102
+                SYMBOL "vertline"
+                GAP -50
+            END
+        END
+    END
+END

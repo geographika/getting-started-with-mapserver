@@ -1,0 +1,71 @@
+MAP
+  NAME "Lakes"
+  # EXTENT 26.668678 58.339241 26.796582 58.409410
+  EXTENT 393234.3937012631 5208170.531190613 495403.1713263091 5303964.876754144
+  SIZE 800 600
+
+  PROJECTION
+    "init=epsg:26915"
+  END
+
+  IMAGETYPE PNG
+
+  WEB
+    METADATA
+      ows_enable_request "*"
+      ows_srs "EPSG:4326 EPSG:3857"
+    END
+  END
+
+  LAYER
+    NAME "lakes"
+    STATUS OFF
+    TYPE POLYGON
+    CONNECTIONTYPE OGR
+    CONNECTION "/vsicurl/https://github.com/MapServer/MapServer-demo/raw/main/data/lakespy2.shp"
+
+    PROCESSING "NATIVE_FILTER=LAKE_NAME!=''"
+
+    # PROCESSING "NATIVE_FILTER=FID IN (127, 1112)"
+
+    CLASS
+      NAME 'Lakes & Rivers'
+
+      STYLE
+        COLOR 49 117 185
+      END
+    END
+  END
+
+  LAYER
+    NAME "lake-labels"
+    STATUS OFF
+    TYPE LINE
+    CONNECTIONTYPE OGR
+    CONNECTION "/vsicurl/https://github.com/MapServer/MapServer-demo/raw/main/data/lakespy2.shp"
+
+    GEOMTRANSFORM (centerline([shape]))
+    # adding a value of 0.1 causes the request to take over 5 minutes
+    # GEOMTRANSFORM (centerline(densify([shape], 0.5)))
+    # GEOMTRANSFORM (centerline(densify([shape], 5)))
+
+    # PROCESSING "NATIVE_FILTER=FID NOT IN (127, 1112)"
+
+    CLASS
+    LABEL
+      COLOR 255 255 255
+      TEXT (initcap("[LAKE_NAME]"))
+      # FONT sans
+      TYPE truetype
+      SIZE 12
+      PARTIALS false
+      POSITION cc
+      FORCE TRUE
+      ANGLE FOLLOW
+    END #label
+
+    END
+  END
+
+
+END

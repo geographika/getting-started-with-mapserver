@@ -1,0 +1,51 @@
+MAP
+  NAME "Buildings"
+  EXTENT 26.668678 58.339241 26.796582 58.409410
+  UNITS DD
+  SIZE 800 600
+
+  PROJECTION
+    "init=epsg:4326"
+  END
+
+  WEB
+    METADATA
+      ows_title "OSM Buildings"
+      ows_enable_request "*"
+      ows_srs "EPSG:4326 EPSG:3857"
+    END
+  END
+
+  LAYER
+    NAME "buildings"
+    STATUS OFF
+    TYPE POLYGON
+    # CONNECTIONTYPE FLATGEOBUF
+    # DATA "data/osm/buildings_a.fgb"
+
+    CONNECTIONTYPE OGR
+    CONNECTION "data/osm/buildings_a.fgb"
+
+    CLASSGROUP "type" # can switch the default set of CLASSes here
+
+    CLASS
+      GROUP "default"
+      STYLE
+        COLOR 246 241 223
+        OUTLINECOLOR 0 0 0
+      END
+    END
+
+    CLASS
+      GROUP "type"
+      EXPRESSION ("[type]" = "office")
+      STYLE
+        COLOR 255 0 0
+        OUTLINECOLOR 0 0 0
+      END
+    END
+
+
+  END
+
+END
