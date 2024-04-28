@@ -1,0 +1,213 @@
+MAP
+    NAME "Landuse"
+    EXTENT 26.668678 58.339241 26.796582 58.40941
+    UNITS DD
+    SIZE 800 600
+    PROJECTION
+        "init=epsg:4326"
+    END
+    SYMBOL                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+  NAME 'octahedron'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+  TYPE VECTOR                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  POINTS                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+    20 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    22 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    24 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    24 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    22 24                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    20 24                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    18 22                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    18 20                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    20 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  FILLED FALSE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+END  
+    SYMBOL
+        NAME "marsh_isom"
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 0.6666666
+            100 0.666666
+            100 1
+            0 1
+            0 0.66666666
+        END
+    END
+    SYMBOL
+        NAME "uncrossablemarsh_isom"
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 0.25
+            100 0.25
+            100 0.5
+            0 0.5
+            0 0.25
+        END
+    END
+    SYMBOL
+        NAME "indistinctmarsh_isom"
+        TYPE VECTOR
+        FILLED TRUE
+        POINTS
+            0 0.2
+            0.45 0.2
+            0.45 0.3
+            0 0.3
+            0 0.2
+            -99 -99
+            0.7 0.2
+            1.15 0.2
+            1.15 0.3
+            0.7 0.3
+            0.7 0.2
+            -99 -99
+            0.125 0.5
+            1.025 0.5
+            1.025 0.6
+            0.125 0.6
+            0.125 0.5
+        END
+    END
+    SYMBOL
+        NAME "scrub"
+        TYPE VECTOR
+        POINTS
+            88 122
+            90 122
+            92 124
+            92 126
+            90 128
+            88 128
+            86 126
+            86 124
+            88 122
+            -99 -99
+            120 122
+            122 122
+            124 124
+            124 126
+            122 128
+            120 128
+            118 126
+            118 124
+            120 122
+            -99 -99
+            106 84
+            108 84
+            110 86
+            110 88
+            108 90
+            106 90
+            104 88
+            104 86
+            106 84
+            -99 -99
+            107 102
+            109 102
+            111 106
+            111 108
+            109 110
+            107 110
+            103 108
+            103 106
+            107 102
+            -99 -99
+        END
+        FILLED FALSE
+    END
+    SYMBOL
+        NAME "wetland2"
+        TYPE SVG
+        IMAGE "data/icons/wetland.svg"
+    END
+    SYMBOL
+        NAME "grass"
+        TYPE PIXMAP
+        IMAGE "resources/fills/grass_fill.png"
+    END
+    SYMBOL
+        NAME "tree"
+        TYPE SVG
+        IMAGE "data/icons/tree.svg"
+    END
+    SYMBOL
+        NAME "wetland"
+        TYPE PIXMAP
+        IMAGE "resources/fills/blue-paper.png"
+    END
+    SYMBOL
+        NAME "sand"
+        TYPE PIXMAP
+        IMAGE "resources/fills/sand.png"
+    END
+    SYMBOL
+        NAME "paper"
+        TYPE PIXMAP
+        IMAGE "resources/fills/paper.png"
+    END
+    WEB
+        METADATA
+            "ows_enable_request" "*" 
+            "ows_srs" "EPSG:4326 EPSG:3857" 
+        END
+    END
+    LAYER
+        NAME "landuse"
+        STATUS OFF
+        TYPE POLYGON
+        CONNECTIONTYPE FLATGEOBUF
+        DATA "data/osm/landuse_a.fgb"
+        CLASSITEM "fclass"
+        CLASS
+            EXPRESSION "grass"
+            STYLE
+                SYMBOL "wetland"
+            END
+        END
+
+        CLASS
+            EXPRESSION {park,grass}
+            STYLE
+                SYMBOL "grass"
+            END
+        END
+        CLASS
+            EXPRESSION "residential"
+            STYLE
+                SYMBOL "paper"
+            END
+        END
+        CLASS
+            EXPRESSION "forest"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+  STYLE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    #COLOR 231 255 170                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+    COLOR 34 139 34
+  END                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  STYLE                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    SYMBOL "tree" # "octahedron"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+    SIZE 10                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+    COLOR 100 100 100                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  END  
+
+            #STYLE
+            #    SYMBOL "paper"
+            #END
+        END
+        #CLASS
+        #    STYLE
+        #        SYMBOL "marsh_isom" # uncrossablemarsh_isom  indistinctmarsh_isom  marsh_isom
+        #        SIZE 10
+        #        # COLOR 100 100 100
+        #    END
+        #END
+        CLASS
+            STYLE
+                OUTLINECOLOR 150 150 150
+                OUTLINEWIDTH 0.5
+            END
+        END
+    END
+END

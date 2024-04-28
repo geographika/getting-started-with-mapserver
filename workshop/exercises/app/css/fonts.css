@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif; /* Fallback font */
+    font-size: 20px;
+}
+
+.search-container {
+    margin-bottom: 10px; /* Add margin to separate search box from grid */
+}
+
+#searchInput {
+    padding: 8px;
+    width: 10%;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+#searchInput:focus {
+    outline: none; /* Remove focus outline */
+    border-color: #007bff; /* Change border color on focus */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust box size as needed */
+    gap: 10px; /* Adjust gap between boxes */
+}
+
+.grid-item {
+    border: 1px solid black; /* Thin border around each box */
+    padding: 10px; /* Add padding inside each box */
+    display: flex;
+    flex-direction: column;
+}
+
+.icon {
+    font-family: 'Material Symbols Outlined', Arial, sans-serif;
+    font-size: xx-large;
+    text-align:center;
+}
+
+.element {
+    margin: 5px 0; /* Adjust margin between elements */
+}
+
+.htmlcode {
+    font-family: Arial, sans-serif;
+    font-size: small;
+}
+
+.title {
+    font-family: Arial, sans-serif;
+    font-size: small;
+}

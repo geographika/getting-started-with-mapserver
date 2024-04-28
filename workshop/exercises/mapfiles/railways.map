@@ -7,29 +7,6 @@ MAP
         "init=epsg:4326"
     END
     SYMBOL
-        NAME "line"
-        TYPE ELLIPSE
-        FILLED TRUE
-        POINTS
-            1 1
-        END
-    END
-    SYMBOL
-        NAME "track"
-        TYPE ELLIPSE
-        FILLED TRUE
-        POINTS
-            1 1
-        END
-    END
-    SYMBOL
-        NAME "tie"
-        TYPE ELLIPSE
-        POINTS
-            -5 5
-        END
-    END
-    SYMBOL
         NAME "vertline"
         TYPE VECTOR
         FILLED TRUE
@@ -73,11 +50,9 @@ MAP
                 COLOR 102 102 102
                 SIZE 12
                 ANGLE FOLLOW
-                OFFSET 5 -99
+                OFFSET 8 -99
             END
         END
-        # STYLE
-        # CLASS
         CLASS
             STYLE
                 COLOR 102 102 102

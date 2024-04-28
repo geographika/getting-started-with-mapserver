@@ -1,0 +1,62 @@
+MAP
+  NAME "Raster"
+  EXTENT 26.668678 58.339241 26.796582 58.409410
+  UNITS DD
+  SIZE 800 600
+
+  IMAGETYPE PNG24
+
+  PROJECTION
+    "init=epsg:4326"
+  END
+
+  WEB
+    METADATA
+      ows_enable_request "*"
+      ows_srs "EPSG:4326 EPSG:3857"
+    END
+  END
+
+  LAYER
+    NAME "dtm"
+    EXTENT 655000 6470000 660000 6475000
+    STATUS OFF
+    TYPE RASTER
+    DATA "data/raster/54752_dtm_1m.tif"
+    PROJECTION
+        "epsg:3301"
+    END
+
+    COMPOSITE
+        OPACITY 50
+    END
+
+    INCLUDE "terrain.include"
+  END
+
+  LAYER
+    NAME "contours"
+    EXTENT 655000 6470000 660000 6475000
+    STATUS OFF
+    TYPE LINE
+    CONNECTIONTYPE CONTOUR
+    DATA "data/raster/54752_dtm_1m.tif"
+    PROJECTION
+        "epsg:3301"
+    END
+
+    PROCESSING "BANDS=1"
+    PROCESSING "CONTOUR_ITEM=elevation"
+    PROCESSING "CONTOUR_INTERVAL=2"
+    CLASS
+        STYLE
+            WIDTH 0.4
+            COLOR 50 50 50
+        END
+    END
+
+
+
+  END
+
+END
