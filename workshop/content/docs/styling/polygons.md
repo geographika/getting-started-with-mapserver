@@ -15,7 +15,7 @@ http://localhost:5001/polygons.html
 landuse
 
 SYMBOLS - if size not specified it is based on the points used in the SYMBOL
-SYMBOLSET. Tribute to Håvard Tveite - marshes. 
+SYMBOLSET. Tribute to HÃ¥vard Tveite - marshes. 
 http://lazarus.elte.hu/mc/specs/isom-2000.pdf
 https://github.com/MapServer/MapServer/wiki/SymbologyExchangeVector#polygon-fills-marsh-symbols-as-used-in-orienteering-maps
 

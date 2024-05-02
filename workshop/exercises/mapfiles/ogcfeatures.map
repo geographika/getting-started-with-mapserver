@@ -1,0 +1,52 @@
+MAP
+  NAME "OGC Features"
+  EXTENT 26.668678 58.339241 26.796582 58.409410
+  UNITS DD
+  SIZE 800 600
+
+  PROJECTION
+    "init=epsg:4326"
+  END
+
+  WEB
+    METADATA
+      ows_title "OSM Features"
+      ows_enable_request "*" # this enables all OGC requests
+      ows_srs "EPSG:4326 EPSG:3857"
+      oga_onlineresource "/ogcfeatures/ogcapi"
+      # oga_html_template_directory
+      # oga_enable_request "*"
+    END
+  END
+
+  LAYER
+    NAME "pois"
+    STATUS OFF
+    TYPE POINT
+    TEMPLATE "void"
+
+    METADATA
+      ows_title "Point POIs"
+      gml_include_items "all"
+      gml_featureid "osm_id"
+    END
+    CONNECTIONTYPE OGR
+    CONNECTION "data/osm/pois.fgb"
+  END
+
+  LAYER
+    NAME "pois_polygon"
+    STATUS OFF
+    TYPE POLYGON
+    TEMPLATE "void"
+
+    METADATA
+      ows_title "Polygon POIs"
+      gml_include_items "all"
+      gml_featureid "osm_id"
+    END
+    CONNECTIONTYPE OGR
+    CONNECTION "data/osm/pois_a.fgb"
+  END
+
+END
