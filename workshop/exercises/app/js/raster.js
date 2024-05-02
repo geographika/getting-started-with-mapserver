@@ -15,6 +15,7 @@ const layers = [
     new ImageLayer({
         extent: [2968743.65508978, 8038921.67212233, 2982981.8632402, 8053818.05714347],
         source: new ImageWMS({
+            attributions: ['Estonian Land Board 2024'],
             url: mapserverUrl + mapfilesPath + 'raster.map&',
             params: { 'LAYERS': 'dtm', 'STYLES': '' },
             ratio: 1

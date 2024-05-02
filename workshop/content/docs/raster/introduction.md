@@ -1,15 +1,89 @@
 ## Raster Data
 
-```
+MapServer can serve both [vector](https://mapserver.org/input/vector/index.html) and [raster](https://mapserver.org/input/raster.html) data.
+
+An example of raster data can be seen at [http://localhost:5001/raster.html](http://localhost:5001/raster.html){:target="_blank"}
+
+![image info](../assets/images/raster-example.png)
+
+### Sample Dataset
+
+The dataset used in this example is elevation data from the [Estonian Geoportal](https://geoportaal.maaamet.ee/eng/Spatial-Data/Elevation-Data-p308.html),
+and data provided by the Estonian Land Board 2024. It covers Tartu center and is from map sheet 474659.
+
+We can view details about this dataset using [gdalinfo](https://gdal.org/programs/gdalinfo.html) which is installed on the
+MapServer Docker container.
+
+```bash
+# first connect to the MapServer Docker container
 docker exec -it mapserver /bin/bash
+
+# now get some basic details about the dataset
 gdalinfo /etc/mapserver/data/raster/54752_dtm_1m.tif
 
-gdalinfo /etc/mapserver/data/raster/54752_dtm_1m.tif -stats
-
+# we can also view these details as JSON for easier parsing
 gdalinfo /etc/mapserver/data/raster/54752_dtm_1m.tif -stats -json
 
 ```
 
+### A Raster LAYER
 
-https://mapserver.org/input/raster.html
+```
+LAYER
+  NAME "dtm"
+  EXTENT 655000 6470000 660000 6475000
+  STATUS OFF
+  TYPE RASTER
+  DATA "data/raster/54752_dtm_1m.tif"
+  PROJECTION
+      "epsg:3301"
+  END
+  COMPOSITE
+      OPACITY 80
+  END
+  INCLUDE "terrain.include"
+END
+```
 
+There are a few points to note in this Mapfile. 
+
+#### INCLUDEs
+
+We are making use of the [INCLUDE](https://mapserver.org/mapfile/include.html) 
+directive. This allows us to include additional files within our Mapfile. In this case `terrain.include` contains a list of CLASSes
+to style the raster data. These classes were generated using a Python script - by keeping them in a separate file we can easily recreate the file
+without modifying the rest of the Mapfile. INCLUDEs can also be used to help manage large Mapfiles, for example by keeping each LAYER in a separate file.
+This approach also makes it easier to share LAYERs between different Mapfiles.
+
+
+The `terrain.include` file shows how we can style raster data. There are classes that apply a different RGB colour to the data
+based on the `[pixel]` value for each cell:
+
+
+#### COMPOSITE
+
+A [COMPOSITE](https://mapserver.org/mapfile/composite.html) block is used on the layer to make it 20% transparent.
+
+
+```mapfile
+
+CLASS
+  EXPRESSION ([pixel] >= 30.68 AND [pixel] < 37.245625)
+  STYLE
+    COLOR 107 129 31
+  END
+END
+
+CLASS
+  EXPRESSION ([pixel] >= 37.245625 AND [pixel] < 43.81125)
+  STYLE
+    COLOR 107 106 26
+  END
+END
+```
+
+
+#### Excercises
+
+- Try different settings for layer `OPACITY` to see its effect on the output.
+- Change the `COLOR` of the first `CLASS` in `terrain.include` to highlight which pixels have values in this range.

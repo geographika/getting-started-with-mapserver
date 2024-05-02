@@ -6,15 +6,20 @@ site_url: https://geographika.github.io/getting-started-with-mapserver
 repo_url: https://github.com/geographika/getting-started-with-mapserver
 nav:
     - Home: index.md
-    - Introduction to MapServer: introduction.md
-    - Workshop environment setup: setup.md
-    - Standards: standards.md
+    - Introduction: introduction.md
+    - Workshop Environment Setup: setup.md
     - Introduction:
         - intro/index.md
         - Exercise 1 - Your first dataset: intro/first.md
     - Styling:
         - Exercise 1 - SLD: styling/sld.md
+    - Raster Data:
+        - Exercise 1 - Introduction: raster/introduction.md
+    - Services:
+        - Exercise 1 - Tiles: services/tiles.md
+        - Exercise 2 - OGC Features API: services/ogcfeatures.md
     - Conclusion: conclusion.md
+    - Credits: credits.md
 
 use_directory_urls: true
 

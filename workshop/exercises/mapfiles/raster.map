@@ -22,19 +22,15 @@ MAP
     EXTENT 655000 6470000 660000 6475000
     STATUS OFF
     TYPE RASTER
+    # Map data: Estonian Land Board 2024
     DATA "data/raster/54752_dtm_1m.tif"
     PROJECTION
         "epsg:3301"
     END
-
     COMPOSITE
         OPACITY 80
     END
-
     INCLUDE "terrain.include"
-
-
-
   END
 
 END

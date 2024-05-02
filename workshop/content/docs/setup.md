@@ -55,7 +55,8 @@ Some notes:
 
 * On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker
 * On Mac, if you are using [Homebrew](https://brew.sh), consider (as the author has) using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
-* On MacOS Monterey, there is an issue with the port 5000 that is already used and therefore conflicting to the default one used by pygeoapi. If you are facing with this error `OSError: [Errno 48] Address already in use` then you need to can disable the *Airplay Receiver* from `System Preference->Sharing` of your MacOS (detailed description in this blog [post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/)).
+* On MacOS Monterey, there is an issue with the port 5000 that is already used and therefore conflicting to the default one used by MapServer. 
+  If you are facing with this error `OSError: [Errno 48] Address already in use` then you need to can disable the *Airplay Receiver* from `System Preference->Sharing` of your MacOS (detailed description in this blog [post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/)).
 * On Linux, you can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu image or use a cloud VM
 * Docker Desktop includes a graphical user interface with some interesting options. You can see logs and information about running containers, open their service in a browser or even open a terminal inside the container
 
@@ -72,10 +73,6 @@ Docker Compose version v2.24.3-desktop.1
 </div>
 
 (It is not required that your version numbers exactly match).
-
-
-
-docker run --rm -p 5000:80 geopython/pygeoapi:latest
 
 
 docker run --rm -p 5000:80 camptocamp/mapserver:latest
