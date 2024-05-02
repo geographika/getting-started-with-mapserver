@@ -12,12 +12,17 @@ nav:
         - intro/index.md
         - Exercise 1 - Your first dataset: intro/first.md
     - Styling:
-        - Exercise 1 - SLD: styling/sld.md
+        - Points: styling/points.md
+        - Lines: styling/lines.md
+        - Polygons: styling/polygons.md
+        - SLD: styling/sld.md
     - Raster Data:
-        - Exercise 1 - Introduction: raster/introduction.md
+        - Introduction: raster/introduction.md
     - Services:
         - Exercise 1 - Tiles: services/tiles.md
         - Exercise 2 - OGC Features API: services/ogcfeatures.md
+    - Advanced:
+        - MapScript: advanced/mapscript.md
     - Conclusion: conclusion.md
     - Credits: credits.md
 

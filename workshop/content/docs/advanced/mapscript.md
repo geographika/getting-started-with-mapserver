@@ -1,22 +1,59 @@
-```
+## MapScript
+
+MapServer has its own scripting language - [MapScript](https://www.mapserver.org/mapscript/). This is available in several
+programming languages including Python, PHP, and Perl. They all share a common [MapScript API](https://www.mapserver.org/mapscript/mapscript-api/index.html).
+
+MapScript is not installed on the MapServer Docker image by default, but it can be added using the approach below.
+
+!!! tip
+
+    The MapScript package must match the version of MapServer installed on the Docker image or
+    segmentation faults will occur.
+
+```bash
+# start an interactive session with the MapServer Docker container
 docker exec -it mapserver /bin/bash
 
-apt install software-properties-common -y
-add-apt-repository ppa:ubuntugis/ubuntugis-unstable -y
-apt update
-# the following still installs libmapserver etc.
-apt install --no-install-recommends python3-mapscript -y
+# install MapScript via a downloaded Debian package available in the workshop repository
+dpkg -i /scripts/python3-mapscript_8.0.1-1~jammy2_amd64.deb
 
-apt-cache search --names-only "mapscript"
+# test that we can import MapScript successfully
+python -c "import mapscript;print(mapscript.msGetVersion())"
+```
 
-apt remove python3-mapscript -y
-apt autoremove -y
+One use of MapScript is to help with writing Mapfiles by getting information from its data sources. Some examples are provided below.
 
-cd /scripts
-apt download python3-mapscript
-dpkg -i python3-mapscript_8.0.1-1~jammy2_amd64.deb
+### Reading Data Extents
 
-# python3-mapscript depends on libmapserver2 (>= 8.0.0); however:
-#  Package libmapserver2 is not installed.
-# can ignore these errors
+```python
+"""
+python /scripts/extents.py
+"""
+
+import mapscript
+
+mapfile = "/etc/mapserver/lakes.map"
+m = mapscript.mapObj(mapfile)
+
+lyr = m.getLayerByName("lakes")
+extent = lyr.getExtent()
+
+original_projection_code = m.getProjection()
+original_projection = mapscript.projectionObj(original_projection_code)
+
+webmercator = mapscript.projectionObj("epsg:3857")
+
+extent_string = f"[{extent.minx}, {extent.miny}, {extent.maxx}, {extent.maxy}]"
+print(extent_string)
+
+# reprojection is done in-place
+extent.project(original_projection, webmercator)
+
+extent_string = f"[{extent.minx}, {extent.miny}, {extent.maxx}, {extent.maxy}]"
+print(extent_string)
+
+center = f"[{(extent.maxx + extent.minx) / 2}, {(extent.maxy + extent.miny) / 2}]"
+print(center)
+
+print("Done!")
 ```

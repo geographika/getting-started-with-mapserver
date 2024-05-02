@@ -49,7 +49,7 @@ MAP
     # GEOMTRANSFORM (centerline(densify([shape], 0.5)))
     # GEOMTRANSFORM (centerline(densify([shape], 5)))
 
-    # PROCESSING "NATIVE_FILTER=FID NOT IN (127, 1112)"
+    PROCESSING "NATIVE_FILTER=FID NOT IN (127, 1112)"
 
     CLASS
     LABEL

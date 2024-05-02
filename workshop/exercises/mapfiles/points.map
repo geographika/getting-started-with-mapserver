@@ -31,7 +31,7 @@ MAP
         NAME "arrow"
         TYPE TRUETYPE
         FONT "MaterialIcons"
-        CHARACTER "&#58703;" #CHARACTER "e0c8"
+        CHARACTER "&#58703;"
     END
     SYMBOL
         NAME "cinema"
@@ -56,8 +56,7 @@ MAP
         STATUS ON
         TYPE POINT
         CONNECTIONTYPE FLATGEOBUF
-        DATA "D:\GitHub\getting-started-with-mapserver\workshop\exercises\mapfiles\data\osm\pois.fgb"
-        # DATA "data/osm/pois.fgb"
+        DATA "data/osm/pois.fgb"
         CLASSITEM "fclass"
         CLASS
             NAME "cinema"
