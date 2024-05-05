@@ -11,11 +11,11 @@ nav:
     - Introduction:
         - intro/index.md
         - Exercise 1 - Your first dataset: intro/first.md
-    - Styling:
-        - Points: styling/points.md
-        - Lines: styling/lines.md
-        - Polygons: styling/polygons.md
-        - SLD: styling/sld.md
+    - Mapfile:
+        - Points: mapfile/points.md
+        - Lines: mapfile/lines.md
+        - Polygons: mapfile/polygons.md
+        - SLD: mapfile/sld.md
     - Raster Data:
         - Introduction: raster/introduction.md
     - Services:
@@ -35,7 +35,9 @@ theme:
         # Default is indigo (blue)
         scheme: mapserver
     features:
-        - navigation.indexes 
+        - navigation.indexes
+        - content.code.copy
+        - content.code.select
     favicon: assets/favicon.ico
     logo: assets/images/mapserver-logo.png
 
@@ -49,6 +51,15 @@ markdown_extensions:
     - pymdownx.superfences # advanced features; such as line number, flow chart, python shell
     - pymdownx.tabbed:
           alternate_style: true
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.inlinehilite
+    # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files
+    - pymdownx.snippets:
+          check_paths: true
+          base_path: ["../../workshop/exercises/mapfiles", "../../workshop/exercises/app/js", "./docs"]
     - footnotes # notes bottom of page
     - attr_list # used to size images
     - md_in_html # used to size images

@@ -1,5 +1,5 @@
 MAP
-  NAME "Buildings"
+  NAME "Roads"
   EXTENT 26.668678 58.339241 26.796582 58.409410
   UNITS DD
   SIZE 800 600
@@ -12,7 +12,7 @@ MAP
 
   WEB
     METADATA
-      ows_title "OSM Buildings"
+      ows_title "OSM Roads"
       ows_enable_request "*"
       ows_srs "EPSG:4326 EPSG:3857"
     END

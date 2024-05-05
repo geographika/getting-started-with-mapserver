@@ -33,7 +33,7 @@ python -c "print((58.339241 + 58.409410) / 2)"
 
 Add section on EXPRESSIONS. Link to docs.
 
-#### Excercises
+#### Exercises
 
 - Switch the CLASSGROUP in the Mapfile to see different styles. There are two groups
   `type` and `default`.

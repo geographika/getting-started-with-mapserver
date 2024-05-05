@@ -2,9 +2,12 @@
 
 MapServer can serve both [vector](https://mapserver.org/input/vector/index.html) and [raster](https://mapserver.org/input/raster.html) data.
 
-An example of raster data can be seen at [http://localhost:5001/raster.html](http://localhost:5001/raster.html){:target="_blank"}
+!!! example
 
-![image info](../assets/images/raster-example.png)
+    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/raster.map&mode=map&layer=dtm>
+    - OpenLayers example: <http://localhost:5001/raster.html>
+
+![Map showing a raster image of elevation data overlain on an OpenStreetMap background](../assets/images/raster-example.png)
 
 ### Sample Dataset
 
@@ -50,7 +53,8 @@ There are a few points to note in this Mapfile.
 #### INCLUDEs
 
 We are making use of the [INCLUDE](https://mapserver.org/mapfile/include.html) 
-directive. This allows us to include additional files within our Mapfile. In this case `terrain.include` contains a list of CLASSes
+directive. This allows us to include additional files within our Mapfile. Any file extensions can be used, and paths are always relative to the main
+Mapfile. In this case `terrain.include` contains a list of CLASSes
 to style the raster data. These classes were generated using a Python script - by keeping them in a separate file we can easily recreate the file
 without modifying the rest of the Mapfile. INCLUDEs can also be used to help manage large Mapfiles, for example by keeping each LAYER in a separate file.
 This approach also makes it easier to share LAYERs between different Mapfiles.
@@ -58,7 +62,6 @@ This approach also makes it easier to share LAYERs between different Mapfiles.
 
 The `terrain.include` file shows how we can style raster data. There are classes that apply a different RGB colour to the data
 based on the `[pixel]` value for each cell:
-
 
 #### COMPOSITE
 

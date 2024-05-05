@@ -57,3 +57,6 @@ print(center)
 
 print("Done!")
 ```
+
+
+python -c 'import mapscript;r=mapscript.rectObj(2969285.329776241,8042942.076072633,2969726.049406544,8043158.9927656725);r.project(mapscript.projectionObj("epsg:3857"), mapscript.projectionObj("epsg:4326"));print(r.toString())'

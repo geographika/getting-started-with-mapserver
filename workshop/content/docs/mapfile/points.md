@@ -2,19 +2,42 @@
 
 Let's start with displaying the simplest spatial type - points.
 
+??? JavaScript
 
-We can make a direct request to MapServer by opening the following URL - 
-[http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois](http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois){:target="_blank"}
+    ``` js
+    --8<-- "points.js"
+    ```
 
-There is an example web page available at [http://localhost:5001/points.html](http://localhost:5001/points.html){:target="_blank"} which displays the
-MapServer layer on top of an OSM background using OpenLayers.
+??? Mapfile
+
+    ``` scala hl_lines="5-10"
+    --8<-- "points.map"
+    ```
+
+We can make a direct request to MapServer by opening the following URL
+
+!!! example
+
+    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
+
+> ![Map showing points of interest](../assets/images/points.png)
+
+http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois&MAPEXT=26.67354394649871+58.35819274893795+26.67750299829783+58.35921498162615
+
+https://mapserver.org/cgi/controls.html
+
+Rather than using the MapServer CGI approacg we can use the [WMS](https://mapserver.org/ogc/wms_server.html) protocol to display the MapServer layer on top of an OSM background using OpenLayers.
+
+!!! example
+
+    - OpenLayers example: <http://localhost:5001/points.html>
 
 ### Mapfile
 
 The Mapfile symbolises the points using different [SYMBOLs](https://mapserver.org/mapfile/symbol.html). A symbol can point to an image file
 on disk as in the example below:
 
-```
+```scala
 SYMBOL
     NAME "city-hall"
     TYPE SVG
@@ -37,7 +60,7 @@ cinema character from Google's [Material Symbols](https://fonts.google.com/icons
 We use HTML entity number of the symbol we want in the [CHARACTER](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-character) keyword.
 A list of these codes and their associated symbols can be seen at [http://localhost:5001/fonts.html](http://localhost:5001/fonts.html).
 
-```
+```scala
 FONTSET "data/fonts/fontset.txt"
 SYMBOL
     NAME "cinema"
