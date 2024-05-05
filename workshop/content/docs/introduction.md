@@ -6,6 +6,9 @@ title: Introduction to MapServer
 
 [An Introduction to MapServer](https://mapserver.org/introduction.html)
 
+## OpenLayers
+
+https://openlayers.org/workshop/en/
 
 ## Docker
 

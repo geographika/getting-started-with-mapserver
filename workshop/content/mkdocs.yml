@@ -11,16 +11,17 @@ nav:
     - Introduction:
         - intro/index.md
         - Exercise 1 - Your first dataset: intro/first.md
-    - Mapfile:
+    - Mapfiles:
         - Points: mapfile/points.md
         - Lines: mapfile/lines.md
         - Polygons: mapfile/polygons.md
         - SLD: mapfile/sld.md
-    - Raster Data:
-        - Introduction: raster/introduction.md
-    - Services:
-        - Exercise 1 - Tiles: services/tiles.md
-        - Exercise 2 - OGC Features API: services/ogcfeatures.md
+    - Inputs:
+        - Raster Data: inputs/raster.md
+    - Outputs:
+        - Tiles: outputs/tiles.md
+        - WFS: outputs/wfs.md
+        - OGC Features API: outputs/ogcfeatures.md  
     - Advanced:
         - MapScript: advanced/mapscript.md
     - Conclusion: conclusion.md
