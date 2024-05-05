@@ -1,4 +1,6 @@
-## WFS
+---
+title: Web Feature Services
+---
 
 ??? JavaScript
 
@@ -12,6 +14,11 @@
     --8<-- "wfs.map"
     ```
 
+See the [WFS Server](https://mapserver.org/ogc/wfs_server.html) documentation for more details.
+
+<div width="100%" class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/ogcfeatures.html"></iframe>
+</div>
 
 "wfs_getfeature_formatlist" "gml,geojson,json,customtext,application/json,shapezip,FileGDB,FlatGeoBuf"
 
