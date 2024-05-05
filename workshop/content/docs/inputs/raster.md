@@ -7,7 +7,9 @@ MapServer can serve both [vector](https://mapserver.org/input/vector/index.html)
     - MapServer request: <http://localhost:5000/?map=/etc/mapserver/raster.map&mode=map&layer=dtm>
     - OpenLayers example: <http://localhost:5001/raster.html>
 
-![Map showing a raster image of elevation data overlain on an OpenStreetMap background](../assets/images/raster-example.png)
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/raster.html"></iframe>
+</div>
 
 ### Sample Dataset
 

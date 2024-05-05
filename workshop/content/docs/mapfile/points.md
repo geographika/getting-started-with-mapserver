@@ -20,17 +20,16 @@ We can make a direct request to MapServer by opening the following URL
 
     - MapServer request: <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
 
-> ![Map showing points of interest](../assets/images/points.png)
-
-http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois&MAPEXT=26.67354394649871+58.35819274893795+26.67750299829783+58.35921498162615
+<http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois&MAPEXT=26.67354394649871+58.35819274893795+26.67750299829783+58.35921498162615>
 
 https://mapserver.org/cgi/controls.html
 
-Rather than using the MapServer CGI approacg we can use the [WMS](https://mapserver.org/ogc/wms_server.html) protocol to display the MapServer layer on top of an OSM background using OpenLayers.
+Rather than using the MapServer CGI approach we can use the [WMS](https://mapserver.org/ogc/wms_server.html) protocol to display the MapServer layer on top of an OSM background using OpenLayers.
 
-!!! example
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/points.html"></iframe>
+</div>
 
-    - OpenLayers example: <http://localhost:5001/points.html>
 
 ### Mapfile
 

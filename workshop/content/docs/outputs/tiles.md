@@ -1,6 +1,12 @@
 ---
-title: Exercise X - Tile Mode
+title: Tiles
 ---
+
+
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/tiles.html"></iframe>
+</div>
+
 
 See https://mapserver.org/output/tile_mode.html
 
@@ -30,9 +36,3 @@ http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetCapabilities&SERVIC
 http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetStyles&SERVICE=WMS&LAYERS=countries&VERSION=1.3.0&sld=http://node:5001/data/sld.xml
 
 
-
-## Vector Tiles
-
-MS RFC 119: Mapbox Vector Tile (MVT) Support https://mapserver.org/development/rfc/ms-rfc-119.html
-
-&map.imagetype=mvt

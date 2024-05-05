@@ -15,7 +15,7 @@ In this workshop we use the following materials:
 
 ## Text editor
 
-Your text editor needs to be able to edit configuration files in **plain text**. Below are some choices
+Your text editor needs to be able to edit files in **plain text**. Below are some choices
 for text editors (there may be others):
 
 * Notepad or Notepad++ (Windows)

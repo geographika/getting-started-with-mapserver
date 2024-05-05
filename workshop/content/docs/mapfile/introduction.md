@@ -1,21 +1,57 @@
+---
+title: Mapfile Introduction
+---
+
+!!! note
+
+    Ensure that you have MapServer setup and can navigate the default configuration and service running at <http://localhost:5000>.
+
+# Exercise 1 - Your first map
+
+- <http://localhost:5000/?map=/etc/mapserver/example1-1.map&layer=states&mode=map>
+- <http://localhost:5000/mapserver/?map=/etc/mapserver/example1-1.map&layer=states&mode=map>
 
 
-https://mapserver.org/mapfile/style.html
+## Verify the existing Docker Compose config
 
-https://mapserver.org/mapfile/symbol.html
+Before making any changes, we will make sure that the initial Docker Compose
+setup provided to you is actually working. Two files are relevant:
 
-https://mapserver.org/mapfile/symbology/construction.html
+* `workshop/exercises/docker-compose.yml`
 
-https://mapserver.org/mapfile/symbology/examples.html
+To test:
+
+!!! question "Test the workshop configuration"
+
+    1. In a terminal shell navigate to the workshop folder and type:
+
+    <div class="termy">
+    ```bash
+    cd workshop/exercises
+    docker-compose up
+    ```
+    </div>
+    1. Open <http://localhost:5000> in your browser, you should see an error message!
+    1. Close by typing `CTRL-C`
+
+!!! note
+
+    You may also run the Docker container in the background (detached) as follows:
+
+    <div class="termy">
+    ```bash
+    docker-compose up -d
+    docker ls  # verify that the pygeoapi container is running
+    # visit http://localhost:5000 in your browser, verify some collections
+    docker logs --follow pygeoapi  # view logs
+    docker-compose stop
+    ```
+    </div>
 
 
+Interacting with MapServer on the command-line:
 
-https://plugins.qgis.org/styles/
-
-C:\Program Files\QGIS 3.34.3\apps\qgis\svg\food
-
-https://wiki.osgeo.org/wiki/OSGeo_map_symbol_set
-
-https://github.com/gmgeo/osmic Osmic (OSM Icons)
-
-https://grasswiki.osgeo.org/wiki/IconSymbols
+```
+docker exec -it mapserver /bin/bash
+mapserv -v
+```

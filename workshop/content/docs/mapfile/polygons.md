@@ -3,6 +3,10 @@
 An example polygon layer can be seen at 
 [http://localhost:5000/?map=/etc/mapserver/polygons.map&mode=map&layer=buildings](http://localhost:5000/?map=/etc/mapserver/polygons.map&mode=map&layer=buildings)
 
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/polygons.html"></iframe>
+</div>
+
 !!! tip
 
     Note the layer name in `layer=buildings` is case-sensitive and had to exactly match the LAYER NAME.
