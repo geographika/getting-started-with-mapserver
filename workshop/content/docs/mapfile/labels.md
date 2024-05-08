@@ -1,6 +1,4 @@
----
-title: Labels
----
+# Labels
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/lakes.html"></iframe>

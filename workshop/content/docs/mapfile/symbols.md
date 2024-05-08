@@ -1,4 +1,4 @@
-## Vector Symbols
+# Vector Symbols
 
 !!! example
 

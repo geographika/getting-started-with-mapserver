@@ -1,78 +1,86 @@
 MAP
-  NAME "Points"
-  EXTENT 26.668678 58.339241 26.796582 58.409410
-  UNITS DD
-  SIZE 800 600
-
-  IMAGETYPE PNG24
-
-  PROJECTION
-    "init=epsg:4326"
-  END
-
- FONTSET "data/fonts/fontset.txt"
-
-  WEB
-    METADATA
-      ows_enable_request "*"
-      ows_srs "EPSG:4326 EPSG:3857"
+    NAME "Clusters"
+    EXTENT 26.668678 58.339241 26.796582 58.40941
+    UNITS DD
+    SIZE 800 600
+    PROJECTION
+        "init=epsg:4326"
     END
-  END
-
-SYMBOL
-  NAME "circle"
-  TYPE ellipse # Type of symbol
-  POINTS
-    1 1
-  END
-  FILLED true
-END
-
-  LAYER
-    NAME "trees"
-    STATUS OFF
-    TYPE POINT
-    # cluster does not seem to work with FLATGEOBUF
-    #CONNECTIONTYPE FLATGEOBUF
-    #DATA "data/osm/natural.fgb"
-
-    CONNECTIONTYPE OGR
-    CONNECTION "data/osm/natural.fgb"
-
-
-    CLUSTER
-      MAXDISTANCE 50
-      REGION "ellipse"
+    FONTSET "data/fonts/fontset.txt"
+    WEB
+        METADATA
+            "ows_enable_request" "*" 
+            "ows_srs" "EPSG:4326 EPSG:3857" 
+        END
     END
-
-    #PROCESSING "CLUSTER_ALGORITHM=SIMPLE"
-    #PROCESSING "CLUSTER_GET_ALL_SHAPES=OFF"
-    #PROCESSING "CLUSTER_KEEP_LOCATIONS=OFF"
-
-    #PROCESSING "ITEMS=fclass"
-
-    LABELITEM "Cluster_FeatureCount"
-    CLASSITEM "Cluster_FeatureCount"
-
-    CLASS
-      #EXPRESSION ("[Cluster_FeatureCount]" != "1")
-      STYLE
-        SIZE 30
-        SYMBOL "circle"
-        COLOR "#4A993A"
-      END
-      LABEL
-        FONT "LiberationSans"
-        # TEXT "hello"
-        TYPE TRUETYPE
-        SIZE 12
-        COLOR 255 255 255
-        ALIGN CENTER
-        PRIORITY 10
-        BUFFER 1
-        PARTIALS TRUE
-        POSITION cc
-      END
+    SYMBOL
+        NAME "circle"
+        TYPE ELLIPSE
+        POINTS
+            1 1
+        END
+        FILLED TRUE
     END
-  END
+    LAYER
+        NAME "trees"
+        STATUS OFF
+        TYPE POINT
+        CONNECTIONTYPE OGR 
+        # cluster does not seem to work with the native FLATGEOBUF driver
+        # CONNECTIONTYPE FLATGEOBUF
+        # DATA "data/osm/natural.fgb"
+
+        CONNECTION "data/osm/natural.fgb"
+        CLUSTER
+            MAXDISTANCE 20
+            REGION "ellipse"
+        END
+
+        # LABELITEM "Cluster_FeatureCount"
+
+        # PROCESSING "CLUSTER_ALGORITHM=SIMPLE"
+        # PROCESSING "CLUSTER_GET_ALL_SHAPES=OFF"
+        # PROCESSING "CLUSTER_KEEP_LOCATIONS=OFF"
+
+        CLASSITEM "Cluster_FeatureCount"
+
+        # class for clustered features
+        CLASS
+            EXPRESSION ("[Cluster_FeatureCount]" != "1")
+            STYLE
+                SIZE 30
+                # In MapServer 8.2 we can use an expression for SIZE
+                # SIZE ([Cluster_FeatureCount] / 3)
+                SYMBOL "circle"
+                COLOR "#4A993A"
+            END
+            LABEL
+                FONT "LiberationSans"
+                TEXT "[Cluster_FeatureCount]"
+                TYPE TRUETYPE
+                SIZE 12
+                COLOR 255 255 255
+                ALIGN CENTER
+                FORCE TRUE # otherwise numbers can disappear
+            END
+        END
+
+        # add a class for non-clustered features
+        CLASS
+            STYLE
+                SIZE 20
+                SYMBOL "circle"
+                COLOR "#4A993A"
+            END
+            LABEL
+                FONT "LiberationSans"
+                TEXT "1"
+                TYPE TRUETYPE
+                SIZE 10
+                COLOR 255 255 255
+                ALIGN CENTER
+            END
+        END
+
+    END
 END

@@ -1,7 +1,4 @@
----
-title: Styled Layer Descriptor
----
-
+# Styled Layer Descriptor
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/sld.html"></iframe>

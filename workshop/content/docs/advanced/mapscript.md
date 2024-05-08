@@ -1,4 +1,4 @@
-## MapScript
+# MapScript
 
 MapServer has its own scripting language - [MapScript](https://www.mapserver.org/mapscript/). This is available in several
 programming languages including Python, PHP, and Perl. They all share a common [MapScript API](https://www.mapserver.org/mapscript/mapscript-api/index.html).

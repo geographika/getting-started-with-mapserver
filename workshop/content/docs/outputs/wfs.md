@@ -1,16 +1,14 @@
----
-title: Web Feature Services
----
+# Web Feature Services
 
-??? JavaScript
+??? JavaScript "wfs.js"
 
-    ``` js
+    ```js
     --8<-- "wfs.js"
     ```
 
-??? Mapfile
+??? Mapfile "wfs.map"
 
-    ``` scala
+    ``` scala title="wfs.map"
     --8<-- "wfs.map"
     ```
 
@@ -33,3 +31,7 @@ mapserv -nh "QUERY_STRING=map=/etc/mapserver/wfs.map&service=WFS&version=2.0.0&r
 
 
 FILTER ([pop_max] > 1000000) # only return places with a population > 1 million
+
+## Exercises
+
+- Change metadata, and view the GetCapabilities document

@@ -1,4 +1,4 @@
-## Line Styling
+# Line Styling
 
 !!! example
 

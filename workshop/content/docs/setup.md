@@ -1,8 +1,4 @@
----
-title: Workshop environment setup
----
-
-# Workshop environment setup
+# Workshop Environment Setup
 
 In this workshop we use the following materials:
 

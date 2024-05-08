@@ -1,4 +1,4 @@
-## Point Styling
+# Point Styling
 
 Let's start with displaying the simplest spatial type - points.
 

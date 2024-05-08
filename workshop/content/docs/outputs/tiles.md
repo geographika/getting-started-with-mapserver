@@ -1,38 +1,52 @@
----
-title: Tiles
----
+# Tiles
 
+MapServer can serve out image tiles using [Tile Mode](https://mapserver.org/output/tile_mode.html). Tiles will always be in the
+Web Mercator (EPSG:3857) projection, and can easily be added to client JavaScript applications such as OpenLayers and Leaflet.
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/tiles.html"></iframe>
 </div>
 
+!!! example "Exercise Links"
 
-See https://mapserver.org/output/tile_mode.html
+    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/tiles.map&MODE=tile&TILE=0+0+0&LAYERS=countries&TILEMODE=gmap>
+    - OpenLayers example: <http://localhost:5001/tiles.html>
 
- get "mapserv(): Web application error. No way to generate map extent. "
+??? JavaScript "tiles.js"
 
- Make sure the order is X,Y,Z often Z is the first parameter for tile services!
+    ``` js
+    --8<-- "tiles.js"
+    ```
 
+??? Mapfile "tiles.map"
 
-http://localhost:5000/?map=/etc/mapserver/tiles.map&MODE=tile&TILE=0+0+0&LAYERS=countries&TILEMODE=gmap
+    ``` scala
+    --8<-- "tiles.map"
+    ```
 
+## Exercises
 
-http://localhost:5001/sld.html
+- Change the background colour of the `MAP` and tiles by modifying the `IMAGECOLOR "#ADD8E6"` setting. [#ADD8E6](https://www.color-hex.com/color/add8e6)
+  is "LightBlue".
+- Uncomment the `LABEL` block in the Mapfile to add labels to the tiles. You will notice that the country names are repeated several times, as they are shown
+  for each tile. Try setting the `tile_metatile_level` value to "1" and then "2". This will reduce label repetition, but take longer to render. 
+  See [tile mode configuration](https://mapserver.org/output/tile_mode.html#configuration) in the docs.
+  ```scala
+  METADATA
+      "tile_map_edge_buffer" "10"
+      "tile_metatile_level" "0"
+  END
+  ```
 
-Update SLD XML file (will need to refresh the browser)
+### Possible Errors
 
-http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
-
-```sld
-<Layer queryable="0" opaque="0" cascaded="0">
-<Name>countries</Name>
-<!--  WARNING: Mandatory metadata "wms_title" or "ows_title" was missing in this context.  -->
-<Title>countries</Title>
-<CRS>EPSG:4326</CRS>
+```
+"mapserv(): Web application error. No way to generate map extent. "
 ```
 
+**Resolution** ensure the parameter order in the JS client is in the format `&TILE={x}+{y}+{z}&LAYERS`. Other tile services
+often use the zoom level as the first parameter, for example `{z}/{x}/{y}`.
 
-http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetStyles&SERVICE=WMS&LAYERS=countries&VERSION=1.3.0&sld=http://node:5001/data/sld.xml
+
 
 

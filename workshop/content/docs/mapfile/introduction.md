@@ -1,6 +1,4 @@
----
-title: Mapfile Introduction
----
+# Mapfile Introduction
 
 !!! note
 

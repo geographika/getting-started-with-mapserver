@@ -1,7 +1,3 @@
----
-title: Introduction to MapServer
----
-
 # Introduction to MapServer
 
 [An Introduction to MapServer](https://mapserver.org/introduction.html)

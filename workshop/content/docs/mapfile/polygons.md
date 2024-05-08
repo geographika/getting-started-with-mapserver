@@ -7,6 +7,20 @@ An example polygon layer can be seen at
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/polygons.html"></iframe>
 </div>
 
+
+??? JavaScript "polygons.js"
+
+    ```js
+    --8<-- "polygons.js"
+    ```
+
+??? Mapfile "polygons.map"
+
+    ``` scala title="polygons.map"
+    --8<-- "polygons.map"
+    ```
+
+
 !!! tip
 
     Note the layer name in `layer=buildings` is case-sensitive and had to exactly match the LAYER NAME.

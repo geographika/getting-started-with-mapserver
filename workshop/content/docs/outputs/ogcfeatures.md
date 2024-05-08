@@ -1,4 +1,4 @@
-## OGC Features API
+# OGC Features API
 
 https://mapserver.org/ogc/ogc_api.html
 

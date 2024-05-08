@@ -1,4 +1,4 @@
-## Raster Data
+# Raster Data
 
 MapServer can serve both [vector](https://mapserver.org/input/vector/index.html) and [raster](https://mapserver.org/input/raster.html) data.
 

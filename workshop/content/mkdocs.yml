@@ -17,6 +17,7 @@ nav:
         - Labels: mapfile/labels.md
     - Inputs:
         - Raster Data: inputs/raster.md
+        - Vector Data: inputs/vector.md
         - Databases: inputs/databases.md
     - Outputs:
         - WMS: outputs/wms.md
