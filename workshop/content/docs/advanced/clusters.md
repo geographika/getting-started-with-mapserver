@@ -32,17 +32,17 @@ In our example points representing trees are clustered together, with the number
   in the `CLASS` then it will be applied to all features. A feature is checked against each `CLASS` until a match is found,
   from first to last. If you want to add a "catch-all" `CLASS` then add it last in the Mapfile without an `EXPRESSION`.
 
-```scala
-# class for clustered features
-CLASS
-    EXPRESSION ("[Cluster_FeatureCount]" != "1")
-    ...
-END
-
-# add a class for non-clustered features
-CLASS
-    ...
-```
+  ```scala
+  # class for clustered features
+  CLASS
+      EXPRESSION ("[Cluster_FeatureCount]" != "1")
+      ...
+  END
+  
+  # add a class for non-clustered features
+  CLASS
+      ...
+  ```
 
 ## Exercises
 

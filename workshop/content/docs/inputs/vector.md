@@ -7,6 +7,10 @@ We've already seen several examples of serving vector data using a Mapfile. MapS
 Native support means the code to read the data is a part of the MapServer codebase, which can make it more optimised. The OGR drivers however
 may be better maintained. For formats which have both native and OGR support, for example Shapefiles and FlatGeobuf it is not always a clear decision which to use.
 
+More information can be found on the [Vector Data Management & Optimization](https://mapserver.org/fr/optimization/vector.html) page in the
+MapServer documentation.
+
+
 
 Already covered access
 

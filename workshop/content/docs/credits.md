@@ -12,3 +12,4 @@ Thanks to the following for helping this workshop to be created:
   for the current [MapServer Tutorial](https://mapserver.org/tutorial/index.html)
 - [Stéphane Brunner](https://github.com/sbrunner) from [Camptocamp](https://www.camptocamp.com/)
   for maintaining the [MapServer Docker images](https://github.com/camptocamp/docker-mapserver) used in this workshop.
+- [Kartoza](https://kartoza.com/) for maintaining the [PostGIS Docker images](https://hub.docker.com/r/kartoza/postgis/)

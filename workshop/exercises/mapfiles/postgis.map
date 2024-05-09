@@ -1,0 +1,37 @@
+MAP
+  NAME "PostGIS"
+  EXTENT 26.668678 58.339241 26.796582 58.409410
+  UNITS DD
+  SIZE 800 600
+
+  PROJECTION
+    "init=epsg:4326"
+  END
+
+  WEB
+    METADATA
+      ows_title "OSM Water"
+      ows_enable_request "*"
+      ows_srs "EPSG:4326 EPSG:3857"
+    END
+  END
+
+  LAYER
+    NAME "water"
+    STATUS OFF
+    TYPE POLYGON
+    CONNECTIONTYPE POSTGIS
+    CONNECTION "host=db user=docker password=docker port=5432 dbname=gis"
+    DATA "wkb_geometry FROM water_a USING UNIQUE ogc_fid USING srid=4326"
+
+    PROCESSING "CLOSE_CONNECTION=DEFER" # for maximum performance
+    CLASS
+      GROUP "default"
+      STYLE
+        COLOR "#d4f1f9"
+        OUTLINECOLOR "#918151"
+      END
+    END
+  END
+
+END
