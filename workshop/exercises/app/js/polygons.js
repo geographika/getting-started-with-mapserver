@@ -16,7 +16,7 @@ const layers = [
         extent: [2968743.65508978, 8038921.67212233, 2982981.8632402, 8053818.05714347],
         source: new ImageWMS({
             url: mapserverUrl + mapfilesPath + 'polygons.map&',
-            params: { 'LAYERS': 'buildings', 'STYLES': 'type' },
+            params: { 'LAYERS': 'buildings', 'STYLES': 'offices' },
             ratio: 1
         }),
     }),

@@ -53,3 +53,8 @@ Interacting with MapServer on the command-line:
 docker exec -it mapserver /bin/bash
 mapserv -v
 ```
+
+## JavaScript
+
+Map name to show all layers
+Or define individually

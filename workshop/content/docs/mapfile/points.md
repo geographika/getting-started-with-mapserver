@@ -1,37 +1,12 @@
 # Point Styling
 
+## Overview
+
 Let's start with displaying the simplest spatial type - points.
 
-??? JavaScript
-
-    ``` js
-    --8<-- "points.js"
-    ```
-
-??? Mapfile
-
-    ``` scala hl_lines="5-10"
-    --8<-- "points.map"
-    ```
-
-We can make a direct request to MapServer by opening the following URL
-
-!!! example
-
-    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
-
-<http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois&MAPEXT=26.67354394649871+58.35819274893795+26.67750299829783+58.35921498162615>
-
-https://mapserver.org/cgi/controls.html
-
-Rather than using the MapServer CGI approach we can use the [WMS](https://mapserver.org/ogc/wms_server.html) protocol to display the MapServer layer on top of an OSM background using OpenLayers.
-
-<div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/points.html"></iframe>
-</div>
 
 
-### Mapfile
+There are several different [TYPE](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type)s of symbol available in MapServer.
 
 The Mapfile symbolises the points using different [SYMBOLs](https://mapserver.org/mapfile/symbol.html). A symbol can point to an image file
 on disk as in the example below:
@@ -70,7 +45,36 @@ END
 ```
 
 
-### Possible Errors
+
+## Code
+
+!!! example
+
+    - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
+    - Local OpenLayers example: <http://localhost:5001/points.html>
+
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/points.html"></iframe>
+</div>
+
+??? JavaScript
+
+    ``` js
+    --8<-- "points.js"
+    ```
+
+??? Mapfile
+
+    ``` scala hl_lines="5-10"
+    --8<-- "points.map"
+    ```
+
+## Exercises
+
+
+
+
+#### Possible Errors
 
 If SVG symbols are not appearing, ensure they have a width and height set. You can view the contents of an SVG file in a text editor.
 
@@ -81,13 +85,3 @@ If SVG symbols are not appearing, ensure they have a width and height set. You c
 ```
 
 
-
-'hotel', 'greengrocer', 'butcher', 'travel_agent', 'fast_food', 'university', 'caravan_site', 'camera_surveillance', 'vending_machine', 'recycling_clothes', 
-'tower', 'drinking_water', 'fire_station', 'playground', 'mobile_phone_shop', 'hostel', 'beauty_shop', 'jeweller', 'tourist_info', 'stationery', 'sports_shop',
-'doityourself', 'gift_shop', 'car_wash', 'viewpoint', 'bookshop', 'dentist', 'convenience', 'hairdresser', 'supermarket', 'fountain', 'bank', 
-'community_centre', 'museum', 'laundry', 'optician', 'doctors', 'recycling_paper', 'furniture_shop', 'hunting_stand', 'veterinary', 'toy_shop', 
-'general', 'mall', 'computer_shop', 'post_office', 'bicycle_rental', 'post_box', 'market_place', 'cafe', 'sports_centre', 'bench', 'shelter', 
-'shoe_shop', 'nightclub', 'artwork', 'car_dealership', 'pharmacy', 'recycling', 'guesthouse', 'theme_park', 'bakery', 'beverages', 'bicycle_shop', 
-'recycling_glass', 'school', 'bar', 'kindergarten', 'theatre', 'memorial', 'waste_basket', 'clothes', 'chemist', 'newsagent', 'courthouse', 
-'monument', 'pub', 'embassy', 'pitch', 'comms_tower', 'clinic', 'car_rental', 'atm', 'library', 'cinema', 'restaurant', 'toilet', 'vending_any', 
-'attraction', 'kiosk', 'vending_parking', 'florist'

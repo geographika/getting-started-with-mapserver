@@ -16,11 +16,11 @@ MAP
     END
     SYMBOL
         NAME "circle"
-        TYPE ELLIPSE # Type of symbol
+        TYPE ELLIPSE
+        FILLED TRUE
         POINTS
             1 1
         END
-        FILLED TRUE
     END
     SYMBOL
         NAME "city-hall"

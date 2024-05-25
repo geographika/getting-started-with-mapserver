@@ -7,15 +7,23 @@ MAP
         "init=epsg:4326"
     END
     SYMBOL
-        NAME "vertline"
+        NAME "vertline" # we can use this to reference the SYMBOL in STYLEs
         TYPE VECTOR
-        FILLED TRUE
+        FILLED FALSE # the symbol will be treated as a LINE
         POINTS
             0 0
             0 10
-            1 10
-            1 0
+        END
+    END
+    SYMBOL
+        NAME "square"
+        TYPE VECTOR
+        FILLED TRUE # the symbol will be treated as a POLYGON
+        POINTS
             0 0
+            0 10
+            10 10
+            10 0
         END
     END
     WEB
@@ -25,7 +33,7 @@ MAP
         END
     END
     LAYER
-        NAME "railways"
+        NAME "tracks"
         STATUS OFF
         TYPE LINE
         CONNECTIONTYPE FLATGEOBUF
@@ -36,7 +44,6 @@ MAP
                 COLOR 102 102 102
                 WIDTH 4.0
             END
-            # STYLE
             STYLE
                 COLOR 255 255 255
                 WIDTH 2.0
@@ -61,8 +68,33 @@ MAP
             STYLE
                 COLOR 102 102 102
                 SYMBOL "vertline"
+                WIDTH 0.4
                 GAP -50
             END
+        END
+    END
+
+    LAYER
+        NAME "stops"
+        STATUS OFF
+        TYPE POINT
+        CONNECTIONTYPE FLATGEOBUF
+        DATA "data/osm/transport.fgb"
+        CLASSITEM "fclass"
+        CLASS
+            EXPRESSION {railway_station,railway_halt}
+            STYLE
+                SYMBOL "square"
+                SIZE 16
+                COLOR 102 102 102
+            END
+            LABEL
+                TEXT "[name]"
+                POSITION ur
+                COLOR 102 102 102
+                SIZE 18
+            END
+        END
         END
     END
 END

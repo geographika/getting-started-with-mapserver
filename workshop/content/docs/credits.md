@@ -6,7 +6,7 @@ title: Credits
 
 Thanks to the following for helping this workshop to be created:
 
-- The [pygeoapi](https://pygeoapi.io/) team - the technology and approach behind the workshop has been based on the excellent
+- The [pygeoapi](https://pygeoapi.io/) team - this workshop is based on the technology and approach used in the excellent
   [Diving into pygeoapi workshop](https://dive.pygeoapi.io/).
 - Pericles S. Nacionales and [Jeff McKenna](https://github.com/jmckenna)
   for the current [MapServer Tutorial](https://mapserver.org/tutorial/index.html)

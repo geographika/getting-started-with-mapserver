@@ -12,7 +12,7 @@ nav:
         - Introduction: mapfile/introduction.md
         - Points: mapfile/points.md
         - Lines: mapfile/lines.md
-        - Symbols: mapfile/symbols.md
+        - Vector Symbols: mapfile/symbols.md
         - Polygons: mapfile/polygons.md
         - Labels: mapfile/labels.md
     - Inputs:

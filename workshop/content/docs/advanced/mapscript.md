@@ -60,3 +60,9 @@ print("Done!")
 
 
 python -c 'import mapscript;r=mapscript.rectObj(2969285.329776241,8042942.076072633,2969726.049406544,8043158.9927656725);r.project(mapscript.projectionObj("epsg:3857"), mapscript.projectionObj("epsg:4326"));print(r.toString())'
+
+
+
+python -c "import mapscript;r=mapscript.pointObj(-8.6556,54.7397);r.project(mapscript.projectionObj('epsg:4326'), mapscript.projectionObj('epsg:2157'));print(r.toString())"
+python -c "import mapscript;r=mapscript.pointObj(-7.7432,55.2053);r.project(mapscript.projectionObj('epsg:4326'), mapscript.projectionObj('epsg:2157'));print(r.toString())"
+55.2053/-7.7432

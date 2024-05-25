@@ -88,7 +88,7 @@ END
 ```
 
 
-#### Excercises
+#### Exercises
 
 - Try different settings for layer `OPACITY` to see its effect on the output.
 - Change the `COLOR` of the first `CLASS` in `terrain.include` to highlight which pixels have values in this range.

@@ -1,0 +1,52 @@
+MAP
+  NAME "WCS"
+  EXTENT 26.668678 58.339241 26.796582 58.409410
+  UNITS DD
+  SIZE 800 600
+  MAXSIZE 5000
+  PROJECTION
+    "init=epsg:4326"
+  END
+
+OUTPUTFORMAT
+    NAME GEOTIFF_BYTE
+    DRIVER "GDAL/GTiff"
+    MIMETYPE "image/tiff"
+    IMAGEMODE BYTE
+    EXTENSION "tif"
+END
+
+  WEB
+    METADATA
+      ows_enable_request "*"
+      ows_srs "EPSG:4326 EPSG:3857"
+
+   "wcs_label"    "Test Label"
+   "wcs_description" "Test description"
+   "wcs_onlineresource"    "http://devgeo.cciw.ca/cgi-bin/mapserv/ecows"
+   "wcs_metadatalink_href" "http://devgeo.cciw.ca/index.html"
+
+    END
+  END
+
+  LAYER
+    NAME "dtm"
+    EXTENT 655000 6470000 660000 6475000
+    STATUS OFF
+    TYPE RASTER
+    # Map data: Estonian Land Board 2024
+    DATA "data/raster/54752_dtm_1m.tif"
+    PROJECTION
+        "epsg:3301"
+    END
+    METADATA
+       "wcs_rangeset_axes" "bands"
+       "wcs_rangeset_name" "Landsat 5 TM Bands"
+       "wcs_rangeset_label" "Bands"
+       "wcs_rangeset_description" "Bands for Landsat 5 TM"
+       "wcs_rangeset_nullvalue" "-99"
+       "wcs_imagemode" "BYTE"
+    END
+  END
+
+END
