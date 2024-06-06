@@ -29,3 +29,9 @@ https://mapserver.org/cgi/controls.html
 
 Rather than using the MapServer CGI approach we can use the [WMS](https://mapserver.org/ogc/wms_server.html) protocol to display the MapServer layer on 
 top of an OSM background using OpenLayers.
+
+
+## Workshop Outline
+
+
+- 0-15 minutes - Introduction, Docker setup and tests
