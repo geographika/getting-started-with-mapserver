@@ -102,4 +102,5 @@ and navigate to <http://localhost:5000/>. You should see the following message:
 loadParams(): Web application error. No query information to decode. QUERY_STRING is set, but empty.
 ```
 
-This is good! It means MapServer is running, and we're ready to start the workshop.
+This is good! It means MapServer is running. Next we can check that the front-end container is running by opening <http://localhost:5001/points.html>.
+Hopefully you'll see a map, and we're ready to start the workshop.
