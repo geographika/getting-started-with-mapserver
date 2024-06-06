@@ -51,7 +51,8 @@ services:
       - ./app:/home/node/app
     networks:
       - mynetwork
-    command: "npm start"
+    command: >
+      sh -c "npm install && npm start"
 
 networks:
   mynetwork:
