@@ -12,7 +12,7 @@ Are you a workshop participant or want to dive-in individually?  Go to
 [https://geographika.github.io/getting-started-with-mapserver](https://geographika.github.io/getting-started-with-mapserver) 
 to follow the lessons and exercises.
 
-The demo execises are also available online at
+The demo exercises are also available online at
 [https://geographika.github.io/getting-started-with-mapserver-demo/](https://geographika.github.io/getting-started-with-mapserver-demo/).
 
 ## For authors

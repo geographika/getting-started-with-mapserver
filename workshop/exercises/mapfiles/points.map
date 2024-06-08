@@ -1,9 +1,9 @@
+# Comment can be added using a hash (#) at the start of a line
+# All Mapfiles begin with a MAP block, and finish with a closing END
 MAP
     NAME "Points"
     EXTENT 26.668678 58.339241 26.796582 58.40941
-    UNITS DD
     SIZE 800 600
-    IMAGETYPE "PNG24"
     PROJECTION
         "init=epsg:4326"
     END
@@ -23,17 +23,6 @@ MAP
         END
     END
     SYMBOL
-        NAME "city-hall"
-        TYPE SVG
-        IMAGE "data/icons/city-hall.svg"
-    END
-    SYMBOL
-        NAME "arrow"
-        TYPE TRUETYPE
-        FONT "MaterialIcons"
-        CHARACTER "&#58703;"
-    END
-    SYMBOL
         NAME "cinema"
         TYPE TRUETYPE
         FONT "MaterialIcons"
@@ -51,16 +40,23 @@ MAP
         FONT "MaterialIcons"
         CHARACTER "&#59922;"
     END
+    # A MAP can have one or more layers, configured
+    # using LAYER blocks
     LAYER
         NAME "pois"
         STATUS ON
-        TYPE POINT
+        TYPE POINT # each LAYER must have a TYPE such as POINT, LINE, or POLYGON
         CONNECTIONTYPE FLATGEOBUF
         DATA "data/osm/pois.fgb"
         CLASSITEM "fclass"
+        # data within a LAYER is classified using one or more CLASSes
+        # these use EXPRESSIONs to define which features are assigned to
+        # which CLASS
         CLASS
             NAME "cinema"
             EXPRESSION "cinema"
+            # we can now STYLE the data in the CLASS using
+            # one or more STYLE blocks
             STYLE
                 SYMBOL "cinema"
                 SIZE 16
@@ -85,5 +81,16 @@ MAP
                 COLOR 0 0 0
             END
         END
-    END
-END
+        CLASS
+            NAME "poi"
+            # when there is no expression any features
+            # that don't match a previous class will be displayed
+            # using this style
+            STYLE
+                SYMBOL "circle"
+                SIZE 16
+                COLOR 0 0 0
+            END
+        END # CLASS ends here
+    END # LAYER ends here
+END # MAP ends here

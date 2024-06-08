@@ -1,10 +1,10 @@
-# Point Styling
+# A First Point Map
 
 ## Overview
 
 Let's start with displaying the simplest spatial type - points.
 
-
+TODO Add diagrams of the MAP and LAYER classes
 
 There are several different [TYPE](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type)s of symbol available in MapServer.
 

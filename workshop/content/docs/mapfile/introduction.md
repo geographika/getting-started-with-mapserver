@@ -2,13 +2,11 @@
 
 !!! note
 
-    Ensure that you have MapServer setup and can navigate the default configuration and service running at <http://localhost:5000>.
+    Ensure that you have MapServer setup and running at <http://localhost:5000>.
 
-# Exercise 1 - Your first map
+# Displaying your First Map
 
-- <http://localhost:5000/?map=/etc/mapserver/example1-1.map&layer=states&mode=map>
-- <http://localhost:5000/mapserver/?map=/etc/mapserver/example1-1.map&layer=states&mode=map>
-
+- <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
 
 ## Verify the existing Docker Compose config
 
