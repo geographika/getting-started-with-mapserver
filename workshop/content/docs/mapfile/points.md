@@ -4,7 +4,7 @@
 
 Let's start with displaying the simplest spatial type - points.
 
-TODO Add diagrams of the MAP and LAYER classes
+![Mapfile classes used in the Points map](../assets/images/point-map-classes.png "Mapfile Classes")
 
 There are several different [TYPE](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type)s of symbol available in MapServer.
 

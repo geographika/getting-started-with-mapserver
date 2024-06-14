@@ -1,5 +1,5 @@
 MAP
-    NAME "countries"
+    NAME "mymap"
 
     # the default size used for image output
     SIZE 800 400
