@@ -8,6 +8,8 @@ nav:
     - Home: index.md
     - Introduction: introduction.md
     - Workshop Environment Setup: setup.md
+    - Introduction:
+        - Command Line: introduction/commandline.md
     - Mapfile:
         - Introduction: mapfile/introduction.md
         - Points: mapfile/points.md

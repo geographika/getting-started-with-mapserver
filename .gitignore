@@ -1,3 +1,4 @@
 workshop/content/site
 .vs/
 # /notes.txt
+workshop/exercises/postgis-data

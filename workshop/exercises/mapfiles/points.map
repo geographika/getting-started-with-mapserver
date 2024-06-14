@@ -10,8 +10,9 @@ MAP
     FONTSET "data/fonts/fontset.txt"
     WEB
         METADATA
-            "ows_enable_request" "*" 
-            "ows_srs" "EPSG:4326 EPSG:3857" 
+            "wms_enable_request" "*"
+            "wms_srs" "EPSG:4326 EPSG:3857"
+            "wms_onlineresource" "http://localhost:5000/?map=/etc/mapserver/points.map&"
         END
     END
     SYMBOL
