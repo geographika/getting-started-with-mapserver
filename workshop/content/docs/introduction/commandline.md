@@ -39,7 +39,7 @@ mapserv -nh "QUERY_STRING=map=/etc/mapserver/countries.map&mode=map" > /etc/maps
 
 `test.png` should now be on your local disk at `getting-started-with-mapserver/workshop/exercises/mapfiles`.
 
-![Test output generated at the command line](../assets/images/command-line-test.png "Test Output")
+![Test output generated at the command line](../assets/images/command-line-test.png)
 
 !!! tip
 

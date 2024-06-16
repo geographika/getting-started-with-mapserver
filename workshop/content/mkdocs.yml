@@ -10,6 +10,7 @@ nav:
     - Workshop Environment Setup: setup.md
     - Introduction:
         - Introduction: introduction/introduction.md
+        - MapServer: introduction/mapserver.md
         - Command Line: introduction/commandline.md
         - OpenLayers: introduction/openlayers.md
     - Mapfile:

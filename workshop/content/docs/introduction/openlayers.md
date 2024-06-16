@@ -1,6 +1,6 @@
 # OpenLayers
 
-TODO Add OL logo
+![OpenLayers logo](../assets/images/OpenLayers_logo.png "OpenLayers logo")
 
 MapServer runs on a server, and publishes data using web services. Whilst it is possible
 to view these outputs on the command line, or in a browser by creating URLs, data from MapServer
