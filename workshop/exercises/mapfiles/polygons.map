@@ -23,17 +23,17 @@ MAP
         CONNECTION "data/osm/buildings_a.fgb"
         CLASSGROUP "offices" # we can switch the default set of CLASSes here
         CLASS
-            GROUP "default"
-            STYLE
-                COLOR 246 241 223
-                OUTLINECOLOR 0 0 0
-            END
-        END
-        CLASS
             GROUP "offices"
             EXPRESSION ( "[type]" = "office" )
             STYLE
                 COLOR 255 0 0
+                OUTLINECOLOR 0 0 0
+            END
+        END
+        CLASS
+            GROUP "default"
+            STYLE
+                COLOR 246 241 223
                 OUTLINECOLOR 0 0 0
             END
         END

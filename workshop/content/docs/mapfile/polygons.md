@@ -2,7 +2,7 @@
 
 ## Overview
 
-This exercise displays buildings from OpenStreetMap. This is a polygon dataset, so we set our `LAYER TYPE` to `POLYGON`:
+This exercise displays building from OpenStreetMap. This is a polygon dataset, so we set our `LAYER TYPE` to `POLYGON`:
 
 ```scala
 LAYER
@@ -26,7 +26,9 @@ END
 In this Mapfile we have two different classes for the dataset. 
 
 
-In the second class we have an [EXPRESSION](https://mapserver.org/mapfile/expressions.htm) that limits which features will be drawn:
+In the second class we have an [EXPRESSION](https://mapserver.org/mapfile/expressions.htm) that limits 
+which features will be drawn. This compares the value for the "type" field for each feature with "office".
+If there is a match then the feature is drawn with the `STYLE`s from the `CLASS`.
 
 ```scala
 CLASS
@@ -44,7 +46,21 @@ CLASS
 
 !!! tip
 
-    Note the layer name in `layer=buildings` is case-sensitive and had to exactly match the LAYER NAME.
+    A LAYER has a [CONNECTIONTYPE](https://mapserver.org/mapfile/layer.html#mapfile-layer-connectiontype)
+    that is used to connect to different data sources. The connection types are "native" -
+    when the reading of the data is handled by MapServer code. The OGR connection type uses GDAL/OGR
+    to read data sources. For some data types, as in the flatgeobuf example used here, there is an option
+    to use either a native connection or an OGR connection.
+
+    There is also a PLUGIN connection type to allow connections to MS SQL Server and Oracle databases.
+
+
+    ```scala
+    CONNECTIONTYPE OGR
+    # CONNECTIONTYPE FLATGEOBUF
+    # DATA "data/osm/buildings_a.fgb"
+    CONNECTION "data/osm/buildings_a.fgb"
+    ```
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/polygons.html"></iframe>
@@ -62,8 +78,6 @@ CLASS
     ``` scala title="polygons.map"
     --8<-- "polygons.map"
     ```
-
-Add section on EXPRESSIONS. Link to docs.
 
 ## Exercises
 
@@ -84,3 +98,8 @@ source: new ImageWMS({
     url: mapserverUrl + mapfilesPath + 'polygons.map&',
     params: { 'LAYERS': 'buildings', 'STYLES': 'offices' },
 ```
+
+- Switch the `CONNECTIONTYPE` to use the native `FLATGEOBUF` driver.
+
+- Experiment with styling the polygons. `WIDTH` can be used to change the width of the polygon
+  outline.

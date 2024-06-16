@@ -5,6 +5,11 @@
     - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/lines.map&mode=map&layer=roads>
     - Local OpenLayers example: <http://localhost:5001/lines.html>
 
+!!! tip
+
+    Note the layer name in `layer=roads` is case-sensitive and had to match the LAYER NAME in the Mapfile
+    exactly.
+
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/lines.html"></iframe>
 </div>

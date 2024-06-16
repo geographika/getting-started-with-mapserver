@@ -9,14 +9,15 @@ nav:
     - Introduction: introduction.md
     - Workshop Environment Setup: setup.md
     - Introduction:
+        - Introduction: introduction/introduction.md
         - Command Line: introduction/commandline.md
+        - OpenLayers: introduction/openlayers.md
     - Mapfile:
-        - Introduction: mapfile/introduction.md
         - Points: mapfile/points.md
         - Lines: mapfile/lines.md
         - Vector Symbols: mapfile/symbols.md
-        - Polygons: mapfile/polygons.md
         - Labels: mapfile/labels.md
+        - Polygons: mapfile/polygons.md
     - Inputs:
         - Raster Data: inputs/raster.md
         - Vector Data: inputs/vector.md
