@@ -8,7 +8,7 @@ In this workshop we use the following materials:
 
 The first step is to download and unzip the `main.zip` file to a local folder on your system. 
 Alternatively, if you are familiar with `git` and have it installed you can fork/clone the GitHub repository of this 
-workshop directly from https://github.com/geographika/getting-started-with-mapserver/.
+workshop directly from <https://github.com/geographika/getting-started-with-mapserver/>.
 
 ## Text editor
 
