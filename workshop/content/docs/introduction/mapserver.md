@@ -1,7 +1,8 @@
 # MapServer
 
-<script type='text/javascript' src='https://openhub.net/p/MapServer/widgets/project_factoids_stats?format=js'></script>
+![MapServer overview diagram](../assets/images/mapserver-overview.png)
 
+<script type='text/javascript' src='https://openhub.net/p/MapServer/widgets/project_factoids_stats?format=js'></script>
 
 ## How MapServer Works
 
