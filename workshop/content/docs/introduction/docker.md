@@ -1,6 +1,9 @@
 ## Docker
 
-We will be using MapServer on a Docker image
+For the workshop We will be using MapServer on a Docker image. This ensures
+that the MapServer version and the Apache web server configuration are identical.
+
+
 https://github.com/camptocamp/docker-mapserver
 
 

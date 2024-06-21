@@ -1,6 +1,6 @@
 # Introduction
 
-Overview of documentation: https://mapserver.org/documentation.html
+
 
 ## Verify the existing Docker Compose config
 

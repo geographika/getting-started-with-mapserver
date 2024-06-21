@@ -62,6 +62,7 @@ Some installation notes for different operating systems:
 
 
 * If you get "WSL update failed" you may need to manually run `wsl --update`
+* Admin access is likely required to install Docker. You may then need to add your local account to the docker-users group as [explained here](https://stackoverflow.com/questions/58663920/), and restart your machine. 
 
 ### Mac
 
@@ -75,7 +76,7 @@ Some installation notes for different operating systems:
 * Docker Desktop includes a graphical user interface with some interesting options. You can see logs and information about running containers, open their service in a browser or even open a terminal inside the container
 
 
-### Testing the installation
+### Testing the Docker installation
 
 If all goes well, you should be able to run Docker from the command line as follows:
 

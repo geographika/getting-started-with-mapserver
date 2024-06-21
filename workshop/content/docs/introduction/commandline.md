@@ -1,11 +1,11 @@
 # MapServer on the Command Line
 
-We can interact with MapServer on the Docker container using the command line. From within your system shell run the following commands:
+You can interact with MapServer on the Docker container using the command line. Run the following commands from your system shell:
 
 ```bash
-# first we connect to the Docker container, and open a bash shell
+# first connect to the Docker container, and open a bash shell
 docker exec -it mapserver /bin/bash
-# now check we can show the MapServer version
+# now show the MapServer version
 mapserv -v
 ```
 
@@ -27,10 +27,10 @@ To test a URL such as <http://localhost:5000/?map=/etc/mapserver/countries.map&m
 mapserv "QUERY_STRING=map=/etc/mapserver/countries.map&mode=map"
 ```
 
-This will output a PNG image to the command line - which will look a mess!
+This will output a PNG image to the command line - this will look like gargabe!
 
-We can save this output by redirecting it to a file using `>`. 
-As the `mapserv` program returns responses for a web server it also returns HTTP headers. To create a valid image file we need to strip these
+We can save the output by redirecting it to a file using `>`. 
+As the `mapserv` program returns responses for a web client it also returns HTTP headers. To create a valid image file we need to strip these
 header by using the `-nh` (no headers) switch.
 
 ```bash
@@ -45,7 +45,7 @@ mapserv -nh "QUERY_STRING=map=/etc/mapserver/countries.map&mode=map" > /etc/maps
 
     The `docker-compose.yml` file maps local folders to folders on the Docker container. Files created in the Docker
     container will be visible on your local disk, and files on your local disk will be visible in the container.
-    This is set in in the `volumes` section, using the syntax ` - LOCALFOLDER:CONTAINER_FOLDER`
+    This is set in in the `volumes` section, using the syntax ` - LOCAL_FOLDER:CONTAINER_FOLDER`
 
     ```yaml
     volumes:
@@ -53,19 +53,15 @@ mapserv -nh "QUERY_STRING=map=/etc/mapserver/countries.map&mode=map" > /etc/maps
       - ./mapfiles:/etc/mapserver
     ```
 
-We can see all options using the `--help` switch:
+We can see all command options using the `--help` switch:
 
 ```bash
-# we can see all options using --help
 mapserver --help
 ```
 
-All MapServer outputs can be run on the command line, not just images. For example to see a WMS GetCapabilities XML response you can run the following:
+All MapServer output can be returned on the command line, not just images. For example, to see a WMS GetCapabilities XML response, run the following command:
 
 ```bash
 mapserv -nh "QUERY_STRING=map=/etc/mapserver/points.map&SERVICE=WMS&REQUEST=GetCapabilities"
 ```
 
-Before services such as WMS and WFS were added to MapServer, interaction was done using custom keywords, listed on the
-[MapServer CGI Controls](https://mapserver.org/cgi/controls.html) page. These are still available for use in MapServer, but the focus of this workshop
-will be on OGC services.
