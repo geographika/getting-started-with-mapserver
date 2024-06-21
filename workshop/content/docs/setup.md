@@ -48,19 +48,39 @@ For many platforms a product called `Docker Desktop` is available, which include
 * Mac [installation](https://docs.Docker.com/desktop/install/mac-install)
 * Linux [installation](https://docs.Docker.com/desktop/install/linux-install)
 
-Some notes:
+Some installation notes for different operating systems:
 
-* On Windows we recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker
-* On Windows if you get "WSL update failed" you may need to first run `wsl --update`
-* On Mac, if you are using [Homebrew](https://brew.sh), consider using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
+### Windows
+
+* We recommend using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl) (WSL) as it also provides a powerful (Bash) command line and has optimal integration with Docker. You can choose this option when installing Docker:
+
+  ![Docker WSL Option](./assets/images/docker-wsl.png)
+
+  When you first run Docker you can then update to the latest WSL version:
+
+  ![Docker WSL Option](./assets/images/docker-wsl-update.png)
+
+
+* If you get "WSL update failed" you may need to manually run `wsl --update`
+
+### Mac
+
+* If you are using [Homebrew](https://brew.sh), consider using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
 * On MacOS Monterey, there is an issue with the port 5000 that is already used and therefore conflicting to the default one used by MapServer. 
   If you are facing with this error `OSError: [Errno 48] Address already in use` then you need to can disable the *Airplay Receiver* from `System Preference->Sharing` of your MacOS (detailed description in this blog [post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/)).
-* On Linux, you can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu image or use a cloud VM
+
+### Linux
+
+* You can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu image or use a cloud VM
 * Docker Desktop includes a graphical user interface with some interesting options. You can see logs and information about running containers, open their service in a browser or even open a terminal inside the container
+
+
+### Testing the installation
 
 If all goes well, you should be able to run Docker from the command line as follows:
 
 <div class="termy">
+
 ```bash
 docker --version
 Docker version 26.1.1, build 4cf5afa
@@ -70,7 +90,7 @@ Docker Compose version v2.27.0-desktop.2
 ```
 </div>
 
-(It is not required that your version numbers exactly match).
+Your version numbers don't have to match those above exactly.
 
 
 ## Quickstart
