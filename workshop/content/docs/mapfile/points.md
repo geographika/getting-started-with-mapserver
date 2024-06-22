@@ -2,13 +2,17 @@
 
 ## Overview
 
-Let's start with displaying the simplest spatial type - points.
+Let's start with a map to display the simplest spatial type - points. 
+
+The diagram below shows the directives used for the point map:
 
 ![Mapfile classes used in the Points map](../assets/images/point-map-classes.png "Mapfile Classes")
 
+The Mapfile symbolises the points using different [SYMBOLs](https://mapserver.org/mapfile/symbol.html). 
+
 There are several different [TYPE](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-type)s of symbol available in MapServer.
 
-The Mapfile symbolises the points using different [SYMBOLs](https://mapserver.org/mapfile/symbol.html). A symbol can point to an image file
+For example a symbol can point to a `SVG` image file
 on disk as in the example below:
 
 ```scala
@@ -19,7 +23,10 @@ SYMBOL
 END
 ```
 
-It can also reference a character in a font file. References to different font files are added to a [FONTSET](https://mapserver.org/mapfile/fontset.html).
+It can also reference a character in a font file using `TYPE TRUETYPE`. 
+
+References to different font files are added to a [FONTSET](https://mapserver.org/mapfile/fontset.html).
+
 This file has an alias for the name of the font, and the path to the font file itself. This workshop uses the following `fontset.txt` file.
 
 ```
@@ -29,7 +36,9 @@ LiberationMono         LiberationMono-Regular.ttf
 LiberationSans         LiberationSans-Regular.ttf
 ```
 
-In the Mapfile itself we can then reference this file and use any of the font aliases for symbols and labels. In the example below we're using a
+In the Mapfile itself we can then reference this file and use any of the font aliases for symbols and labels. 
+
+In the example below we're using a
 cinema character from Google's [Material Symbols](https://fonts.google.com/icons).
 We use HTML entity number of the symbol we want in the [CHARACTER](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-character) keyword.
 A list of these codes and their associated symbols can be seen at [http://localhost:5001/fonts.html](http://localhost:5001/fonts.html).
@@ -43,8 +52,6 @@ SYMBOL
     CHARACTER "&#57388;"
 END
 ```
-
-
 
 ## Code
 
@@ -65,7 +72,7 @@ END
 
 ??? Mapfile
 
-    ``` scala hl_lines="5-10"
+    ``` scala
     --8<-- "points.map"
     ```
 
@@ -83,5 +90,3 @@ If SVG symbols are not appearing, ensure they have a width and height set. You c
     <path fill="currentColor" d="M7.743 21.8h3.485v22.4h5.229V25h5.229v19.2h5.228...
 </svg>
 ```
-
-

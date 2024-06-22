@@ -1,5 +1,3 @@
-# Comment can be added using a hash (#) at the start of a line
-# All Mapfiles begin with a MAP block, and finish with a closing END
 MAP
     NAME "Points"
     EXTENT 26.668678 58.339241 26.796582 58.40941

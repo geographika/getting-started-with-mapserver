@@ -1,3 +1,5 @@
+# Comment can be added using a hash (#) at the start of a line
+# All Mapfiles begin with a MAP block, and finish with a closing END
 MAP
     NAME "mymap"
 

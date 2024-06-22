@@ -20,6 +20,18 @@ In its most basic form, MapServer is a CGI program that sits inactive on your we
 
 ![MapServer overview diagram](../assets/images/mapserver-overview.png)
 
+## Mapfiles
+
+A Mapfile is used to define the data contained in a map and how it will be displayed.
+
+Mapfiles are text files, that contain hierarchical and nested blocks. An annotated Mapfile is displayed below:
+
+TODO add and create blocks diagram
+
+``` scala
+--8<-- "countries.map"
+```
+
 ## MapServer development
 
 The first release of MapServer was in 1997, and is written in a combination of C and C++. 
