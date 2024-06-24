@@ -23,7 +23,7 @@ When styling polygons we can set the colour of the polygon, and also its outline
 
 ```scala
 CLASS
-    GROUP "default"
+    ...
     STYLE
         COLOR 246 241 223
         OUTLINECOLOR 0 0 0
@@ -85,7 +85,7 @@ CLASS
 
 ## Exercises
 
-1. Switch the `CLASSGROUP` in the Mapfile to see different styles. There are two groups `offices` and `default`.
+1. Switch the `CLASSGROUP` in the Mapfile to see different styles. There are two groups `offices` and `other`.
 
     ```scala
     LAYER
@@ -94,12 +94,12 @@ CLASS
         CLASSGROUP "offices" # can switch the default set of CLASSes here
     ```
 
-2. Switch the style used in the `polygon.js` file from `offices` to `default`:
+2. Switch the style used in the `polygon.js` file from `offices` to `other`:
 
     ```js
     source: new ImageWMS({
         url: mapserverUrl + mapfilesPath + 'polygons.map&',
-        params: { 'LAYERS': 'buildings', 'STYLES': 'offices' },
+        params: { 'LAYERS': 'buildings', 'STYLES': 'other' },
     ```
 
 3. Switch the `CONNECTIONTYPE` to use the native `FLATGEOBUF` driver.

@@ -31,7 +31,7 @@ MAP
             END
         END
         CLASS
-            GROUP "default"
+            GROUP "other"
             STYLE
                 COLOR 246 241 223
                 OUTLINECOLOR 0 0 0
