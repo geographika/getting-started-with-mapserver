@@ -80,16 +80,13 @@ Some installation notes for different operating systems:
 
 If all goes well, you should be able to run Docker from the command line as follows:
 
-<div class="termy">
-
 ```bash
 docker --version
-Docker version 26.1.1, build 4cf5afa
+# Docker version 26.1.1, build 4cf5afa
 
 docker compose version
-Docker Compose version v2.27.0-desktop.2
+# Docker Compose version v2.27.0-desktop.2
 ```
-</div>
 
 Your version numbers don't have to match those above exactly.
 

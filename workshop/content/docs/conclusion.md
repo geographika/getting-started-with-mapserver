@@ -1,6 +1,6 @@
 # Conclusion
 
-We hope you enjoyed this workshop, and become members of the
+We hope you enjoyed this workshop, and go on to become members of the
 MapServer community!
 
 ## Next Steps

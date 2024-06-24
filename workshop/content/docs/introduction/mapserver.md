@@ -26,11 +26,11 @@ A Mapfile is used to define the data contained in a map and how it will be displ
 
 Mapfiles are text files, that contain hierarchical and nested blocks. An annotated Mapfile is displayed below:
 
-TODO add and create blocks diagram
-
 ``` scala
 --8<-- "countries.map"
 ```
+
+![Mapfile classes used in the Countries map](../assets/images/countries-map-classes.png "Mapfile Classes")
 
 ## MapServer development
 
