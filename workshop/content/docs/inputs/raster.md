@@ -4,14 +4,14 @@
 
 MapServer can serve both [vector](https://mapserver.org/input/vector/index.html) and [raster](https://mapserver.org/input/raster.html) data.
 
+The dataset used in this example is elevation data from the [Estonian Geoportal](https://geoportaal.maaamet.ee/eng/Spatial-Data/Elevation-Data-p308.html),
+and data provided by the Estonian Land Board 2024. It covers Tartu center and is from map sheet 474659.
+
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/raster.html"></iframe>
 </div>
 
-### Sample Dataset
-
-The dataset used in this example is elevation data from the [Estonian Geoportal](https://geoportaal.maaamet.ee/eng/Spatial-Data/Elevation-Data-p308.html),
-and data provided by the Estonian Land Board 2024. It covers Tartu center and is from map sheet 474659.
+## Viewing Dataset Details
 
 We can view details about this dataset using [gdalinfo](https://gdal.org/programs/gdalinfo.html) which is installed on the
 MapServer Docker container.

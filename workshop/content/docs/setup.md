@@ -125,4 +125,4 @@ Hopefully you'll see a map, and we're ready to start the workshop.
 
 ## Possible Errors
 
-* The error `error during connect: this error may indicate that the docker daemon is not running` indicates that the Docker service isn't running. You will need to start Docker, for example by opening Docker Desktop.
+* The error `error during connect: this error may indicate that the docker daemon is not running` indicates that the Docker service isn't running. You will need to start Docker. On Windows you can do this by opening Docker Desktop. If it is still failing try running it as Administrator.

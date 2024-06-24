@@ -4,7 +4,11 @@
 
 In this exercise we're going to display the road network from OpenStreetMap for Tartu, Estonia.
 
-The diagram below shows the Mapfile directives used for the point map:
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/lines.html"></iframe>
+</div>
+
+The diagram below shows the Mapfile directives used for the map:
 
 ![Mapfile classes used in the Lines map](../assets/images/line-map-classes.png "Mapfile Classes")
 
@@ -66,11 +70,6 @@ END
 
     Note the layer name in `layer=roads` is case-sensitive and had to match the LAYER NAME in the Mapfile
     exactly.
-
-<div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/lines.html"></iframe>
-</div>
-
 
 ??? JavaScript
 

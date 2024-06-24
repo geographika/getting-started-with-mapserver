@@ -8,10 +8,30 @@ In this exercises we'll look at labelling features in a map. We'll be using a la
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/lakes.html"></iframe>
 </div>
 
+## Labels
 
+[LABEL](https://mapserver.org/mapfile/label.html)s are placed within a `CLASS`. 
+Each class can label features differently.
 
+Here is the `LABEL` block used in our example:
 
-<https://mapserver.org/mapfile/geomtransform.html#centerline>
+```scala
+LABEL
+    COLOR 255 255 255
+    TEXT (initcap("[LAKE_NAME]"))
+    TYPE TRUETYPE 
+    FONT LiberationMono
+    SIZE 12
+    PARTIALS FALSE
+    POSITION CC
+    FORCE TRUE
+    ANGLE FOLLOW
+END
+```
+
+## Label Positions
+
+We use the [centerline](https://mapserver.org/mapfile/geomtransform.html#centerline) function as part of a [GEOMTRANSFORM](https://mapserver.org/mapfile/geomtransform.html) expression:
 
 ``` scala
 GEOMTRANSFORM (centerline(densify([shape], 0.1)))

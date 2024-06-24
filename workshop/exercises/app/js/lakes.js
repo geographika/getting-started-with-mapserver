@@ -27,7 +27,7 @@ const map = new Map({
     layers: layers,
     target: 'map',
     view: new View({
-        center: [-10435560.249279488, 6016745.972729611],
-        zoom: 13,
+        center: [-10405560, 6011045],
+        zoom: 11,
     }),
 });

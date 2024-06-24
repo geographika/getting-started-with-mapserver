@@ -38,20 +38,20 @@ Or define individually
 
 ## WMS
 
+We use the WMS protocol to serve out data. To configure this in our Mapfiles we need to include the following `WEB` block:
+
 ```scala
 WEB
     METADATA
-        ows_enable_request "*"
-        ows_srs "EPSG:4326 EPSG:3857"
+        ows_enable_request "*" # this enables all OGC protocols supported by MapServer
+        ows_srs "EPSG:4326 EPSG:3857" # we ensure Web Mercator is available as this is the projection we use in our OL maps
     END
 END
 ```
 
 ## Centres and Extents
 
-In our OpenLayers maps we often want to set a starting extent or centre for the map. If our Mapfile
-contains an EXTENT in a different projection we can use the GDAL programs installed on the Docker image
-to convert coordinates to the OpenLayers projection:
+In our OpenLayers maps we often want to set a starting extent or centre for the map. If our Mapfile contains an EXTENT in a different projection we can use the GDAL programs installed on the Docker image to convert coordinates to the OpenLayers projection:
 
 
 ```bash
