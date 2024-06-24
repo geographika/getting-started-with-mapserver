@@ -9,6 +9,7 @@ nav:
     - Workshop Environment Setup: setup.md
     - Introduction:
         - Introduction: introduction/introduction.md
+        - Docker: introduction/docker.md        
         - MapServer: introduction/mapserver.md
         - Command Line: introduction/commandline.md
         - OpenLayers: introduction/openlayers.md
@@ -29,7 +30,7 @@ nav:
         - OGC Features API: outputs/ogcfeatures.md
     - Advanced:
         - SLD: advanced/sld.md
-        - Vector Symbols: mapfile/symbols.md        
+        - Vector Symbols: advanced/symbols.md        
         - Clusters: advanced/clusters.md
         - MapScript: advanced/mapscript.md
     - Conclusion: conclusion.md
