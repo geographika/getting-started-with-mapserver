@@ -1,10 +1,7 @@
 MAP
   NAME "Roads"
   EXTENT 26.668678 58.339241 26.796582 58.409410
-  UNITS DD
   SIZE 800 600
-
-  IMAGETYPE PNG24
 
   PROJECTION
     "init=epsg:4326"
@@ -12,7 +9,6 @@ MAP
 
   WEB
     METADATA
-      ows_title "OSM Roads"
       ows_enable_request "*"
       ows_srs "EPSG:4326 EPSG:3857"
     END
@@ -20,20 +16,14 @@ MAP
 
   LAYER
     NAME "roads"
-    STATUS OFF
     TYPE LINE
+    STATUS OFF    
     CONNECTIONTYPE FLATGEOBUF
     DATA "data/osm/roads.fgb"
-
-    CLASSGROUP "type" # can switch the default set of CLASSes here
-
     CLASS
-      GROUP "default"
       STYLE
-        COLOR 246 241 223
+        COLOR 50 50 50
       END
     END
-
   END
-
 END

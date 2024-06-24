@@ -13,9 +13,8 @@ nav:
         - Command Line: introduction/commandline.md
         - OpenLayers: introduction/openlayers.md
     - Mapfile:
+        - Lines: mapfile/lines.md    
         - Points: mapfile/points.md
-        - Lines: mapfile/lines.md
-        - Vector Symbols: mapfile/symbols.md
         - Labels: mapfile/labels.md
         - Polygons: mapfile/polygons.md
     - Inputs:
@@ -30,6 +29,7 @@ nav:
         - OGC Features API: outputs/ogcfeatures.md
     - Advanced:
         - SLD: advanced/sld.md
+        - Vector Symbols: mapfile/symbols.md        
         - Clusters: advanced/clusters.md
         - MapScript: advanced/mapscript.md
     - Conclusion: conclusion.md

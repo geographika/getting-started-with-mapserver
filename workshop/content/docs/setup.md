@@ -106,7 +106,7 @@ docker compose up --detach
 The first time this command is run it will start downloading the containers - this may take several minutes depending on your Internet connection.
 On Windows you may be prompted to let Docker access ports through your Windows Firewall. 
 
-When this command is next run it should only take a few seconds to start.The `detach` flag means the containers will run in the background so we 
+When this command is next run it should only take a few seconds to start. The `detach` flag means the containers will run in the background so we 
 can continue to use the shell. If you want to stop the containers you can run:
 
 ```bash
@@ -122,3 +122,7 @@ loadParams(): Web application error. No query information to decode. QUERY_STRIN
 
 This is good! It means MapServer is running. Next we can check that the front-end container is running by opening <http://localhost:5001/points.html>.
 Hopefully you'll see a map, and we're ready to start the workshop.
+
+## Possible Errors
+
+* The error `error during connect: this error may indicate that the docker daemon is not running` indicates that the Docker service isn't running. You will need to start Docker, for example by opening Docker Desktop.

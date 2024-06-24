@@ -87,7 +87,7 @@ MAP
             # using this style
             STYLE
                 SYMBOL "circle"
-                SIZE 16
+                SIZE 1
                 COLOR 0 0 0
             END
         END # CLASS ends here

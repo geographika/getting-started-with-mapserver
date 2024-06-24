@@ -2,9 +2,11 @@
 
 ## Overview
 
-[SYMBOL](https://mapserver.org/mapfile/symbol.html)s can be used to apply complex cartographic effects to vector data. 
+In this exercise we'll look at how [SYMBOL](https://mapserver.org/mapfile/symbol.html)s can be used to apply complex cartographic effects to vector data. The Mapfile displays OpenStreetMap railways in Tartu, Estonia.
 
-We've looked at `ELLIPSE`, `SVG`, and `TRUETYPE` symbols in the [Points Styling](points.md) exercise. In this example 
+## Vector Symbols
+
+We've looked at `ELLIPSE`, and `TRUETYPE` symbols in the [Points Styling](points.md) exercise. In this example 
 we'll be looking at [Vector Symbols](https://mapserver.org/mapfile/symbology/construction.html#symbols-of-type-vector-and-ellipse) - which
 use vector drawings to define the shape of a symbol.
 
@@ -96,18 +98,18 @@ END
 
 ## Exercises
 
-- Try experimenting with the `GAP` values to see how this affects the output.
+1. Try experimenting with the `GAP` values to see how this affects the output.
 
-```scala
-STYLE
-    COLOR 102 102 102
-    SYMBOL "vertline"
-    WIDTH 0.4
-    GAP -50
-END
-```
+    ```scala
+    STYLE
+        COLOR 102 102 102
+        SYMBOL "vertline"
+        WIDTH 0.4
+        GAP -50
+    END
+    ```
 
-- Change the square symbol used for stations into a different shape such as a triangle.
+2. Change the square symbol used for stations into a different shape such as a triangle.
 
 ## Further Reading
 

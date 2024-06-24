@@ -2,26 +2,50 @@
 
 ![OpenLayers logo](../assets/images/OpenLayers_logo.png "OpenLayers logo")
 
-MapServer runs on a server, and publishes data using web services. Whilst it is possible
-to view these outputs on the command line, or in a browser by creating URLs, data from MapServer
-is  typically accessed using a client application. 
+MapServer runs on a server and publishes data via web services. You can view this data on the command line or in a browser by creating URLs, but it is usually accessed through a client application.
 
-This could be a desktop GIS such as QGIS or ArcGIS Pro, or through a web browser
-using a JavaScript mapping library such as Leaflet or OpenLayers.
+This could be a desktop GIS like QGIS or ArcGIS Pro, or through a web browser using a JavaScript mapping library like Leaflet or OpenLayers.
 
-This workshop has chosen to use OpenLayers for the exercises as it implements many of 
-the OGC published by MapServer, and it is an OSGeo project like MapServer. 
+This workshop uses OpenLayers for the exercises because it supports many OGC standards published by MapServer and is an OSGeo project like MapServer.
 
-To run the exercises will require some editing of HTML and JavaScript code, but
-will be simple enough that no pre-existing coding experience in these languages
-is required.
+To complete the exercises, you will need to edit some HTML and JavaScript code, but it will be simple enough that no prior experience in these languages is required.
 
 A useful introduction to OpenLayers can be found [here](https://openlayers.org/workshop/en/).
 
-## JavaScript
+## HTML example pages
+
+The HTML pages are served using a Docker container, and when the containers are
+running an index page for all workshop exercises is available at <http://localhost:5001/>. 
+
+The HTML files used in the workshop are located in `exercises/app`.
+The JavaScript files can be found in `exercises/app/js`. These files can be edited, and changes viewed in the browser. 
+
+To display MapServer WMS services we use an [ImageLayer](https://openlayers.org/en/latest/apidoc/module-ol_layer_Image-ImageLayer.html) with a [ImageWMS](https://openlayers.org/en/latest/apidoc/module-ol_source_ImageWMS-ImageWMS.html) source.
+
+These are created as follows:
+
+```js
+new ImageLayer({
+    source: new ImageWMS({
+        url: mapserverUrl + mapfilesPath + 'points.map&',
+        params: { 'LAYERS': 'pois', 'STYLES': '' }
+    }),
+}),
+```
 
 Map name to show all layers
 Or define individually
+
+## WMS
+
+```scala
+WEB
+    METADATA
+        ows_enable_request "*"
+        ows_srs "EPSG:4326 EPSG:3857"
+    END
+END
+```
 
 ## Centres and Extents
 
@@ -39,8 +63,8 @@ echo "26.668 58.339" | gdaltransform -s_srs EPSG:4326 -t_srs EPSG:3857
 # same for the top-right coordinate
 echo "26.796 58.409" | gdaltransform -s_srs EPSG:4326 -t_srs EPSG:3857
 
-# to calculate centres we can use simple maths and Pyton
-# centre X (longtitude)
+# to calculate centres we can use simple maths and Python
+# centre X (longitude)
 python -c "print((26.668 + 26.796) / 2)"
 # centre Y (latitude)
 python -c "print((58.339 + 58.409) / 2)"

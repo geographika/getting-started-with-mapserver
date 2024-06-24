@@ -11,13 +11,12 @@ const mapfilesPath = import.meta.env.VITE_MAPFILES_PATH;
 const layers = [
     new TileLayer({
         source: new OSM(),
+        visible: true
     }),
     new ImageLayer({
-        extent: [2968743.65508978, 8038921.67212233, 2982981.8632402, 8053818.05714347],
-        source: new ImageWMS({
+            source: new ImageWMS({
             url: mapserverUrl + mapfilesPath + 'points.map&',
-            params: { 'LAYERS': 'pois', 'STYLES': '' },
-            ratio: 1
+            params: { 'LAYERS': 'pois', 'STYLES': '' }
         }),
     }),
 ];

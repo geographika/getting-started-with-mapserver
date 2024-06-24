@@ -2,16 +2,24 @@
 
 ## Overview
 
-This exercise displays building from OpenStreetMap. This is a polygon dataset, so we set our `LAYER TYPE` to `POLYGON`:
+This exercise displays building from OpenStreetMap. 
+
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/polygons.html"></iframe>
+</div>
+
+## Polygons
+
+The buildings are a polygon dataset, so we set our `LAYER TYPE` to `POLYGON`:
 
 ```scala
 LAYER
     NAME "buildings"
     TYPE POLYGON
-...
+    ...
 ```
 
-When stying polygons we can set the colour of the polygon, and also its outline color:
+When styling polygons we can set the colour of the polygon, and also its outline color:
 
 ```scala
 CLASS
@@ -23,10 +31,11 @@ CLASS
 END
 ```
 
+## Expressions
+
 In this Mapfile we have two different classes for the dataset. 
 
-
-In the second class we have an [EXPRESSION](https://mapserver.org/mapfile/expressions.htm) that limits 
+The first class has an [EXPRESSION](https://mapserver.org/mapfile/expressions.htm) that limits 
 which features will be drawn. This compares the value for the "type" field for each feature with "office".
 If there is a match then the feature is drawn with the `STYLE`s from the `CLASS`.
 
@@ -62,11 +71,6 @@ CLASS
     CONNECTION "data/osm/buildings_a.fgb"
     ```
 
-<div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/polygons.html"></iframe>
-</div>
-
-
 ??? JavaScript "polygons.js"
 
     ```js
@@ -81,25 +85,23 @@ CLASS
 
 ## Exercises
 
-- Switch the `CLASSGROUP` in the Mapfile to see different styles. There are two groups
-  `offices` and `default`.
+1. Switch the `CLASSGROUP` in the Mapfile to see different styles. There are two groups `offices` and `default`.
 
-```scala
-  LAYER
-    NAME "buildings"
-    ...
-    CLASSGROUP "offices" # can switch the default set of CLASSes here
-```
+    ```scala
+    LAYER
+        NAME "buildings"
+        ...
+        CLASSGROUP "offices" # can switch the default set of CLASSes here
+    ```
 
-- Switch the style used in the `polygon.js` file. 
+2. Switch the style used in the `polygon.js` file from `offices` to `default`:
 
-```js
-source: new ImageWMS({
-    url: mapserverUrl + mapfilesPath + 'polygons.map&',
-    params: { 'LAYERS': 'buildings', 'STYLES': 'offices' },
-```
+    ```js
+    source: new ImageWMS({
+        url: mapserverUrl + mapfilesPath + 'polygons.map&',
+        params: { 'LAYERS': 'buildings', 'STYLES': 'offices' },
+    ```
 
-- Switch the `CONNECTIONTYPE` to use the native `FLATGEOBUF` driver.
+3. Switch the `CONNECTIONTYPE` to use the native `FLATGEOBUF` driver.
 
-- Experiment with styling the polygons. `WIDTH` can be used to change the width of the polygon
-  outline.
+4. Experiment with styling the polygons. `WIDTH` can be used to change the width of the polygon outline.

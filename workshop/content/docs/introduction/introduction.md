@@ -86,6 +86,6 @@ The workshop folder structure is shown below:
 
 Key folders are:
 
-- `exercises/mapfiles` - the location of all the Mapfiles used in the workshop
-- `exercises/app/js` - the JavaScript files used in the workshop
-
+- `workshop/exercises/mapfiles` - the location of all the Mapfiles used in the workshop
+- `workshop/exercises/mapfiles/data` - datasets used in the Mapfiles
+- `workshop/exercises/app/js` - the JavaScript files used in the workshop

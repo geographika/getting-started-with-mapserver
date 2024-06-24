@@ -20,3 +20,5 @@ Access via GitHub - same dataset. Add both to the Mapfile
 s3 buckets
 
 
+# CONNECTION "/vsicurl/https://github.com/MapServer/MapServer-demo/raw/main/data/lakespy2.shp"
+CONNECTION "data/itasca/lakespy2.shp"

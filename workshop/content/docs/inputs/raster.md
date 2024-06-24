@@ -1,11 +1,8 @@
 # Raster Data
 
+## Overview
+
 MapServer can serve both [vector](https://mapserver.org/input/vector/index.html) and [raster](https://mapserver.org/input/raster.html) data.
-
-!!! example
-
-    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/raster.map&mode=map&layer=dtm>
-    - OpenLayers example: <http://localhost:5001/raster.html>
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/raster.html"></iframe>
@@ -31,9 +28,9 @@ gdalinfo /etc/mapserver/data/raster/54752_dtm_1m.tif -stats -json
 
 ```
 
-### A Raster LAYER
+## A Raster LAYER
 
-```
+```scala
 LAYER
   NAME "dtm"
   EXTENT 655000 6470000 660000 6475000
@@ -52,11 +49,11 @@ END
 
 There are a few points to note in this Mapfile. 
 
-#### INCLUDEs
+## Include Files
 
 We are making use of the [INCLUDE](https://mapserver.org/mapfile/include.html) 
 directive. This allows us to include additional files within our Mapfile. Any file extensions can be used, and paths are always relative to the main
-Mapfile. In this case `terrain.include` contains a list of CLASSes
+Mapfile. In this case `terrain.include` contains a list of `CLASS`es
 to style the raster data. These classes were generated using a Python script - by keeping them in a separate file we can easily recreate the file
 without modifying the rest of the Mapfile. INCLUDEs can also be used to help manage large Mapfiles, for example by keeping each LAYER in a separate file.
 This approach also makes it easier to share LAYERs between different Mapfiles.
@@ -65,13 +62,7 @@ This approach also makes it easier to share LAYERs between different Mapfiles.
 The `terrain.include` file shows how we can style raster data. There are classes that apply a different RGB colour to the data
 based on the `[pixel]` value for each cell:
 
-#### COMPOSITE
-
-A [COMPOSITE](https://mapserver.org/mapfile/composite.html) block is used on the layer to make it 20% transparent.
-
-
-```mapfile
-
+```scala
 CLASS
   EXPRESSION ([pixel] >= 30.68 AND [pixel] < 37.245625)
   STYLE
@@ -87,8 +78,30 @@ CLASS
 END
 ```
 
+## Composite Blocks
 
-#### Exercises
+A [COMPOSITE](https://mapserver.org/mapfile/composite.html) block is used on the layer to make it 20% transparent.
 
-- Try different settings for layer `OPACITY` to see its effect on the output.
-- Change the `COLOR` of the first `CLASS` in `terrain.include` to highlight which pixels have values in this range.
+## Code
+
+!!! example
+
+    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/raster.map&mode=map&layer=dtm>
+    - OpenLayers example: <http://localhost:5001/raster.html>
+
+??? JavaScript
+
+    ``` js
+    --8<-- "raster.js"
+    ```
+
+??? Mapfile
+
+    ``` scala
+    --8<-- "raster.map"
+    ```
+
+## Exercises
+
+1. Try different settings for layer `OPACITY` to see its effect on the output.
+2. Change the `COLOR` of the first `CLASS` in `terrain.include` to highlight which pixels have values in this range.
