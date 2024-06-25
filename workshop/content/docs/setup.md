@@ -75,6 +75,42 @@ Some installation notes for different operating systems:
 * You can choose the relevant installer for your platform. You can also use Virtualbox with a Ubuntu image or use a cloud VM
 * Docker Desktop includes a graphical user interface with some interesting options. You can see logs and information about running containers, open their service in a browser or even open a terminal inside the container
 
+### OSGeoLive
+
+The steps below are based on [Install Docker Engine on Ubuntu](docs.docker.com/engine/install/ubuntu/#install-using-the-repository) and have been tested on the OSGeoLive 16.0 virtual machine.
+
+```bash
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+# Install the Docker packages
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Test with Docker test image
+sudo service docker start
+sudo docker run hello-world
+
+# Setup the workshop
+cd /home
+sudo git clone https://github.com/geographika/getting-started-with-mapserver/
+cd /home/getting-started-with-mapserver/workshop/exercises/
+sudo docker compose up
+
+# Test the following URLs in a browser
+# http://localhost:5000
+# http://localhost:5001/lines.html
+```
 
 ### Testing the Docker installation
 
@@ -89,7 +125,6 @@ docker compose version
 ```
 
 Your version numbers don't have to match those above exactly.
-
 
 ## Quickstart
 
@@ -126,3 +161,8 @@ Hopefully you'll see a map, and we're ready to start the workshop.
 ## Possible Errors
 
 * The error `error during connect: this error may indicate that the docker daemon is not running` indicates that the Docker service isn't running. You will need to start Docker. On Windows you can do this by opening Docker Desktop. If it is still failing try running it as Administrator.
+* `docker: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?` - the Docker service isn't running. Start it with `sudo service docker start`.
+* `E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 46288 (unattended-upgr)` is caused
+by another program trying to update Ubuntu. Rebooting may fix this, or you can try running `sudo kill <process_id>` for example in this case `sudo kill 46288`. 
+* `docker-desktop : Depends: docker-ce-cli but it is not installable` - you are attempting to install Docker Desktop, but have not yet installed the Docker Engine.
+
