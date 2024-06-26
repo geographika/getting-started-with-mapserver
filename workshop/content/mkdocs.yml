@@ -33,8 +33,8 @@ nav:
         - Vector Symbols: advanced/symbols.md        
         - Clusters: advanced/clusters.md
         - MapScript: advanced/mapscript.md
-    - Conclusion: conclusion.md
-    - Credits: credits.md
+    - Summary: summary.md
+    - Credits and Thanks: credits.md
 
 use_directory_urls: true
 

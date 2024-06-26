@@ -15,14 +15,8 @@ MAP
     LAYER
         NAME "countries"
         TYPE POLYGON
-        PROJECTION
-            "init=epsg:4326"
-        END
+
         STATUS OFF
-        METADATA
-            "gml_include_items" "all" 
-            "gml_types" "auto" 
-        END
         CONNECTIONTYPE OGR
         CONNECTION "data/naturalearth"
         DATA "ne_110m_admin_0_countries"

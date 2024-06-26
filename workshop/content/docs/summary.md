@@ -13,6 +13,11 @@ MapServer community!
 
 - Join the [MapServer Users Mailing List](https://mapserver.org/community/lists.html#mapserver-users), and ask any questions you may have!
 
+## Useful Tools and Sites
+
+- [mappyfile](https://mappyfile.readthedocs.io/) is a Python library that can be used to create, parse, modify, and format MapServer Mapfiles.
+- [Mapfile Syntax for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=chicoff.mapfile) - syntax highlighting for Mapfiles
+
 ## Further Reading
 
 Yearly summaries of developments in MapServer and the MapServer community

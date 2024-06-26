@@ -29,9 +29,10 @@ MAP
         PROJECTION
             "init=epsg:4326"
         END
+        EXTENT -180.0 -90.0 180.0 90        
         STATUS OFF
-        TEMPLATE "ttt"
         METADATA
+            "gml_featureid" "ne_id"
             "gml_include_items" "all"
             "gml_types" "auto"
         END
@@ -39,8 +40,6 @@ MAP
         CONNECTIONTYPE OGR
         CONNECTION "data/naturalearth"
         DATA "ne_50m_populated_places_simple"
-        EXTENT -180.0 -90.0 180.0 90
-        PROCESSING "CLOSE_CONNECTION=DEFER"
         CLASS
             STYLE
                 COLOR 60 179 113

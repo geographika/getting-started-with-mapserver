@@ -1,5 +1,7 @@
 # Web Coverage Services
 
+TODO
+
 https://mapserver.org/ogc/wcs_server.html
 
 https://mapserver.org/ogc/wcs_format.html
@@ -42,3 +44,7 @@ Set the [MAXSIZE](https://mapserver.org/mapfile/map.html#mapfile-map-maxsize) di
 mapserv -nh "QUERY_STRING=map=test.map&SERVICE=WCS&VERSION=2.0.0&REQUEST=GetCoverage&CoverageId=test&FORMAT=GEOTIFF_INT16&BBOX=-69.955,3.420,-69.701,3.5896&CRS=EPSG:4326&WIDTH=500&HEIGHT=500" > output2.tif
 gdalinfo output.tif
 ```
+
+<!--
+https://openlayers.org/workshop/en/cog/
+-->

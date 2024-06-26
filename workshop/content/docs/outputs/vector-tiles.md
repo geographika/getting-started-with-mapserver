@@ -1,8 +1,16 @@
 # Vector Tiles
 
+## Overview
+
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/vector-tiles.html"></iframe>
 </div>
+
+## Code
+
+!!! example
+
+    - Local OpenLayers example: <http://localhost:5001/vector-tiles.html>
 
 ??? JavaScript
 

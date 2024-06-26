@@ -1,12 +1,12 @@
 # OpenLayers
 
-![OpenLayers logo](../assets/images/OpenLayers_logo.png "OpenLayers logo")
-
 MapServer runs on a server and publishes data via web services. You can view this data on the command line or in a browser by creating URLs, but it is usually accessed through a client application.
 
 This could be a desktop GIS like QGIS or ArcGIS Pro, or through a web browser using a JavaScript mapping library like Leaflet or OpenLayers.
 
 This workshop uses OpenLayers for the exercises because it supports many OGC standards published by MapServer and is an OSGeo project like MapServer.
+
+![OpenLayers logo](../assets/images/OpenLayers_logo.png "OpenLayers logo")
 
 To complete the exercises, you will need to edit some HTML and JavaScript code, but it will be simple enough that no prior experience in these languages is required.
 
