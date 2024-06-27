@@ -1,16 +1,18 @@
 # MapServer and Apache
 
-Apache - used by the workshop Docker image
+!!! warning
 
-Since version 8.0 MapServer has a global config file.
+    This page is currently in a draft form.
+    
+## Overview
+
+The Apache web server is used by the workshop Docker image. Since version 8.0 MapServer has a global config file.
 
 At its heart MapServer is a command-line application that can be accessed through a web server.
 
 https://github.com/camptocamp/docker-mapserver/blob/master/runtime/usr/local/bin/start-server
 
-Apache has a configuration file
-
-https://github.com/camptocamp/docker-mapserver/blob/master/runtime/etc/apache2/conf-enabled/mapserver.conf
+Apache has a [configuration file](https://github.com/camptocamp/docker-mapserver/blob/master/runtime/etc/apache2/conf-enabled/mapserver.conf).
 
 [mod_fcgid module](https://httpd.apache.org/mod_fcgid/), which is an Apache module that provides FastCGI support.
 
@@ -28,7 +30,6 @@ These are all documented on the [reference page(https://httpd.apache.org/mod_fcg
 These all have defaults in the Docker file, but can be overriden using environment variables.
 
 ```
-
 ENV MS_DEBUGLEVEL=0 \
     MS_ERRORFILE=stderr \
     MAPSERVER_CONFIG_FILE=/etc/mapserver.conf \
@@ -48,6 +49,12 @@ ScriptAliasMatch "^${MAPSERVER_BASE_PATH}/(.*)" /usr/local/bin/mapserv_wrapper/$
 ScriptAliasMatch "^${MAPSERVER_BASE_PATH}" /usr/local/bin/mapserv_wrapper
 ```
 
+Restarting Apache:
 
+```bash
+docker restart mapserver
+```
 
-IIS - https://mapserver.org/installation/iis.html
+## Other Web Servers
+
+* [IIS](https://mapserver.org/installation/iis.html)

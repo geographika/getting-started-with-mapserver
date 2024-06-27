@@ -4,6 +4,10 @@
 
 In this exercise we'll look at how [SYMBOL](https://mapserver.org/mapfile/symbol.html)s can be used to apply complex cartographic effects to vector data. The Mapfile displays OpenStreetMap railways in Tartu, Estonia.
 
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/railways.html"></iframe>
+</div>
+
 ## Vector Symbols
 
 We've looked at `ELLIPSE`, and `TRUETYPE` symbols in the [Points Styling](../mapfile/points.md) exercise. In this example 
@@ -79,10 +83,6 @@ END
 
     - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/railways.map&mode=map&layer=roads>
     - Local OpenLayers example: <http://localhost:5001/railways.html>
-
-<div class="map">
-  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/railways.html"></iframe>
-</div>
 
 ??? JavaScript
 

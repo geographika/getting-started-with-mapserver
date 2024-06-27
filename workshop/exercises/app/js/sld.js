@@ -11,7 +11,7 @@ const wmsSource = new ImageWMS({
     url: mapserverUrl + mapfilesPath + 'sld.map&',
     params: {
         'LAYERS': 'countries',
-        'SLD': appUrl + 'data/sld.xml',
+        'SLD': appUrl + 'sld.xml',
         'SLD_VERSION': '1.1.0'
     },
     ratio: 1

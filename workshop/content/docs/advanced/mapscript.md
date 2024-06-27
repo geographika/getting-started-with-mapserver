@@ -1,7 +1,16 @@
 # MapScript
 
-MapServer has its own scripting language - [MapScript](https://www.mapserver.org/mapscript/). This is available in several
+!!! warning
+
+    This page is currently in a draft form.
+
+## Overview
+
+MapServer has its own scripting language - [MapScript](https://www.mapserver.org/mapscript/). MapScript is available in several
 programming languages including Python, PHP, and Perl. They all share a common [MapScript API](https://www.mapserver.org/mapscript/mapscript-api/index.html).
+
+
+## Adding MapScript to the Docker Container
 
 MapScript is not installed on the MapServer Docker image by default, but it can be added using the approach below.
 
@@ -20,6 +29,9 @@ dpkg -i /scripts/python3-mapscript_8.0.1-1~jammy2_amd64.deb
 # test that we can import MapScript successfully
 python -c "import mapscript;print(mapscript.msGetVersion())"
 ```
+
+
+## Example Script
 
 One use of MapScript is to help with writing Mapfiles by getting information from its data sources. Some examples are provided below.
 
@@ -59,10 +71,10 @@ print("Done!")
 ```
 
 
+<!--
 python -c 'import mapscript;r=mapscript.rectObj(2969285.329776241,8042942.076072633,2969726.049406544,8043158.9927656725);r.project(mapscript.projectionObj("epsg:3857"), mapscript.projectionObj("epsg:4326"));print(r.toString())'
-
-
 
 python -c "import mapscript;r=mapscript.pointObj(-8.6556,54.7397);r.project(mapscript.projectionObj('epsg:4326'), mapscript.projectionObj('epsg:2157'));print(r.toString())"
 python -c "import mapscript;r=mapscript.pointObj(-7.7432,55.2053);r.project(mapscript.projectionObj('epsg:4326'), mapscript.projectionObj('epsg:2157'));print(r.toString())"
 55.2053/-7.7432
+-->

@@ -77,7 +77,7 @@ Some installation notes for different operating systems:
 
 ### OSGeoLive
 
-The steps below are based on [Install Docker Engine on Ubuntu](docs.docker.com/engine/install/ubuntu/#install-using-the-repository) and have been tested on the OSGeoLive 16.0 virtual machine.
+The steps below are based on [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository) and have been tested on the OSGeoLive 16.0 virtual machine.
 
 ```bash
 # Add Docker's official GPG key:

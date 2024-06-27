@@ -1,12 +1,23 @@
 # Databases
 
+## Overview
+
 MapServer can connect to most geospatial databases. There are native MapServer drivers for [PostgreSQL/PostGIS](https://mapserver.org/input/vector/postgis.html),
-[Oracle](https://mapserver.org/input/vector/oracle.html), and [Microsoft SQL Server](https://mapserver.org/input/vector/mssql.html).Other databases
+[Oracle](https://mapserver.org/input/vector/oracle.html), and [Microsoft SQL Server](https://mapserver.org/input/vector/mssql.html). Other databases
 can be accessed through OGR e.g. [MySQL](https://mapserver.org/input/vector/mysql.html).
 
-In this exercise we'll be connecting to a PostGIS database. [PostGIS](https://postgis.net/) spatially enables the [PostgreSQL](https://www.postgresql.org/)
-databases. To avoid having to install and setup a database we'll be using the [PostGIS Docker image](https://hub.docker.com/r/kartoza/postgis/) provided
+In this exercise we'll be connecting to a PostGIS database to display water polygon features using a MapServer WMS. [PostGIS](https://postgis.net/) spatially enables the [PostgreSQL](https://www.postgresql.org/)
+databases. 
+
+## Docker Setup
+
+To avoid having to install and setup a database we'll be using the [PostGIS Docker image](https://hub.docker.com/r/kartoza/postgis/) provided
 by [Kartoza](https://kartoza.com/).
+
+We will use a different Docker Compose file, which includes a PostGIS container for this exercise.
+
+
+## Checking the Database Connection with QGIS
 
 If you have QGIS installed on your machine you can check you can successfully connect to the database by opening the
 [browser panel](https://docs.qgis.org/3.34/en/docs/user_manual/managing_data_source/opening_data.html#the-browser-panel), and
@@ -46,11 +57,14 @@ ogrinfo PG:"host=db user=docker password=docker dbname=gis port=5432" water_a -s
 
 ## Code
 
-The example map below shows water polygon features, read from PostgreSQL, and displayed as a WMS by MapServer.
+<!--
+
+Online example not available as no PostGIS installation on the server
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/postgis.html"></iframe>
 </div>
+-->
 
 !!! example "Exercise Links"
 
@@ -71,15 +85,15 @@ The example map below shows water polygon features, read from PostgreSQL, and di
 
 ## Exercises
 
-- Try and load another dataset into the database using the `ogr2ogr` approach above.
-- Now add a new layer to the Mapfile to display the layer. You can make a direct request to MapServer in the form:
+1. Try and load another dataset into the database using the `ogr2ogr` approach above.
+2. Now add a new layer to the Mapfile to display the layer. You can make a direct request to MapServer in the form:
   <http://localhost:5000/?map=/etc/mapserver/postgis.map&mode=map&layers=water%20NEWLAYERNAME>.
-- Now update the JS file so the layer is visible as part of the interactive map, through WMS:
+3. Now update the JS file so the layer is visible as part of the interactive map, through WMS:
 
-  ```js
-    source: new ImageWMS({
-        url: mapserverUrl + mapfilesPath + 'postgis.map&',
-        params: { 'LAYERS': 'water,NEWLAYERNAME', 'STYLES': '' },
-        ratio: 1
-    }),
-  ```
+    ```js
+      source: new ImageWMS({
+          url: mapserverUrl + mapfilesPath + 'postgis.map&',
+          params: { 'LAYERS': 'water,NEWLAYERNAME', 'STYLES': '' },
+          ratio: 1
+      }),
+    ```

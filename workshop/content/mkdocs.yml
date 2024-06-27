@@ -32,6 +32,7 @@ nav:
         - SLD: advanced/sld.md
         - Vector Symbols: advanced/symbols.md        
         - Clusters: advanced/clusters.md
+        - Apache: advanced/apache.md        
         - MapScript: advanced/mapscript.md
     - Summary: summary.md
     - Credits and Thanks: credits.md
@@ -69,7 +70,7 @@ markdown_extensions:
     # https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files
     - pymdownx.snippets:
           check_paths: true
-          base_path: ["../../workshop/exercises/mapfiles", "../../workshop/exercises/app/js", "../../workshop/exercises/app/data", "./docs"]
+          base_path: ["../../workshop/exercises/mapfiles", "../../workshop/exercises/app/js", "../../workshop/exercises/app", "./docs"]
     - footnotes # notes bottom of page
     - attr_list # used to size images
     - md_in_html # used to size images

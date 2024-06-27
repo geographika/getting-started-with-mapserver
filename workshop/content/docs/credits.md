@@ -4,7 +4,7 @@ title: Credits
 
 # Authors
 
-- [Seth Girvin](https://geographika.net/) (also known as [@geographika](https://github.com/geographika)). Please get in touch if you'd like a particular topic added to the workshop, or require any MapServer development.
+- [Seth Girvin](https://geographika.net/) (found on GitHub at [@geographika](https://github.com/geographika)). Please get in touch if you'd like a particular topic added to the workshop, or require any MapServer development.
 
 # Thanks
 

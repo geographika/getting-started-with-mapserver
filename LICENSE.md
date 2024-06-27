@@ -1,6 +1,6 @@
 # The MIT License (MIT)
 
-Copyright &copy; 2008-2024 The MapServer community
+Copyright &copy; 2008-2024 Seth Girvin and the MapServer community
 
 * * *
 

@@ -21,9 +21,6 @@ const map = new Map({
             }),
             style: function (feature) {
                 return new Style({
-                    //fill: new Fill({
-                    //    color: 'rgba(255, 0, 0, 0.5)', // Red fill color with 50% opacity
-                    //}),
                     stroke: new Stroke({
                         color: 'rgb(66, 133, 244)', // Light blue border color
                         width: 2, // Border width
@@ -35,6 +32,6 @@ const map = new Map({
     target: 'map',
     view: new View({
         center: [-472202, 7530279],
-        zoom: 4,
+        zoom: 2,
     }),
 });
