@@ -30,7 +30,7 @@
 services:
   mapserver:
     image: camptocamp/mapserver:8.0
-    container_name: mapserver
+    container_name: mapserver2
     ports:
       - 5000:80
     environment:
@@ -43,7 +43,7 @@ services:
 
   node:
     image: node:lts-slim
-    container_name: node
+    container_name: node2
     ports:
       - 5001:5001
     working_dir: /home/node/app

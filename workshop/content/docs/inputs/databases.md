@@ -14,7 +14,15 @@ databases.
 To avoid having to install and setup a database we'll be using the [PostGIS Docker image](https://hub.docker.com/r/kartoza/postgis/) provided
 by [Kartoza](https://kartoza.com/).
 
-We will use a different Docker Compose file, which includes a PostGIS container for this exercise.
+!!! info
+
+  We will use a different Docker Compose file, which includes a PostGIS container for this exercise. We can stop the current Docker containers, and run the alternate Docker containers with the following commands:
+
+  ```bash
+  cd ./getting-started-with-mapserver/workshop/exercises
+  docker compose down
+  docker compose -f docker-db-compose.yml up -d 
+  ```
 
 
 ## Checking the Database Connection with QGIS
@@ -46,7 +54,7 @@ We can use the OGR tool [ogr2ogr](https://gdal.org/programs/ogr2ogr.html) instal
 
 ```bash
 # connect to the MapServer Docker image which includes OGR tools for importing data
-docker exec -it mapserver bash
+docker exec -it mapserver2 bash
 # navigate to the folder containing the OSM FlatGeobuf files
 cd /etc/mapserver/data/osm
 # import the water polygons dataset to the Postgres database in the Postgres Docker image

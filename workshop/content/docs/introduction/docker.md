@@ -46,3 +46,31 @@ A second container that serves the JavaScript example pages is also run using Do
     command: >
       sh -c "npm install && npm start"
 ```
+
+## Stopping and Starting Docker
+
+```bash
+
+  cd ./getting-started-with-mapserver/workshop/exercises
+  # start docker in detached mode
+  docker compose up -d
+  # the following URLs should now be available
+  # http://localhost:5000
+  # http://localhost:5001
+
+  # stop docker
+  docker compose down
+
+  # for help
+  docker compose help
+  # for a specific command
+  docker compose up --help
+```
+
+
+## Removing a Container
+
+```bash
+# to remove a container named db
+docker rm db
+```

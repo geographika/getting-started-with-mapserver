@@ -58,7 +58,7 @@ GEOMTRANSFORM (centerline(densify([shape], 0.1)))
 
 ## Exercises
 
-1. Use a different font for the label by adding the following to the `LABEL` block: `FONT LiberationMono`.
+1. Use a different font for the label by adding the following to the `LABEL` block: `FONT MonsieurLaDoulaise` and increasing the `SIZE` to `28`.
 2. Comment out the `GEOMTRANSFORM (centerline([shape]))` and `ANGLE FOLLOW` lines (using `#`) to see its effect on the map.
 
 <!--

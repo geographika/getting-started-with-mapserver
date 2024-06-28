@@ -10,6 +10,7 @@ title: Credits
 
 Thanks to the following for helping this workshop to be created:
 
+- Colleagues at [Compass Informatics](https://compass.ie/) for attending the workshop and providing valuable feedback 
 - The [pygeoapi](https://pygeoapi.io/) team - this workshop is based on the technology and approach used in the excellent
   [Diving into pygeoapi workshop](https://dive.pygeoapi.io/).
 - [Stéphane Brunner](https://github.com/sbrunner) from [Camptocamp](https://www.camptocamp.com/)
