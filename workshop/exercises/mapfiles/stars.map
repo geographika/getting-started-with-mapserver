@@ -1,0 +1,83 @@
+MAP
+    NAME "Stars!"
+    EXTENT -42.33528830884047 -47.25854720678822 43.404846801027695 24.75957883214916
+    PROJECTION
+        "init=epsg:4326"
+    END
+    SIZE 400 400
+    FONTSET "data/fonts/fontset.txt"      
+    SYMBOL
+        NAME "circle"
+        TYPE ELLIPSE
+        FILLED TRUE
+        POINTS
+            1 1
+        END
+    END
+    WEB
+        METADATA
+            "ows_enable_request" "*" 
+            "ows_srs" "EPSG:4326 EPSG:3857" 
+        END
+    END    
+    IMAGECOLOR 0 0 0
+    LAYER
+        TYPE LINE
+        PROJECTION
+            AUTO
+        END
+        NAME "constellations"
+        STATUS OFF
+        CONNECTIONTYPE OGR
+        CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/constellations.lines.json"
+        LABELITEM "Id"
+        CLASS
+            LABEL
+                COLOR "#15f4ee"
+                FONT "LiberationMono"
+                TYPE TRUETYPE
+                SIZE 10
+                POSITION AUTO
+                PARTIALS FALSE
+            END
+            STYLE
+                COLOR "#15f4ee"
+                WIDTH 1
+            END
+        END
+    END
+    LAYER
+        TYPE POINT
+        NAME "stars"
+        STATUS OFF
+        CONNECTIONTYPE OGR
+        CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/stars.14.json"
+        PROCESSING "NATIVE_FILTER=mag>12"
+        COMPOSITE
+            COMPFILTER "blur(5)"
+            OPACITY 90
+        END
+        CLASS
+            STYLE
+                SYMBOL "circle"
+                COLOR "#ffcd3c"
+                SIZE [mag]
+            END
+        END
+    END
+    LAYER
+        TYPE POINT
+        NAME "stars2"
+        STATUS OFF
+        CONNECTIONTYPE OGR
+        CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/stars.14.json"
+        PROCESSING "NATIVE_FILTER=mag>10"
+        CLASS
+            STYLE
+                SYMBOL "circle"
+                COLOR 255 255 255
+                SIZE 2
+            END
+        END
+    END
+END

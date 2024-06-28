@@ -21,7 +21,9 @@ by [Kartoza](https://kartoza.com/).
   ```bash
   cd ./getting-started-with-mapserver/workshop/exercises
   docker compose down
-  docker compose -f docker-db-compose.yml up -d 
+  docker compose -f docker-db-compose.yml up -d
+  # when finished
+  docker compose -f docker-db-compose.yml down
   ```
 
 

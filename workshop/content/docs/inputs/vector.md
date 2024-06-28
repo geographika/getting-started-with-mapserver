@@ -12,19 +12,48 @@ The OGR drivers however may be better maintained. For formats which have both na
 More information can be found on the [Vector Data Management & Optimization](https://mapserver.org/fr/optimization/vector.html) page in the
 MapServer documentation.
 
-## Remote Datasets
+<div class="map">
+  <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/stars.html"></iframe>
+</div>
 
-Already covered access
+## Remote Datasets using  Virtual File Systems
 
-Access via GitHub - same dataset. Add both to the Mapfile
-s3 buckets
+GDAL's [Virtual File Systems](https://gdal.org/user/virtual_file_systems.html) can be used to
+access data over stored on a network, for example on a server or Amazon S3 bucket. 
 
 ```scala
-# CONNECTION "/vsicurl/https://github.com/MapServer/MapServer-demo/raw/main/data/lakespy2.shp"
-CONNECTION "data/itasca/lakespy2.shp"
+CONNECTIONTYPE OGR
+CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/constellations.lines.json"
 ```
 
+<!--
 ## Extents
+-->
+
+## Code
+
+!!! example
+
+    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/stars.map&mode=map&layer=constellations>
+    - OpenLayers example: <http://localhost:5001/stars.html>
+
+??? JavaScript
+
+    ``` js
+    --8<-- "stars.js"
+    ```
+
+??? Mapfile
+
+    ``` scala
+    --8<-- "stars.map"
+    ```
+
+## Exercises
+
+TODO
+
+
 
 
 
