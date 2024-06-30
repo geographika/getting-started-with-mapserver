@@ -10,12 +10,12 @@ MAP
 
   WEB
     METADATA
-      ows_title "OSM Features"
-      ows_enable_request "*" # this enables all OGC requests
-      ows_srs "EPSG:4326 EPSG:3857"
-      oga_onlineresource "/ogcfeatures/ogcapi"
-      # oga_html_template_directory
-      # oga_enable_request "*"
+      "ows_title" "OSM Features"
+      "ows_enable_request" "*" # this enables all OGC requests
+      "ows_srs" "EPSG:4326 EPSG:3857"
+      "oga_onlineresource" "/ogcfeatures/ogcapi"
+      # "oga_html_template_directory"
+      # "oga_enable_request" "*"
     END
   END
 
@@ -26,9 +26,9 @@ MAP
     TEMPLATE "void"
 
     METADATA
-      ows_title "Point POIs"
-      gml_include_items "all"
-      gml_featureid "osm_id"
+      "ows_title" "Point POIs"
+      "gml_include_items" "all"
+      "gml_featureid" "osm_id"
     END
     CONNECTIONTYPE OGR
     CONNECTION "data/osm/pois.fgb"
@@ -41,9 +41,9 @@ MAP
     TEMPLATE "void"
 
     METADATA
-      ows_title "Polygon POIs"
-      gml_include_items "all"
-      gml_featureid "osm_id"
+      "ows_title" "Polygon POIs"
+      "gml_include_items" "all"
+      "gml_featureid" "osm_id"
     END
     CONNECTIONTYPE OGR
     CONNECTION "data/osm/pois_a.fgb"

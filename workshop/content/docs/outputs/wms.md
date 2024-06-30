@@ -4,6 +4,18 @@
 
 We've been using WMS for the example so far. In this exercise we'll look in more detail at how to configure WMS services in MapServer.
 
+
+## METADATA Blocks
+
+Web services are configured using `METADATA` blocks. These are key-value pairs, for example:
+
+
+!!! tip
+
+    It is good practice to put the key names in quotes. This is not required, but it makes the Mapfile
+    clearer that they are strings and not keywords. Keys can also contain strings such as field names, which
+    could contain spaces. Without quotes these will cause syntax errors in the Mapfile.
+
 ## Output Image Formats
 
 + webp

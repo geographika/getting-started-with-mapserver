@@ -26,6 +26,9 @@ CONNECTIONTYPE OGR
 CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/constellations.lines.json"
 ```
 
++ GeoParquet, GeoArrow - use range requests to access only the data needed.
+**Cloud-Optimised** - similar to raster data formats such as "Cloud-Optimized GeoTIFFs" - COGs.
+
 <!--
 ## Extents
 -->

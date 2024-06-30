@@ -24,7 +24,7 @@ const map = new Map({
                     stroke: new Stroke({
                         color: 'rgb(66, 133, 244)', // Light blue border color
                         width: 2, // Border width
-                    }),
+                    })
                 });
             },
         }),

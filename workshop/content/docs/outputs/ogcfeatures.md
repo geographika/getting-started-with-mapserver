@@ -121,6 +121,11 @@ new VectorLayer({
 
 1. Modify the `workshop\exercises\mapfiles\railways.map` to enable the OGC Features API. You will need to add a new entry to the `MAPS` section in `workshop\exercises\mapfiles\mapserver.conf` and restart the Docker container to be able to browse the OGC Features API interface. 
 
+    !!! tip
+
+    You need to add `TEMPLATE "void"` to each of the layers you want to make available through the OGC Features API. 
+    [TEMPLATE](https://mapserver.org/mapfile/layer.html#mapfile-layer-template) is a left-over from when HTML templates were used to return features, and allows the layer to be queried. 
+
 ## Possible Errors
 
 - 

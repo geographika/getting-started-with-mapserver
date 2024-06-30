@@ -18,9 +18,10 @@ MAP
 
     WEB
         METADATA
-            ows_enable_request "*" # this enables all OGC requests
+            "ows_enable_request" "*" # this enables all OGC requests
             "wfs_getfeature_formatlist" "geojson"
             "wfs_srs" "EPSG:4326 EPSG:3857"
+            "ows_onlineresource" "http://localhost:5000/"
         END
     END
     LAYER
