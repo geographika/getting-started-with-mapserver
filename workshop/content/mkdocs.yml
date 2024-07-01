@@ -8,7 +8,7 @@ nav:
     - Home: index.md
     - Workshop Environment Setup: setup.md
     - Introduction:
-        - Introduction: introduction/introduction.md
+        - Workshop Overview: introduction/introduction.md
         - Docker: introduction/docker.md        
         - MapServer: introduction/mapserver.md
         - Command Line: introduction/commandline.md

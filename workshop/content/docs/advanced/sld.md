@@ -1,15 +1,31 @@
-# Styled Layer Descriptor
+# Styled Layer Descriptor (SLD) in MapServer
+
+## Overview
+
+Styled Layer Descriptor (SLD) is an OGC standard used for describing styles. SLD files are written in XML. 
+
+SLD can be used by MapServer in several different ways:
+
+1. Applying an SLD file to a WMS service
+
+This exercise will focus on the first use case.
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/sld.html"></iframe>
 </div>
 
+## Code
+
+!!! example
+
+    - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/lines.map&mode=map&layer=roads>
+    - Local OpenLayers example: <http://localhost:5001/sld.html>
+    - 
 ???+ SLD
 
     ``` xml
     --8<-- "sld.xml"
     ```
-
 
 ??? JavaScript
 
@@ -23,10 +39,6 @@
     --8<-- "sld.map"
     ```
 
-http://localhost:5001/sld.html
-
-Update SLD XML file (will need to refresh the browser)
-
 http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0
 
 ```xml
@@ -39,3 +51,7 @@ http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetCapabilities&SERVIC
 
 
 http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetStyles&SERVICE=WMS&LAYERS=countries&VERSION=1.3.0&sld=http://node:5001/data/sld.xml
+
+## Exercises
+
+1. Update SLD XML file. You will then need to refresh the browser to see any changes.
