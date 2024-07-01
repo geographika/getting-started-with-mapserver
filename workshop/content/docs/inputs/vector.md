@@ -54,10 +54,28 @@ CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/maste
 
 ## Exercises
 
-TODO
+1. Try adding a new dataset to the `stars.map`, for example `mw.json` which is at the same location as the other datasets:
+   
+   ```scala
+    LAYER
+        TYPE POLYGON
+        NAME "milkyway"
+        STATUS OFF
+        # TODO add in the data connection
+        COMPOSITE
+            OPACITY 30
+        END
+        CLASS
+            STYLE
+                COLOR 230 230 230
+                OUTLINECOLOR 50 50 50
+            END
+        END
+    END
+    ```
 
+    In the `stars.js` you will need to ensure the `milkyway` layer is added to the OpenLayers map:
 
-
-
-
-
+    ```js
+    params: { 'LAYERS': 'constellations,stars,stars2,milkyway'},
+    ```
