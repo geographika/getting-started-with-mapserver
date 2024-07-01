@@ -23,6 +23,7 @@ MAP
         CONNECTION "data/osm/buildings_a.fgb"
         CLASSGROUP "offices" # we can switch the default set of CLASSes here
         CLASS
+            NAME "Offices" # this value is used for Legend titles for the CLASS
             GROUP "offices"
             EXPRESSION ( "[type]" = "office" )
             STYLE
@@ -31,6 +32,7 @@ MAP
             END
         END
         CLASS
+            NAME "Other"
             GROUP "other"
             STYLE
                 COLOR 246 241 223
