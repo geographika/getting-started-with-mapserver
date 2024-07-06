@@ -1,5 +1,9 @@
 # Styled Layer Descriptor (SLD) in MapServer
 
+!!! warning
+
+    This page is currently in a draft form.
+
 ## Overview
 
 Styled Layer Descriptor (SLD) is an OGC standard used for describing styles. SLD files are written in XML. 

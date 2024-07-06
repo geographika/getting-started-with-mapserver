@@ -55,8 +55,8 @@ CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/maste
 ## Exercises
 
 1. Try adding a new dataset to the `stars.map`, for example `mw.json` which is at the same location as the other datasets:
-   
-   ```scala
+
+    ```scala
     LAYER
         TYPE POLYGON
         NAME "milkyway"

@@ -30,7 +30,7 @@ MAP
         PROJECTION
             "init=epsg:4326"
         END
-        EXTENT -180.0 -90.0 180.0 90        
+        EXTENT -180.0 -90.0 180.0 90
         STATUS OFF
         METADATA
             "gml_featureid" "ne_id"
