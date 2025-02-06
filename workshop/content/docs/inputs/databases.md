@@ -16,15 +16,15 @@ by [Kartoza](https://kartoza.com/).
 
 !!! info
 
-  We will use a different Docker Compose file, which includes a PostGIS container for this exercise. We can stop the current Docker containers, and run the alternate Docker containers with the following commands:
+    We will use a different Docker Compose file, which includes a PostGIS container for this exercise. We can stop the current Docker containers, and run the alternate Docker containers with the following commands:
 
-  ```bash
-  cd ./getting-started-with-mapserver/workshop/exercises
-  docker compose down
-  docker compose -f docker-db-compose.yml up -d
-  # when finished
-  docker compose -f docker-db-compose.yml down
-  ```
+    ```bash
+    cd ./getting-started-with-mapserver/workshop/exercises
+    docker compose down
+    docker compose -f docker-db-compose.yml up -d
+    # when finished
+    docker compose -f docker-db-compose.yml down
+    ```
 
 
 ## Checking the Database Connection with QGIS
