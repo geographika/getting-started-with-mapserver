@@ -23,8 +23,8 @@ MapScript is not installed on the MapServer Docker image by default, but it can 
 # start an interactive session with the MapServer Docker container
 docker exec -it mapserver /bin/bash
 
-# install MapScript via a downloaded Debian package available in the workshop repository
-dpkg -i /scripts/python3-mapscript_8.0.1-1~jammy2_amd64.deb
+apt install python3-pip -y
+pip install /scripts/mapscript-8.4.0-cp312-cp312-linux_x86_64.whl --break-system-packages
 
 # test that we can import MapScript successfully
 python -c "import mapscript;print(mapscript.msGetVersion())"
