@@ -12,7 +12,8 @@ const inputFiles = readdirSync(__dirname)
 export default {
     base: '', // otherwise assets are located at /assets
     server: {
-        host: true,
+        host: true, // allow connections from other Docker containers
+        allowedHosts: ['node', 'geographika.github.io'], // allow access using http://node:5001 from the mapserver container
         port: 5001,
         watch: {
             // fix for Windows on WSL - https://github.com/vitejs/vite/issues/1153
