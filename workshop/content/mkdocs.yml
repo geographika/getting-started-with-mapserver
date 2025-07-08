@@ -1,7 +1,7 @@
 site_name: Getting Started with MapServer
 site_description: "MapServer is an Open Source platform for publishing spatial data and interactive mapping applications to the web. This workshop will cover publishing geospatial data to the Web using MapServer in support of the suite of OGC API standards."
 site_author: The MapServer community
-copyright: "&copy; 2024 Seth Girvin and the MapServer community"
+copyright: "&copy; 2025 Seth Girvin and the MapServer community"
 site_url: https://geographika.github.io/getting-started-with-mapserver
 repo_url: https://github.com/geographika/getting-started-with-mapserver
 nav:
@@ -9,12 +9,12 @@ nav:
     - Workshop Environment Setup: setup.md
     - Introduction:
         - Workshop Overview: introduction/introduction.md
-        - Docker: introduction/docker.md        
+        - Docker: introduction/docker.md
         - MapServer: introduction/mapserver.md
         - Command Line: introduction/commandline.md
         - OpenLayers: introduction/openlayers.md
     - Mapfile:
-        - Lines: mapfile/lines.md    
+        - Lines: mapfile/lines.md
         - Points: mapfile/points.md
         - Labels: mapfile/labels.md
         - Polygons: mapfile/polygons.md
@@ -30,9 +30,9 @@ nav:
         - OGC Features API: outputs/ogcfeatures.md
     - Advanced:
         - SLD: advanced/sld.md
-        - Vector Symbols: advanced/symbols.md        
+        - Vector Symbols: advanced/symbols.md
         - Clusters: advanced/clusters.md
-        - Apache: advanced/apache.md        
+        - Apache: advanced/apache.md
         - MapScript: advanced/mapscript.md
     - Summary: summary.md
     - Credits and Thanks: credits.md
