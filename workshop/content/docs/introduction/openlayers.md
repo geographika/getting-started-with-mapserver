@@ -33,8 +33,8 @@ new ImageLayer({
 }),
 ```
 
-Map name to show all layers
-Or define individually
+The `LAYERS`parameter can be set to the Mapfile `MAP NAME` to show all layers, or you can add individual
+layers using a comma-separated list of `LAYER NAME`.
 
 ## WMS
 
