@@ -44,7 +44,7 @@ system the Docker website provides detailed installation instructions. Please fo
 
 For many platforms a product called `Docker Desktop` is available, which includes `Docker compose`:
 
-* Windows [installation](https://docs.Docker.com/desktop/install/windows-install) - install "Docker Desktop for Windows"
+* Windows [installation](https://docs.Docker.com/desktop/install/windows-install) - install "Docker Desktop for Windows - x86_64"
 * Mac [installation](https://docs.Docker.com/desktop/install/mac-install)
 * Linux [installation](https://docs.Docker.com/desktop/install/linux-install)
 
@@ -118,10 +118,10 @@ If all goes well, you should be able to run Docker from the command line as foll
 
 ```bash
 docker --version
-# Docker version 26.1.1, build 4cf5afa
+# Docker version 28.2.2, build e6534b4
 
 docker compose version
-# Docker Compose version v2.27.0-desktop.2
+# Docker Compose version v2.36.2-desktop.1
 ```
 
 Your version numbers don't have to match those above exactly.
@@ -165,4 +165,6 @@ Hopefully you'll see a map, and we're ready to start the workshop.
 * `E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 46288 (unattended-upgr)` is caused
 by another program trying to update Ubuntu. Rebooting may fix this, or you can try running `sudo kill <process_id>` for example in this case `sudo kill 46288`. 
 * `docker-desktop : Depends: docker-ce-cli but it is not installable` - you are attempting to install Docker Desktop, but have not yet installed the Docker Engine.
-
+* `unable to get image 'node:lts-slim': error during connect: in the default daemon configuration on Windows, the docker client must be 
+   run with elevated privileges to connect: Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.50/images/node:lts-slim/json": open //./pipe/docker_engine: The system cannot find the file specified.`
+   - you will need 
