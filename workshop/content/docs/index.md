@@ -14,7 +14,7 @@ major platforms (Windows, Linux, Mac).
 
 **Getting Started with MapServer** is a half day workshop designed for users to become familiar with MapServer. 
 This workshop will cover creating Mapfiles, working with data sources and publishing geospatial data to the web using
-OGC API standards.Please see the left hand navigation for the table of contents.
+OGC API standards. Please see the left hand navigation for the table of contents.
 
 # About this tutorial
 
