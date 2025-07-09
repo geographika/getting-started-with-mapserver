@@ -70,7 +70,7 @@ setup provided to you is actually working. The configuration file for Docker Com
 
     ```bash
     docker compose up -d
-    docker ls  # verify that the mapserver container is running
+    docker container ls  # verify that the mapserver container is running
     # visit http://localhost:5000 in your browser
     docker logs --follow mapserver  # view logs
     docker compose stop
