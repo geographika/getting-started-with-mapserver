@@ -81,11 +81,23 @@ END
 
 ## Exercises
 
-1. Edit the `workshop/exercises/app/js/points.js` to hide the OpenStreetMap base layer. You need to set the `visible: true` to `visible: false`.
+1. Edit the `workshop/exercises/app/js/points.js` to show the OpenStreetMap base layer. You need to set the `visible: false` to `visible: true`.
 2. Change the default `CLASS` to use larger points in a more visible colour.
 3. Add another class to display another point type. Choose an appropriate symbol from the list at <http://localhost:5001/fonts.html>. Some example attribute types include `fast_food`, `monument`, and `post_box`. The source dataset is `workshop/exercises/mapfiles/data/osm/pois.fgb` - this can be opened in QGIS to view all available attributes and values. 
 
 <!--
+
+If a symbol name doesn't exist:
+
+msDrawMap(): Image handling error. Failed to draw layer named 'pois'. msLoadMSRasterBufferFromFile(): General error message. unable to open file /etc/mapserver/new for reading
+
+E.g.
+
+    STYLE
+        SYMBOL "new"
+        SIZE 50
+        COLOR 0 0 0
+    END
 
 A symbol can also point to a SVG image file on disk as in the example below:
 
