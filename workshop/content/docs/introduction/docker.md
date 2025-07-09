@@ -15,7 +15,7 @@ located at `workshop\exercises\docker-compose.yml`:
 
 ```yaml
   mapserver:
-    image: camptocamp/mapserver:8.0
+    image: camptocamp/mapserver:8.4-gdal3.10
     container_name: mapserver
     ports:
       - 5000:80
