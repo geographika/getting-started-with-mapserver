@@ -52,7 +52,7 @@ setup provided to you is actually working. The configuration file for Docker Com
 
     ```bash
     cd workshop/exercises
-    docker-compose up
+    docker compose up
     ```
 
     2. Open <http://localhost:5000> in your browser, you should see an error message!
@@ -69,11 +69,11 @@ setup provided to you is actually working. The configuration file for Docker Com
     You may also run the Docker container in the background (detached) as follows:
 
     ```bash
-    docker-compose up -d
+    docker compose up -d
     docker ls  # verify that the mapserver container is running
     # visit http://localhost:5000 in your browser
     docker logs --follow mapserver  # view logs
-    docker-compose stop
+    docker compose stop
     ```
 
 ## Folder Structure
