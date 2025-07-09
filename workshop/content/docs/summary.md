@@ -23,5 +23,6 @@ MapServer community!
 Yearly summaries of developments in MapServer and the MapServer community
 can be found below:
 
+- [State of MapServer 2025](https://geographika.github.io/mapserver-state-2025/)
 - [State of MapServer 2024](https://geographika.github.io/mapserver-state-2024/)
 - [State of MapServer 2022](https://geographika.github.io/mapserver-state-2022/)
