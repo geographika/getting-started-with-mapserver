@@ -8,12 +8,12 @@ Full MapServer WMS documentation is available [here](https://www.mapserver.org/o
 
 ## METADATA Blocks
 
-Web services are configured using `METADATA` blocks. These are key-value pairs, for example:
+Web services are configured using `METADATA` blocks. These are key-value pairs, for example: `"wms_title" "My WMS Services"`.
 
 !!! tip
 
-    It is good practice to put the key names in quotes. This is not required, but it makes the Mapfile
-    clearer that they are strings and not keywords. Keys can also contain strings such as field names, which
+    It is good practice to put the key names in quotes. This is not required, but it makes it clearer
+    that they are strings and not Mapfile keywords. Keys can also contain strings such as field names, which
     could contain spaces. Without quotes these will cause syntax errors in the Mapfile.
 
 Prefixes are used to configure different types of web service. For example:
