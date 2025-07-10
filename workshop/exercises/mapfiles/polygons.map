@@ -1,6 +1,6 @@
 MAP
     NAME "Buildings"
-    EXTENT 26.668678 58.339241 26.796582 58.40941
+    EXTENT 17 43 18 44
     UNITS DD
     SIZE 800 600
     PROJECTION
@@ -19,13 +19,13 @@ MAP
         STATUS OFF
         CONNECTIONTYPE OGR
         # CONNECTIONTYPE FLATGEOBUF
-        # DATA "data/osm/buildings_a.fgb"
-        CONNECTION "data/osm/buildings_a.fgb"
-        CLASSGROUP "offices" # we can switch the default set of CLASSes here
+        # DATA "data/osm/mostar/buildings_a.fgb"
+        CONNECTION "data/osm/mostar/buildings_a.fgb"
+        CLASSGROUP "university" # we can switch the default set of CLASSes here
         CLASS
-            NAME "Offices" # this value is used for Legend titles for the CLASS
-            GROUP "offices"
-            EXPRESSION ( "[type]" = "office" )
+            NAME "University" # this value is used for Legend titles for the CLASS
+            GROUP "university"
+            EXPRESSION ( "[type]" = "university" )
             STYLE
                 COLOR 255 0 0
                 OUTLINECOLOR 0 0 0

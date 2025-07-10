@@ -11,7 +11,7 @@ const mapfilesPath = import.meta.env.VITE_MAPFILES_PATH;
 const layers = [
     new TileLayer({
         source: new OSM(),
-        visible: true
+        visible: false
     }),
     new ImageLayer({
             source: new ImageWMS({
@@ -24,7 +24,7 @@ const map = new Map({
     layers: layers,
     target: 'map',
     view: new View({
-        center: [2975862.75916499, 8046369.8646329],
+        center: [1982884, 5363834],
         zoom: 14,
     }),
 });

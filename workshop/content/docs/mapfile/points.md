@@ -2,7 +2,8 @@
 
 ## Overview
 
-In this exercise we'll create a map of POIs (Points of Interest) from OpenStreetMap.
+In this exercise we'll create a map of POIs (Points of Interest) from OpenStreetMap for Mostar, Bosnia-Herzegovina - the host
+city for [FOSS4G Europe 2025](https://2025.europe.foss4g.org/).
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/points.html"></iframe>
@@ -67,13 +68,13 @@ END
     - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
     - Local OpenLayers example: <http://localhost:5001/points.html>
 
-??? JavaScript
+??? JavaScript "points.js"
 
     ``` js
     --8<-- "points.js"
     ```
 
-??? Mapfile
+??? Mapfile "points.map"
 
     ``` scala
     --8<-- "points.map"

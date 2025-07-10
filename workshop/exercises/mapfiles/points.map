@@ -46,7 +46,7 @@ MAP
         STATUS ON
         TYPE POINT # each LAYER must have a TYPE such as POINT, LINE, or POLYGON
         CONNECTIONTYPE FLATGEOBUF
-        DATA "data/osm/pois.fgb"
+        DATA "data/osm/mostar/pois.fgb"
         CLASSITEM "fclass"
         # data within a LAYER is classified using one or more CLASSes
         # these use EXPRESSIONs to define which features are assigned to

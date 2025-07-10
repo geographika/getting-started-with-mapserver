@@ -2,7 +2,7 @@
 
 ## Overview
 
-This exercise displays building from OpenStreetMap. 
+This exercise displays buildings from OpenStreetMap. 
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/polygons.html"></iframe>
@@ -33,16 +33,16 @@ END
 
 ## Expressions
 
-In this Mapfile we have two different classes for the dataset. 
+In this Mapfile we have two different classes for the dataset.
 
 The first class has an [EXPRESSION](https://mapserver.org/mapfile/expressions.htm) that limits 
-which features will be drawn. This compares the value for the "type" field for each feature with "office".
+which features will be drawn. This compares the value for the "type" field for each feature with "university".
 If there is a match then the feature is drawn with the `STYLE`s from the `CLASS`.
 
 ```scala
 CLASS
-    GROUP "offices"
-    EXPRESSION ( "[type]" = "office" )
+    GROUP "university"
+    EXPRESSION ( "[type]" = "university" )
 ...
 ```
 
@@ -79,22 +79,22 @@ CLASS
 
 ??? Mapfile "polygons.map"
 
-    ``` scala title="polygons.map"
+    ``` scala
     --8<-- "polygons.map"
     ```
 
 ## Exercises
 
-1. Switch the `CLASSGROUP` in the Mapfile to see different styles. There are two groups `offices` and `other`.
+1. Switch the `CLASSGROUP` in the Mapfile to see different styles. There are two groups `university` and `other`.
 
     ```scala
     LAYER
         NAME "buildings"
         ...
-        CLASSGROUP "offices" # can switch the default set of CLASSes here
+        CLASSGROUP "university" # can switch the default set of CLASSes here
     ```
 
-2. Switch the style used in the `polygon.js` file from `offices` to `other`:
+2. Switch the style used in the `polygon.js` file from `university` to `other`:
 
     ```js
     source: new ImageWMS({
