@@ -50,13 +50,13 @@ new VectorTileLayer({
 
     - Local OpenLayers example: <http://localhost:5001/vector-tiles.html>
 
-??? JavaScript
+??? JavaScript "vector-tiles.js"
 
     ``` js
     --8<-- "vector-tiles.js"
     ```
 
-??? Mapfile
+??? Mapfile "vector-tiles.map"
 
     ``` scala
     --8<-- "vector-tiles.map"

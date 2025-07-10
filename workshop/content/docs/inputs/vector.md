@@ -40,13 +40,13 @@ CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/maste
     - MapServer request: <http://localhost:5000/?map=/etc/mapserver/stars.map&mode=map&layer=constellations>
     - OpenLayers example: <http://localhost:5001/stars.html>
 
-??? JavaScript
+??? JavaScript "stars.js"
 
     ``` js
     --8<-- "stars.js"
     ```
 
-??? Mapfile
+??? Mapfile "stars.map"
 
     ``` scala
     --8<-- "stars.map"

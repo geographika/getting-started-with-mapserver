@@ -44,13 +44,13 @@ GEOMTRANSFORM (centerline(densify([shape], 0.1)))
     - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/lakes.map&mode=map&layer=lakes&layer=lake-labels>
     - Local OpenLayers example: <http://localhost:5001/lakes.html>
 
-??? JavaScript
+??? JavaScript "lakes.js"
 
     ``` js
     --8<-- "lakes.js"
     ```
 
-??? Mapfile
+??? Mapfile "lakes.map"
 
     ``` scala
     --8<-- "lakes.map"

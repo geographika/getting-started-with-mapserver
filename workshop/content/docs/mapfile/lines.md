@@ -2,7 +2,8 @@
 
 ## Overview
 
-In this exercise we're going to display the road network from OpenStreetMap for Tartu, Estonia.
+In this exercise we're going to display the road network from OpenStreetMap for Tartu, Estonia - the host
+city for [FOSS4G Europe 2024](https://2024.europe.foss4g.org/) where this workshop was first given. 
 
 <div class="map">
   <iframe src="https://geographika.github.io/getting-started-with-mapserver-demo/lines.html"></iframe>
@@ -22,7 +23,7 @@ a dataset that will be displayed in your map. In this example we have a single "
 LAYER
   NAME "roads"
   TYPE LINE
-  STATUS OFF  
+  STATUS OFF
   ...
 ```
 
@@ -71,13 +72,13 @@ END
     Note the layer name in `layer=roads` is case-sensitive and had to match the LAYER NAME in the Mapfile
     exactly.
 
-??? JavaScript
+??? JavaScript "lines.js"
 
     ``` js
     --8<-- "lines.js"
     ```
 
-??? Mapfile
+??? Mapfile "lines.map"
 
     ``` scala
     --8<-- "lines.map"

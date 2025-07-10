@@ -105,13 +105,13 @@ new VectorLayer({
     - Direct MapServer request: <http://localhost:5000/ogcfeatures/ogcapi/collections/pois/items?f=html>    
     - Local OpenLayers example: <http://localhost:5001/ogcfeatures.html>
 
-??? JavaScript
+??? JavaScript "ogcfeatures.js"
 
     ``` js
     --8<-- "ogcfeatures.js"
     ```
 
-??? Mapfile
+??? Mapfile "ogcfeatures.map"
 
     ``` scala
     --8<-- "ogcfeatures.map"
