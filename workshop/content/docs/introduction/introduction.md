@@ -79,14 +79,16 @@ setup provided to you is actually working. The configuration file for Docker Com
 
 ## Folder Structure
 
-The workshop folder structure is shown below:
-
-```
---8<-- "tree.md"
-```
-
 Key folders are:
 
 - `workshop/exercises/mapfiles` - the location of all the Mapfiles used in the workshop
 - `workshop/exercises/mapfiles/data` - datasets used in the Mapfiles
 - `workshop/exercises/app/js` - the JavaScript files used in the workshop
+
+![Workshop Folders](../assets/images/workshop-folders.png)
+
+The full workshop folder structure is shown below:
+
+```
+--8<-- "tree.md"
+```
