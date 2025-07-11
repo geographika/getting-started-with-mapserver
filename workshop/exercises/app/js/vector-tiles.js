@@ -4,7 +4,7 @@ import Map from 'ol/Map.js';
 import VectorTileLayer from 'ol/layer/VectorTile.js';
 import VectorTileSource from 'ol/source/VectorTile.js';
 import View from 'ol/View.js';
-import { Fill, Icon, Stroke, Style, Text } from 'ol/style.js';
+import { Fill, Stroke, Style } from 'ol/style.js';
 
 // https://openlayers.org/en/latest/examples/mapbox-vector-tiles.html
 
@@ -24,7 +24,10 @@ const map = new Map({
                     stroke: new Stroke({
                         color: 'rgb(66, 133, 244)', // Light blue border color
                         width: 2, // Border width
-                    })
+                    }),
+                    // fill: new Fill({
+                    //    color: 'rgba(66, 133, 244, 0.4)' // semi-transparent blue fill
+                    //})
                 });
             },
         }),
