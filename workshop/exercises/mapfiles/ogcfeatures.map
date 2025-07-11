@@ -1,8 +1,8 @@
 MAP
   NAME "OGC Features"
-  EXTENT 26.668678 58.339241 26.796582 58.409410
+    EXTENT 17.77 43.31 17.83 43.36
   UNITS DD
-  SIZE 800 600
+  SIZE 600 600
 
   PROJECTION
     "init=epsg:4326"
@@ -31,7 +31,7 @@ MAP
       "gml_featureid" "osm_id"
     END
     CONNECTIONTYPE OGR
-    CONNECTION "data/osm/pois.fgb"
+    CONNECTION "data/osm/mostar/pois.fgb"
   END
 
   LAYER
@@ -46,7 +46,7 @@ MAP
       "gml_featureid" "osm_id"
     END
     CONNECTIONTYPE OGR
-    CONNECTION "data/osm/pois_a.fgb"
+    CONNECTION "data/osm/mostar/pois_a.fgb"
   END
 
 END
