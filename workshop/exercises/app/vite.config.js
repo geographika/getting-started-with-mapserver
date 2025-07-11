@@ -27,7 +27,8 @@ export default {
             plugins: [
                 copy({
                     targets: [
-                        { src: 'data/*.*', dest: 'dist/data' }
+                        // { src: 'data/*.*', dest: 'dist/data' },
+                        { src: '*.xml', dest: 'dist' }
                     ],
                     verbose: true,
                     hook: 'writeBundle'
