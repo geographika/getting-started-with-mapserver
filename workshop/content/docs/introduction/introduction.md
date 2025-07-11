@@ -28,14 +28,14 @@ features so new topics will be added over time.
 
 ## Workshop Outline
 
-Below is a rough timeline for how the timings of the 4-hour workshop. 
+Below is a rough timeline for how the timings of the 4-hour workshop, with a 15 minute break.
 These can be adapted based on the needs of the participants.
 
 - 0h00 - 0h30 - Introduction to the workshop, Docker setup and tests
 - 0h30 - 1h30 - Mapfile exercises
 - 1h30 - 2h00 - Inputs
-- Break
-- 2h00 - 3h00 - Outputs
+- Break (15 minutes)
+- 2h15 - 3h00 - Outputs
 - 3h00 - 3h15 - Brief Overview of Advanced topics
 - 3h15 - 3h45 - Custom Mapfile creation
 - 3h45 - 4h00 - Questions and conclusions
