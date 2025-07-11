@@ -1,9 +1,9 @@
 MAP
     NAME "Vector Tiles"
-    EXTENT -180 -90 180 90
-    SIZE 400 400
+    EXTENT -20037508.34 -20048966.1 20037508.34 20048966.1
+    SIZE 256 256
     PROJECTION
-        "init=epsg:4326"
+        "init=epsg:3857"
     END
     LAYER
         NAME "countries"
@@ -11,7 +11,7 @@ MAP
         PROJECTION
             "init=epsg:4326"
         END
-        EXTENT -180.0 -90.0 180.0 90        
+        EXTENT -180.0 -90.0 180.0 90
         STATUS OFF
         # If want to include attributes in the tiles add
         # the METADATA block
@@ -19,8 +19,7 @@ MAP
             "gml_include_items" "all"
             "gml_types" "auto"
         END
-        CONNECTIONTYPE OGR
-        CONNECTION "data/naturalearth"
-        DATA "ne_110m_admin_0_countries"
+        CONNECTIONTYPE FLATGEOBUF
+        DATA "data/naturalearth/ne_110m_admin_0_countries.fgb"
     END
 END
