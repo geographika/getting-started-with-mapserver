@@ -1,6 +1,6 @@
 MAP
     NAME "Buildings"
-    EXTENT 17 43 18 44
+    EXTENT 17.77 43.31 17.83 43.36
     UNITS DD
     SIZE 800 600
     PROJECTION
