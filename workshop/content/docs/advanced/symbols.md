@@ -84,13 +84,13 @@ END
     - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/railways.map&mode=map&layer=roads>
     - Local OpenLayers example: <http://localhost:5001/railways.html>
 
-??? JavaScript
+??? JavaScript "railways.js"
 
     ``` js
     --8<-- "railways.js"
     ```
 
-??? Mapfile
+??? Mapfile "railways.map"
 
     ``` scala
     --8<-- "railways.map"

@@ -4,7 +4,7 @@
 
 MapServer can connect to most geospatial databases. There are native MapServer drivers for [PostgreSQL/PostGIS](https://mapserver.org/input/vector/postgis.html),
 [Oracle](https://mapserver.org/input/vector/oracle.html), and [Microsoft SQL Server](https://mapserver.org/input/vector/mssql.html). Other databases
-can be accessed through OGR e.g. [MySQL](https://mapserver.org/input/vector/mysql.html).
+can be accessed through OGR, for example [MySQL](https://mapserver.org/input/vector/mysql.html).
 
 In this exercise we'll be connecting to a PostGIS database to display water polygon features using a MapServer WMS. [PostGIS](https://postgis.net/) spatially enables the [PostgreSQL](https://www.postgresql.org/)
 databases. 

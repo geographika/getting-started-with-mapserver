@@ -104,4 +104,5 @@ CLASS
 
 3. Switch the `CONNECTIONTYPE` to use the native `FLATGEOBUF` driver.
 
-4. Experiment with styling the polygons. `WIDTH` can be used to change the width of the polygon outline.
+4. Experiment with styling the polygons. `WIDTH` can be used to change the width of the polygon outline. There are more examples
+   at [Cartographical Symbol Construction with MapServer](https://mapserver.org/mapfile/symbology/construction.html).

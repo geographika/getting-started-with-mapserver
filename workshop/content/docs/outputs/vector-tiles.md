@@ -65,7 +65,8 @@ new VectorTileLayer({
 ## Exercises
 
 1. Update the layer to use the `data/naturalearth/ne_110m_lakes` dataset.
-2. Update the OpenLayers style to use a blue fill for the lakes. In the `Style` function you will need to add a
+2. Update the OpenLayers style to use a blue fill for the lakes. In the `Style` function you will need to uncomment the `fill` JavaScript.
+   Experiment with different colour values for the `fill` and `stroke`.
 
 
 

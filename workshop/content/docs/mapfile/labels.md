@@ -59,8 +59,10 @@ GEOMTRANSFORM (centerline(densify([shape], 0.1)))
 ## Exercises
 
 1. Use a different font for the label by adding the following to the `LABEL` block: `FONT MonsieurLaDoulaise` and increasing the `SIZE` to `28`.
+   The list of fonts available can be found in `workshop/exercises/mapfiles/data/fonts/fontset.txt`.
 2. Comment out the `GEOMTRANSFORM (centerline([shape]))` and `ANGLE FOLLOW` lines (using `#`) to see its effect on the map.
-
+3. If you have time, download a font you like from https://fonts.google.com/ and unzip the .TTF file to `workshop/exercises/mapfiles/data/fonts/`
+   add a new entry to `fontset.txt` and use this font to draw your Map labels.
 <!--
 ``` xml
 <ServiceExceptionReport xmlns="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.3.0" xsi:schemaLocation="http://www.opengis.net/ogc http://schemas.opengis.net/wms/1.3.0/exceptions_1_3_0.xsd">

@@ -26,8 +26,9 @@ CONNECTIONTYPE OGR
 CONNECTION "/vsicurl/https://raw.githubusercontent.com/ofrohn/d3-celestial/master/data/constellations.lines.json"
 ```
 
-+ GeoParquet, GeoArrow - use range requests to access only the data needed.
-**Cloud-Optimised** - similar to raster data formats such as "Cloud-Optimized GeoTIFFs" - COGs.
+MapServer (through GDAL) takes advantage of the newer **Cloud-Optimised** formats such as COGs - "Cloud-Optimized GeoTIFFs".
+These formats use range requests to access only the data needed, so MapServer only needs to download the data for rendering rather
+than a huge GeoTIFF file.
 
 <!--
 ## Extents

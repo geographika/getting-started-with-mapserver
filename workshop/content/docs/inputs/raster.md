@@ -104,4 +104,5 @@ A [COMPOSITE](https://mapserver.org/mapfile/composite.html) block is used on the
 ## Exercises
 
 1. Try different settings for layer `OPACITY` to see its effect on the output in `raster.map`.
-2. Change the `COLOR` of the first `CLASS` in `terrain.include` to highlight which pixels have values in this range.
+2. Change the `COLOR` of the first `CLASS` in `terrain.include` to highlight which pixels have values in this range. 
+   Cyan (`COLOR 0 255 255`) is a good colour for highlighting.
