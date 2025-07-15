@@ -20,7 +20,7 @@ Prefixes are used to configure different types of web service. For example:
 
 - `wms_` is used for WMS services, for example `"wms_title"` can be set in the `WEB` `METADATA` block to set the title of the WMS service. This will be seen when read with client applications such as QGIS. 
 - `wfs_` is used for Web Feature Services.
-- `oga_` is used for the new [OGC Features API](ogcfeatures.md). 
+- `oga_` is used for the new [OGC API - Features](ogcapi-features.md). 
 
 !!! tip
 
