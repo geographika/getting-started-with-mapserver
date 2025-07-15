@@ -18,7 +18,7 @@ const layers = [
             'stroke-width': 1.3,
         },
         source: new Vector({
-            url: mapserverUrl + 'ogcfeatures/ogcapi/collections/pois_polygon/items?f=json&limit=500',
+            url: mapserverUrl + 'ogcapi-features/ogcapi/collections/pois_polygon/items?f=json&limit=500',
             format: new GeoJSON(),
         }),
     }),

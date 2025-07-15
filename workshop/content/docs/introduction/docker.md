@@ -10,7 +10,7 @@ MapServer runs on the Apache web server - see the [Apache page](../advanced/apac
 
 It uses the Apache [mod_fcgid module](https://httpd.apache.org/mod_fcgid/), module that provides FastCGI support.
 
-MapServer runs on port 80 on the Docker container, which is mapped to port 5000 on the local machine, as can be seen in the Docker compose file
+MapServer runs on port 80 on the Docker container, which is mapped to port 5002 on the local machine, as can be seen in the Docker compose file
 located at `workshop\exercises\docker-compose.yml`:
 
 ```yaml
@@ -18,7 +18,7 @@ located at `workshop\exercises\docker-compose.yml`:
     image: camptocamp/mapserver:8.4-gdal3.10
     container_name: mapserver
     ports:
-      - 5000:80
+      - 5002:80
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
     volumes:
@@ -55,7 +55,7 @@ A second container that serves the JavaScript example pages is also run using Do
   # start docker in detached mode
   docker compose up -d
   # the following URLs should now be available
-  # http://localhost:5000
+  # http://localhost:5002
   # http://localhost:5001
 
   # stop docker

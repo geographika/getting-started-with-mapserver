@@ -41,7 +41,7 @@ GEOMTRANSFORM (centerline(densify([shape], 0.1)))
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/lakes.map&mode=map&layer=lakes&layer=lake-labels>
+    - Direct MapServer request: <http://localhost:5002/?map=/etc/mapserver/lakes.map&mode=map&layer=lakes&layer=lake-labels>
     - Local OpenLayers example: <http://localhost:5001/lakes.html>
 
 ??? JavaScript "lakes.js"

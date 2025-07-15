@@ -45,8 +45,8 @@ new TileLayer({
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
-    -  MapServer request: <http://localhost:5000/?map=/etc/mapserver/tiles.map&MODE=tile&TILE=0+0+0&LAYERS=countries&TILEMODE=gmap>
+    - Direct MapServer request: <http://localhost:5002/?map=/etc/mapserver/points.map&mode=map&layer=pois>
+    -  MapServer request: <http://localhost:5002/?map=/etc/mapserver/tiles.map&MODE=tile&TILE=0+0+0&LAYERS=countries&TILEMODE=gmap>
     - Local OpenLayers example: <http://localhost:5001/tiles.html>
 
 ??? JavaScript "tiles.js"

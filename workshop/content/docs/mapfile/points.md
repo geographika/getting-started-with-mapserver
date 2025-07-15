@@ -65,7 +65,7 @@ END
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
+    - Direct MapServer request: <http://localhost:5002/?map=/etc/mapserver/points.map&mode=map&layer=pois>
     - Local OpenLayers example: <http://localhost:5001/points.html>
 
 ??? JavaScript "points.js"

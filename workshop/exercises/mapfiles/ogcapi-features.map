@@ -1,5 +1,5 @@
 MAP
-  NAME "OGC Features"
+  NAME "OGC API - Features"
   EXTENT 17.77 43.31 17.83 43.36
   UNITS DD
   SIZE 600 600
@@ -13,7 +13,7 @@ MAP
       "ows_title" "OSM Features"
       "ows_enable_request" "*" # this enables all OGC requests
       "ows_srs" "EPSG:4326 EPSG:3857"
-      "oga_onlineresource" "/ogcfeatures/ogcapi"
+      "oga_onlineresource" "/ogcapi-features/ogcapi"
       # "oga_html_template_directory"
       # "oga_enable_request" "*"
     END

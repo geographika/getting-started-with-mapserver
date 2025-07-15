@@ -67,8 +67,6 @@ Some installation notes for different operating systems:
 ### Mac
 
 * If you are using [Homebrew](https://brew.sh), consider using the [brew Docker formula](https://formulae.brew.sh/formula/Docker)
-* On MacOS Monterey, there is an issue with the port 5000 that is already used and therefore conflicting to the default one used by MapServer. 
-  If you are facing with this error `OSError: [Errno 48] Address already in use` then you need to can disable the *Airplay Receiver* from `System Preference->Sharing` of your MacOS (detailed description in this blog [post](https://progressstory.com/tech/port-5000-already-in-use-macos-monterey-issue/)).
 
 ### Linux
 
@@ -108,7 +106,7 @@ cd /home/getting-started-with-mapserver/workshop/exercises/
 sudo docker compose up
 
 # Test the following URLs in a browser
-# http://localhost:5000
+# http://localhost:5002
 # http://localhost:5001/lines.html
 ```
 
@@ -149,7 +147,7 @@ docker compose down
 ```
 
 Once the containers are downloaded you can test they are running and you can connect to them. Open a web browser
-and navigate to <http://localhost:5000/>. You should see the following message:
+and navigate to <http://localhost:5002/>. You should see the following message:
 
 ```bash
 loadParams(): Web application error. No query information to decode. QUERY_STRING is set, but empty.
