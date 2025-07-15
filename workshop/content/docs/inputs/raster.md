@@ -86,7 +86,7 @@ A [COMPOSITE](https://mapserver.org/mapfile/composite.html) block is used on the
 
 !!! example
 
-    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/raster.map&mode=map&layer=dtm>
+    - MapServer request: <http://localhost:5002/?map=/etc/mapserver/raster.map&mode=map&layer=dtm>
     - OpenLayers example: <http://localhost:5001/raster.html>
 
 ??? JavaScript "raster.js"

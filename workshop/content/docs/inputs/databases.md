@@ -78,7 +78,7 @@ Online example not available as no PostGIS installation on the server
 
 !!! example "Exercise Links"
 
-    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/postgis.map&mode=map&layer=water>
+    - MapServer request: <http://localhost:5002/?map=/etc/mapserver/postgis.map&mode=map&layer=water>
     - OpenLayers example: <http://localhost:5001/postgis.html>
 
 ??? JavaScript "postgis.js"
@@ -97,7 +97,7 @@ Online example not available as no PostGIS installation on the server
 
 1. Try and load another dataset into the database using the `ogr2ogr` approach above.
 2. Now add a new layer to the Mapfile to display the layer. You can make a direct request to MapServer in the form:
-  <http://localhost:5000/?map=/etc/mapserver/postgis.map&mode=map&layers=water%20NEWLAYERNAME>.
+  <http://localhost:5002/?map=/etc/mapserver/postgis.map&mode=map&layers=water%20NEWLAYERNAME>.
 3. Now update the JS file so the layer is visible as part of the interactive map, through WMS:
 
     ```js

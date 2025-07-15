@@ -31,7 +31,7 @@ CLASS
 
 !!! example
 
-    - MapServer request: <http://localhost:5000/?map=/etc/mapserver/clusters.map&mode=map&layer=trees>
+    - MapServer request: <http://localhost:5002/?map=/etc/mapserver/clusters.map&mode=map&layer=trees>
     - OpenLayers example: <http://localhost:5001/clusters.html>
 
 ??? JavaScript "clusters.js"
