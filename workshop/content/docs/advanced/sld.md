@@ -24,10 +24,10 @@ This exercise will focus on the first use case.
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/lines.map&mode=map&layer=roads>
-    - Local OpenLayers example: <http://localhost:5001/sld.html>
-    - GetCapabilities request: <http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>
-    - Request to generate SLD from a Mapfile: <http://localhost:5000/?map=/etc/mapserver/sld.map&REQUEST=GetStyles&SERVICE=WMS&LAYERS=countries&VERSION=1.3.0&sld=http://node:5001/data/sld.xml>
+    - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/lines.map&mode=map&layer=roads>
+    - Local OpenLayers example: <http://localhost:7001/sld.html>
+    - GetCapabilities request: <http://localhost:7000/?map=/etc/mapserver/sld.map&REQUEST=GetCapabilities&SERVICE=WMS&VERSION=1.3.0>
+    - Request to generate SLD from a Mapfile: <http://localhost:7000/?map=/etc/mapserver/sld.map&REQUEST=GetStyles&SERVICE=WMS&LAYERS=countries&VERSION=1.3.0&sld=http://node:7001/data/sld.xml>
 
 ???+ SLD
 

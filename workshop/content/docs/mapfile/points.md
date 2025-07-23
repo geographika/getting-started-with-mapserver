@@ -49,7 +49,7 @@ In the Mapfile itself we then reference this file and use any of the font aliase
 In the example below we're using a
 cinema character from Google's [Material Symbols](https://fonts.google.com/icons).
 We use HTML entity number of the symbol we want in the [CHARACTER](https://mapserver.org/mapfile/symbol.html#mapfile-symbol-character) keyword.
-A list of these codes and their associated symbols can be seen at [http://localhost:5001/fonts.html](http://localhost:5001/fonts.html).
+A list of these codes and their associated symbols can be seen at [http://localhost:7001/fonts.html](http://localhost:7001/fonts.html).
 
 ```scala
 FONTSET "data/fonts/fontset.txt"
@@ -65,8 +65,8 @@ END
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
-    - Local OpenLayers example: <http://localhost:5001/points.html>
+    - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/points.map&mode=map&layer=pois>
+    - Local OpenLayers example: <http://localhost:7001/points.html>
 
 ??? JavaScript "points.js"
 
@@ -84,7 +84,7 @@ END
 
 1. Edit the `workshop/exercises/app/js/points.js` to show the OpenStreetMap base layer. You need to set the `visible: false` to `visible: true`.
 2. Change the default `CLASS` to use larger points in a more visible colour.
-3. Add another class to display another point type. Choose an appropriate symbol from the list at <http://localhost:5001/fonts.html>. Some example attribute types include `fast_food`, `monument`, and `post_box`. The source dataset is `workshop/exercises/mapfiles/data/osm/pois.fgb` - this can be opened in QGIS to view all available attributes and values. 
+3. Add another class to display another point type. Choose an appropriate symbol from the list at <http://localhost:7001/fonts.html>. Some example attribute types include `fast_food`, `monument`, and `post_box`. The source dataset is `workshop/exercises/mapfiles/data/osm/pois.fgb` - this can be opened in QGIS to view all available attributes and values. 
 
 <!--
 

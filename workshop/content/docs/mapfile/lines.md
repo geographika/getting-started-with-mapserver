@@ -64,8 +64,8 @@ END
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:5000/?map=/etc/mapserver/lines.map&mode=map&layer=roads>
-    - Local OpenLayers example: <http://localhost:5001/lines.html>
+    - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/lines.map&mode=map&layer=roads>
+    - Local OpenLayers example: <http://localhost:7001/lines.html>
 
 !!! tip
 

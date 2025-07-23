@@ -20,7 +20,7 @@ Prefixes are used to configure different types of web service. For example:
 
 - `wms_` is used for WMS services, for example `"wms_title"` can be set in the `WEB` `METADATA` block to set the title of the WMS service. This will be seen when read with client applications such as QGIS. 
 - `wfs_` is used for Web Feature Services.
-- `oga_` is used for the new [OGC Features API](ogcfeatures.md). 
+- `oga_` is used for the new [OGC API - Features](ogcapi-features.md). 
 
 !!! tip
 
@@ -49,7 +49,7 @@ More details are in [the documentation](https://www.mapserver.org/ogc/wms_server
 
 A sample request for the legend for the `polygons.map` is as follows:
 
-- <http://localhost:5000/?map=/etc/mapserver/polygons.map&service=wms&version=1.3.0&request=GetLegendGraphic&layer=buildings&format=image/png&SLD_VERSION=1.1.0>
+- <http://localhost:7000/?map=/etc/mapserver/polygons.map&service=wms&version=1.3.0&request=GetLegendGraphic&layer=buildings&format=image/png&SLD_VERSION=1.1.0>
 
 !!! tip
 
@@ -63,8 +63,8 @@ A sample request for the legend for the `polygons.map` is as follows:
 
 ## Exercises
 
-1. If you've read this far you deserve to discover one of MapServer's Easter eggs. Try changing the output format to `&format=image/txt`. We'll use the `polygons.map` for the request: <http://localhost:5000/?map=/etc/mapserver/polygons.map&service=wms&version=1.3.0&request=GetMap&layers=buildings&format=image/txt>
+1. If you've read this far you deserve to discover one of MapServer's Easter eggs. Try changing the output format to `&format=image/txt`. We'll use the `polygons.map` for the request: <http://localhost:7000/?map=/etc/mapserver/polygons.map&service=wms&version=1.3.0&request=GetMap&layers=buildings&format=image/txt>
 2. Create a `GetLegendGraphic` request, but for the `points.map` for the `layer=poi`.
-3. Run a [GetCapabilities](http://localhost:5000/?map=/etc/mapserver/polygons.map&service=wms&version=1.3.0&request=GetCapabilities) request for the `polygon.map`. 
+3. Run a [GetCapabilities](http://localhost:7000/?map=/etc/mapserver/polygons.map&service=wms&version=1.3.0&request=GetCapabilities) request for the `polygon.map`. 
    Add various `METADATA` pairs listed in the [Web Object Metadata](https://mapserver.org/ogc/wms_server.html#web-object-metadata) and check its output
    in the `GetCapabilities` response.

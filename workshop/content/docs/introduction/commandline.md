@@ -21,7 +21,7 @@ INPUT=POSTGIS INPUT=OGR INPUT=GDAL INPUT=SHAPEFILE INPUT=FLATGEOBUF
 When run through a web server, data is passed to the `mapserv` application, which generates output that is then sent back through the web server.
 All web requests can be recreated and tested on the command line, this makes it a handy debugging tool. 
 
-To test a URL such as <http://localhost:5000/?map=/etc/mapserver/countries.map&mode=map> run the following command:
+To test a URL such as <http://localhost:7000/?map=/etc/mapserver/countries.map&mode=map> run the following command:
 
 ```bash
 mapserv "QUERY_STRING=map=/etc/mapserver/countries.map&mode=map"

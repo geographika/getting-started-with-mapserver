@@ -32,7 +32,7 @@ services:
     image: camptocamp/mapserver:8.4-gdal3.10
     container_name: mapserver
     ports:
-      - 5000:80
+      - 7000:80
     environment:
       MAPSERVER_CONFIG_FILE: "/etc/mapserver/mapserver.conf"
     volumes:
@@ -45,7 +45,7 @@ services:
     image: node:lts-slim
     container_name: node
     ports:
-      - 5001:5001
+      - 7001:7001
     working_dir: /home/node/app
     volumes:
       - ./app:/home/node/app
