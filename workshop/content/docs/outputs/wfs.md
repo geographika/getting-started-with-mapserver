@@ -181,7 +181,6 @@ mapserv -nh "QUERY_STRING=map=/etc/mapserver/wfs.map&service=WFS&version=2.0.0&r
         FORMATOPTION "STORAGE=filesystem"
         FORMATOPTION "FORM=zip"
         FORMATOPTION "LCO:SPATIAL_INDEX=YES"
-        FORMATOPTION "LCO:ADJUST_TYPE=YES"
         FORMATOPTION "LCO:RESIZE=YES"
     END
     ```
