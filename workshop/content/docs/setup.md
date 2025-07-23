@@ -106,8 +106,8 @@ cd /home/getting-started-with-mapserver/workshop/exercises/
 sudo docker compose up
 
 # Test the following URLs in a browser
-# http://localhost:5002
-# http://localhost:5001/lines.html
+# http://localhost:7000
+# http://localhost:7001/lines.html
 ```
 
 ### Testing the Docker installation
@@ -147,13 +147,13 @@ docker compose down
 ```
 
 Once the containers are downloaded you can test they are running and you can connect to them. Open a web browser
-and navigate to <http://localhost:5002/>. You should see the following message:
+and navigate to <http://localhost:7000/>. You should see the following message:
 
 ```bash
 loadParams(): Web application error. No query information to decode. QUERY_STRING is set, but empty.
 ```
 
-This is good! It means MapServer is running. Next we can check that the front-end container is running by opening <http://localhost:5001/points.html>.
+This is good! It means MapServer is running. Next we can check that the front-end container is running by opening <http://localhost:7001/points.html>.
 Hopefully you'll see a map, and we're ready to start the workshop.
 
 ## Possible Errors

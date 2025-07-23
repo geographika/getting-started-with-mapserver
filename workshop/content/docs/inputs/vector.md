@@ -38,8 +38,8 @@ than a huge GeoTIFF file.
 
 !!! example
 
-    - MapServer request: <http://localhost:5002/?map=/etc/mapserver/stars.map&mode=map&layer=constellations>
-    - OpenLayers example: <http://localhost:5001/stars.html>
+    - MapServer request: <http://localhost:7000/?map=/etc/mapserver/stars.map&mode=map&layer=constellations>
+    - OpenLayers example: <http://localhost:7001/stars.html>
 
 ??? JavaScript "stars.js"
 

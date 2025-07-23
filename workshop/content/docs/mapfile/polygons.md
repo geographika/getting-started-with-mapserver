@@ -50,8 +50,8 @@ CLASS
 
 !!! example
 
-    - Direct MapServer request: <http://localhost:5002/?map=/etc/mapserver/polygons.map&mode=map&layer=buildings>
-    - Local OpenLayers example: <http://localhost:5001/polygons.html>
+    - Direct MapServer request: <http://localhost:7000/?map=/etc/mapserver/polygons.map&mode=map&layer=buildings>
+    - Local OpenLayers example: <http://localhost:7001/polygons.html>
 
 !!! tip
 

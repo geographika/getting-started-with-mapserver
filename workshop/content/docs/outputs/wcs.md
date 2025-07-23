@@ -9,13 +9,13 @@ https://mapserver.org/ogc/wcs_format.html
 We'll be using [WCS 2.0](https://mapserver.org/ogc/wcs_server.html#wcs-2-0) for this tutorial.
 
 # GetCapabilities
-http://localhost:5002/?map=/etc/mapserver/wcs.map&SERVICE=WCS&REQUEST=GetCapabilities
+http://localhost:7000/?map=/etc/mapserver/wcs.map&SERVICE=WCS&REQUEST=GetCapabilities
 
 # DescribeCoverage 2.0
-http://localhost:5002/?map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=DescribeCoverage&COVERAGEID=dtm
+http://localhost:7000/?map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=DescribeCoverage&COVERAGEID=dtm
 
 # GetCoverage 2.0 image/tiff full
-http://localhost:5002/?map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=dtm&FORMAT=image/tiff
+http://localhost:7000/?map=/etc/mapserver/wcs.map&SERVICE=WCS&VERSION=2.0.1&REQUEST=GetCoverage&COVERAGEID=dtm&FORMAT=image/tiff
 
 ```bash
 gdalinfo /etc/mapserver/data/raster/54752_dtm_1m.tif
@@ -24,7 +24,7 @@ gdalinfo /etc/mapserver/data/raster/54752_dtm_1m.tif
 NoData Value=-9999
 Size is 5002, 5002
 
-curl "http://localhost:5002/?map=/etc/mapserver/wcs.map&SERVICE=WCS&REQUEST=GetCapabilities"
+curl "http://localhost:7000/?map=/etc/mapserver/wcs.map&SERVICE=WCS&REQUEST=GetCapabilities"
 
 !!! tip
 

@@ -37,7 +37,7 @@ A second container that serves the JavaScript example pages is also run using Do
     image: node:lts-slim
     container_name: node
     ports:
-      - 5001:5001
+      - 5001:7001
     working_dir: /home/node/app
     volumes:
       - ./app:/home/node/app
@@ -55,8 +55,8 @@ A second container that serves the JavaScript example pages is also run using Do
   # start docker in detached mode
   docker compose up -d
   # the following URLs should now be available
-  # http://localhost:5002
-  # http://localhost:5001
+  # http://localhost:7000
+  # http://localhost:7001
 
   # stop docker
   docker compose down

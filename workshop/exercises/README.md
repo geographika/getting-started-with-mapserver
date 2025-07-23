@@ -10,8 +10,8 @@ navigate to the `workshop/exercises` folder and run the following command:
 docker compose up -d
 ```
 
-This will start a Docker container with MapServer (reachable from the browser at <http://localhost:5002/>), and
-a Docker container with an OpenLayers development environment (reachable from the browser at <http://localhost:5001/>).
+This will start a Docker container with MapServer (reachable from the browser at <http://localhost:7000/>), and
+a Docker container with an OpenLayers development environment (reachable from the browser at <http://localhost:7001/>).
 
 To stop, use the command:
 
