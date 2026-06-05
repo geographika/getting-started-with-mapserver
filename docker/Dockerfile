@@ -1,4 +1,4 @@
-FROM ghcr.io/osgeo/gdal:ubuntu-full-3.11.4 AS gdal
+FROM ghcr.io/osgeo/gdal:ubuntu-full-3.13.1 AS gdal
 # see https://github.com/OSGeo/gdal/tree/master/docker#ubuntu-based
 
 FROM gdal AS builder
@@ -14,9 +14,7 @@ RUN --mount=type=cache,target=/var/cache,sharing=locked \
         cmake librsvg2-dev colordiff libpq-dev libpng-dev libjpeg-dev libgif-dev libgeos-dev libgd-dev \
         libfreetype6-dev libfcgi-dev libcurl4-gnutls-dev libcairo2-dev libxml2-dev \
         libxslt1-dev python3-dev python3-pip python3-setuptools python3-venv php-dev libexempi-dev lcov lftp ninja-build git curl \
-        clang libprotobuf-c-dev protobuf-c-compiler libharfbuzz-dev libcairo2-dev librsvg2-dev \
-        unixodbc-dev \
-    && ln -s /usr/lib/*-linux-gnu/libproj.so.*[0] $(echo /usr/lib/*-linux-gnu)/libproj.so
+        clang libprotobuf-c-dev protobuf-c-compiler libharfbuzz-dev libcairo2-dev librsvg2-dev
 
 ARG MAPSERVER_BRANCH
 ARG MAPSERVER_REPO
@@ -43,6 +41,8 @@ RUN cmake .. \
     -DWITH_CAIRO=1 \
     -DWITH_RSVG=1 \
     -DUSE_PROJ=1 \
+    -DPROJ_INCLUDE_DIR=/usr/local/gdal-internal/include \
+    -DPROJ_LIBRARY=/usr/local/gdal-internal/lib/libinternalproj.so \
     -DUSE_WFS_SVR=1 \
     -DUSE_OGCAPI_SVR=1 \
     -DWITH_ORACLESPATIAL=0 \
